@@ -1,0 +1,1886 @@
+[
+  {
+    "id": "28cfc1ad",
+    "name": "Aux Merveilleux de fred",
+    "categories": [
+      "bakery"
+    ],
+    "rating": 4.6,
+    "reviewCount": 627,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Aux%20Merveilleux%20de%20fred/@51.2240725,6.7753693,17z",
+    "address": null,
+    "coordinates": {
+      "lat": 51.2240725,
+      "lng": 6.7753692999999995
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerE0TM0tlCvoH8XeHY2MS8T-7Z1_x6Xtavd3-A93ONwB1U7tuyF2nbOkKMB1LkV9FGvlZvdMRyU5pWvlHxh9X0uDSKvL_ZSd-D6Qb1e1QIyi7GTSMFYkzcYEazeKG5uwdGncTE=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "f08c3097",
+    "name": "Café Gallery Artists",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.9,
+    "reviewCount": 70,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20Gallery%20Artists/@51.2167730,6.8019099,17z",
+    "address": "Eisenstraße 106, 40227 Düsseldorf",
+    "coordinates": {
+      "lat": 51.216772999999996,
+      "lng": 6.8019099
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwero15nvOkXC4nWTt5YPNQInHjrcoPkgiAQ5AAXAAYv1J_scqPy19Clbbqlg237aGSMYGDKg8O3TWgmRtb2WvGAtzFUD1ntVo7w_LH15Ks3KoH-_5stUiCEDp3M9he38mPZ5R84RtPJFOV5t=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "34cb829a",
+    "name": "Café Mélancholie",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.6,
+    "reviewCount": 30,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20M%C3%A9lancholie/@51.2073379,6.7643121,17z",
+    "address": "Germaniastraße 42, 40223 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2073379,
+      "lng": 6.7643121
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerxwwKN-NeWqUtX3Owb2k6qpd0wQYzCAVVvJP5tD0SCmZAGsQULSZmhHjITV2aMa_FmexNwEk51Rjexz3ocQ4HCjDSFTQ7PJdbNlkDfN_YGgxbgU_c9JgyHD_7OJEwRb1cnRP64smuvGkWi=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "0056f903",
+    "name": "Dübchen",
+    "categories": [],
+    "rating": 5,
+    "reviewCount": 64,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/D%C3%BCbchen/@51.2446022,6.7860901,17z",
+    "address": "Ulmenstraße 18, 40476 Düsseldorf",
+    "coordinates": {
+      "lat": 51.244602199999996,
+      "lng": 6.7860901
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwep7aubm8fhI9pUiCmMH65zf9dTbPF_pfS-zagCHZzvleLqHxrzra_YK2IuyO5u52xLrht4Zb0gsxlOhAcEJXJM-Y2jKZ3ry55SvuINUT7f9wgg-5c5jFdkQFQHAEpNO8CQqeqDFYzUIlho-=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "49592c3e",
+    "name": "Café Bienentisch",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.5,
+    "reviewCount": 301,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20Bienentisch/@51.1622644,6.8753986,17z",
+    "address": "Heubesstraße 1, 40597 Düsseldorf",
+    "coordinates": {
+      "lat": 51.1622644,
+      "lng": 6.8753986
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepjnC2qAVN7lQ84KPuxHSuQHb9maE7KdaOfK0jC2Y7En57V1PS0RmsJXcCGcPSp1c6fCyPGks_iJ1PJafFu5NulMayH1MTjp1W_umYvnbrOlvozDaSaCIiKwEbfsbpRcTc9i9ZL=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "62120d83",
+    "name": "Zeitlos Cafe",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.5,
+    "reviewCount": 97,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Zeitlos%20Cafe/@51.2406277,6.7755414,17z",
+    "address": "Kaiserswerther Str. 69, 40476 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2406277,
+      "lng": 6.7755414
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqI7FjJFiqr7eDRad2ocgfVt8CLtIAPLBpLGbVBeZjHY1XhG-BWJiiD6OaGLZMPnQRJBMdiMGdV_XZ5yab1YxlsTqvhs0Z2hdDVEtiVKyQ7zujpH1tgVcyxeeHTb7Lwh44nsWo_=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "b3be969e",
+    "name": "Lasam Café & more",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.8,
+    "reviewCount": 290,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Lasam%20Caf%C3%A9%20%26%20more/@51.1149108,6.9616467,17z",
+    "address": "Solinger Str. 177, 40764 Langenfeld (Rheinland)",
+    "coordinates": {
+      "lat": 51.1149108,
+      "lng": 6.961646699999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerlh0PWN7RFrjJZV9jRNX3tV1vJZ2FdCjvggIz2DlZg2MU0qwuPv8Tll_Pds-dnAuzNprb3O7AlfYy_qEA2UciIcz1YdzYRpxBbbv5kdM38i5iIEb7Yon6FQA-WcjqtuOkyzbb7EQ=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "2a67b814",
+    "name": "Böhler Café",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.8,
+    "reviewCount": 239,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/B%C3%B6hler%20Caf%C3%A9/@51.2430887,6.7132718,17z",
+    "address": "Hansaallee 321, 40549 Düsseldorf",
+    "coordinates": {
+      "lat": 51.243088699999994,
+      "lng": 6.713271799999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepYTH-zxFGqWRo3AogbDyFlvnLNgKMI--NySXrMdN85UlCk1UMjcw1lEkjZSRKtkJlXRk9DDqECY6AoVMwmLPpHObauTzuaMwS2Kudf3Fdl_o6bBFsbmtH-QIYJ4lNfz-91IrJB=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "a37bb715",
+    "name": "Café 34",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.8,
+    "reviewCount": 37,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%2034/@51.2395915,6.7871395,17z",
+    "address": null,
+    "coordinates": {
+      "lat": 51.239591499999996,
+      "lng": 6.787139499999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerrcpKbGJWk7ZROWEgagMV_qIvTGRwD5JvIkAHnNBmXObWBsupV6CPbKqXPsU2atZfu-kgHXE2aEZqYM6eFTeWzPxc0QXT36wEgdfiP86hL_sW4gFKANBDuS6MEMwJ98-qPeX4EdRZvlHag=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "852d68bd",
+    "name": "Café Chillkröte",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.9,
+    "reviewCount": 290,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20Chillkr%C3%B6te/@51.2362359,6.7293430,17z",
+    "address": "Viersener Str. 34, 40549 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2362359,
+      "lng": 6.729343
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwer-VCV-Szg7SGaWTTb3ggyYHHz5njKTQwhiVomBHdukAY_szSn5TS8WF5SnDqDRU_87S4k5AcoKJSKwMzQTurM-eFtHp51uAFL92d5zyZu98I_F_pdAxSYvBhAkzoo2HzGPhHy1R20JtEHR=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "5b84f35c",
+    "name": "Kaffeeschmiede",
+    "categories": [],
+    "rating": 4.7,
+    "reviewCount": 716,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Kaffeeschmiede/@51.2304621,6.7462436,17z",
+    "address": "Belsenstraße 11, 40545 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2304621,
+      "lng": 6.7462436
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwer8tB_d1-AsktGZWOw8PV3YPugARUrp11rVyYmv2OEhZ9Tz1kAVONox9PrwiYKY17wp5v3RjQbiTqtXblQMRGsguQcYeriTkN-ki3kGlBHmgvTmhnaRnYBU8s_tgXu2wbBy7gIGlA=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "7cb4cfa0",
+    "name": "Brew Coffee",
+    "categories": [
+      "work-friendly"
+    ],
+    "rating": 5,
+    "reviewCount": 7,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Brew%20Coffee/@51.2107628,6.7677809,17z",
+    "address": "Bilker Allee 53, 40219 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2107628,
+      "lng": 6.7677809
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepteVaZ0gGP1lUvXrWTHjwTkYqMWGuahefnCroEjqLUuAmuw3IJqGZ9K4zY-trnBHEV01fwSbquInrz7GqxwAvomNFSIo3xs17jKnO4CmvnPWtBXecRZpRzFvbLutgtr4PKyvuBzaw972do=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "58294458",
+    "name": "Tremendo Café",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 5,
+    "reviewCount": 68,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Tremendo%20Caf%C3%A9/@51.2033953,6.7827851,17z",
+    "address": "Witzelstraße 12, 40225 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2033953,
+      "lng": 6.7827851
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepf10ofNXgxLEGvZwHOtNmLZIkaYTNFOec_dUPapFFJD71zRd9I8GdWmUo5OpbXujCUd6WmkTPB-sBBRcUXG9ntYpQ0VyfTkYEtwG_LWnKflnkB_bBmHhFJXl6yN5M3Kc5HUnPNIKHbGuKY=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "b7edd236",
+    "name": "Cafe Babou",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": null,
+    "reviewCount": null,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Cafe%20Babou/@51.2372631,6.8020345,17z",
+    "address": "Paulusstraße 2, 40237 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2372631,
+      "lng": 6.8020344999999995
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoQYjlf1l49G1kxVJrCBFz1aSL00rqGeijWK6PrBdp2gnVEHcFg0_dkk9aY4OAu0f0xH7hvcUBexx9dWaAJ8b2VV1PhxlI44l2fdxgN6wMCNd6ciBbGMwlEDxnXQ__Kj8lEDKoPSb7iab4=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "54bd59b6",
+    "name": "IMMCHO Café",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": null,
+    "reviewCount": null,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/IMMCHO%20Caf%C3%A9/@51.2251713,6.7855654,17z",
+    "address": "Immermannstraße 2, 40210 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2251713,
+      "lng": 6.785565399999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoDL_uIyahXI1ZscS04VJ8rBrAzu2kOgW5YXEgdt4ELvAo_v9iyxSPhit2nTwUI0EyK_SJmWVoyM5bU_AyWSLuKFdNg2GdlIFxhkDsIrHh8kEfVFr1GVKJnVTxY16ThkBv00tzXNlJPQVq6=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "5866cf56",
+    "name": "Ella's Cafe",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 5,
+    "reviewCount": 17,
+    "priceTier": null,
+    "status": "closed",
+    "openingHours": "Permanently closed",
+    "mapsUrl": "https://www.google.com/maps/search/Ella's%20Cafe/@51.2219898,6.7739104,17z",
+    "address": "Hohe Str. 19, 40213 Düsseldorf",
+    "coordinates": {
+      "lat": 51.221989799999996,
+      "lng": 6.7739104
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwep-UlEViKt56xkT0wluIR30B2HPHLrBevPCadz7lDivjADjSSufXK-Pu58gHb6ev8e9c1qcsjQeYuVmqFrlZxhxdXVwfOhufXOkEjLBcta4jt1lhjbLnLIalcNH9IYN3fGZ9-w=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "5b30311a",
+    "name": "Café Plätz",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.9,
+    "reviewCount": 133,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20Pl%C3%A4tz/@51.2272818,6.8111968,17z",
+    "address": "Dorotheenstraße 73, 40235 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2272818,
+      "lng": 6.811196799999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepgDjqCwE8yu4WcfbyGnLstSQULkmPYA6gcEfbi7kUxsZiDppLtQDrpnfW4Aq6RTYrzq1AXnxtgM0FeDtD_DO45pNruzQberg7oFhhG3BYnAX6Ogq3hve5mtWlUgKPqCO4jG1U=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "b9637ec7",
+    "name": "Café Robab",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 5,
+    "reviewCount": 25,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20Robab/@51.2168522,6.7837222,17z",
+    "address": "Hüttenstraße 32, 40215 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2168522,
+      "lng": 6.7837222
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerc_2UJ5VRQ5ASzJIAKaOpLNK_rUOnhW2-jviXAWpeiEJNpGEPoJCpQ_YmWbmtMbO92-Z_q_ztVVJR_paXmncA5lmcOs_c4a_4RONyRGky2uok4grvGJhlpvvZAawwaTOHmmCzbGs-dToI=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "3ab8d589",
+    "name": "Velvet",
+    "categories": [],
+    "rating": 4.7,
+    "reviewCount": 522,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Velvet/@51.2215557,6.7833879,17z",
+    "address": "Stresemannstraße 8, 40210 Düsseldorf",
+    "coordinates": {
+      "lat": 51.221555699999996,
+      "lng": 6.7833879
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwer-z9a5JGnn94ok9icwmtDxMnjeJ7zdwwd8amML-EYx7EY_TepkvbcwdTBbBMVFxIMR2Eh5bT-Kd4UBt8oRJ-Ka1EGN5fkiYpcRQTPWZEwLuwLo7X6fh3rxZfcU2zXtNikBwDxFNdGVoywc=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "4124dff1",
+    "name": "Fay Café",
+    "categories": [
+      "specialty-coffee",
+      "late-evening"
+    ],
+    "rating": 4.5,
+    "reviewCount": 118,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Fay%20Caf%C3%A9/@51.2261191,6.7849462,17z",
+    "address": "Wagnerstraße 9, 40212 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2261191,
+      "lng": 6.784946199999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoTTlbmLsz6gUHMl5_BmyWAm_mENl2mTYAHpiZbzv7M4-Nw0D7EDxNNtR0Wd4Luz4_a0mtHcmSKFlhV0w3Rs8FYCoL8LUSwKHDKLz8TESk4w6QiZomM0O5aKewLyUOsiaLMwbfWc7gLTXgg=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "c94b3e47",
+    "name": "pyc cheesecake x Die Röstmeister Oberkassel",
+    "categories": [
+      "bakery",
+      "work-friendly"
+    ],
+    "rating": 4.7,
+    "reviewCount": 218,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/pyc%20cheesecake%20x%20Die%20R%C3%B6stmeister%20Oberkassel/@51.2304884,6.7455181,17z",
+    "address": "Belsenstraße 18, 40545 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2304884,
+      "lng": 6.7455181
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwernoPa5fRSNYRmLKc3WNABPYpdLVI2VDq8aiHHyuFnsDX3YsshxV9en6xzMHtNA8XEVlGWBqTj3Madzc4z6ooGN3GYWrvpYtXWXej4HgQB_VHTs02A_eNPa4oX1Shg40rl1rBCt=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "6cdc3f75",
+    "name": "bunker. café",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.8,
+    "reviewCount": 33,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/bunker.%20caf%C3%A9/@51.2292354,6.7003722,17z",
+    "address": "Pastor-Klinkhammer-Platz 1, 40549 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2292354,
+      "lng": 6.7003721999999994
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerMxDDeMQJygkRLEqik0tkmPR47c3gDELNF9zD3GXaF8hCx3ys-BzF_UBin3fyAf0geAse4baSnidgJSy11jdKq_tmGrflNHzq8U_opqXHBctYeNGqGXb_SC2k2uzeikuq8GagilxWzoI46=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "6e024e82",
+    "name": "Café Kleinod",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.9,
+    "reviewCount": 164,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20Kleinod/@51.2276831,6.8020328,17z",
+    "address": "Ackerstraße 75, 40233 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2276831,
+      "lng": 6.8020328
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqTCszzrc-G_MKaQtkAqO-C1-xcYzMXtMF33GER4HzQcG0U1qxA5aOTxGZS35qfptOeU9sDah-qWwIKCZl5xIFmxcZDdJKcl1KVfIiGijzOF_n5_HDZMJouavJSYLeW0lKbBMly=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "9de4bda8",
+    "name": "Pure Pastry",
+    "categories": [
+      "bakery"
+    ],
+    "rating": 4.5,
+    "reviewCount": 78,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Pure%20Pastry/@51.2109391,6.7695511,17z",
+    "address": "Bilker Allee 74, 40219 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2109391,
+      "lng": 6.769551099999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepgurD7uysTLv6hT2Clqmn4GxWgzQCXUmk6oHtXH2ooPmilFlOZpmS3B0M-m_MZmD0HEsAJpaM5ZFNWIk3bmunfFi3zwng2F04vkn7X2HXglyYgJaTlaTfjM9OT42pBkIGBN-w623A4wJc=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "1a23c6ab",
+    "name": "Caféthiopia",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.9,
+    "reviewCount": 197,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9thiopia/@51.2043030,6.7806230,17z",
+    "address": "Brunnenstraße 62, 40223 Düsseldorf",
+    "coordinates": {
+      "lat": 51.204302999999996,
+      "lng": 6.780622999999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerfavh_5J5NdQsO7G4mA54CWMk0g5huEK5trZJUQcKFKzdkYZvRxVlaBlJksMmdsaqDKFQ9m9fb82UMOTBBgsM6elV1X-hKU2A6Zv6ic5vU2Rw1wWz5oTq1E8wDy8flbGI-X-D0sA=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "5a7ddd40",
+    "name": "Baristarei",
+    "categories": [],
+    "rating": 4.8,
+    "reviewCount": 266,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Baristarei/@51.1958242,6.7692029,17z",
+    "address": "Aachener Str. 202, 40223 Düsseldorf",
+    "coordinates": {
+      "lat": 51.1958242,
+      "lng": 6.7692029
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqdydiHde6YyKC0LTkQTXsRGJdmfPdgTH_WUiFZDuJWYnw0xLH8tfxHuNIesVd9W_HbyJh28albpDtL7un8v8m9Wg0aWgkzak9anXi8di82dhokKgpmFCtHIpN0Kcilj57rO7t0YA=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "b07da308",
+    "name": "Roberts Cafe",
+    "categories": [
+      "specialty-coffee",
+      "late-evening"
+    ],
+    "rating": 4.7,
+    "reviewCount": 98,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Roberts%20Cafe/@51.2039556,6.7727144,17z",
+    "address": "Aachener Str. 70, 40223 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2039556,
+      "lng": 6.7727144
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqIBjvLvlXsMVhx2NddIs1FH_49Ci7oxhrtzIAB8zfPNJBw858pUUoxmUl_CPQOePuKFTzkED19oVXE0tGPleEg92XO5H1W2VlIEBAgGSTbgGyQbm6cfA2g_4RB6FdWfUBKHaCk=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "0000aa29",
+    "name": "Meeple und Macchiato Brettspielcafé Düsseldorf Bilk",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.8,
+    "reviewCount": 91,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Meeple%20und%20Macchiato%20Brettspielcaf%C3%A9%20D%C3%BCsseldorf%20Bilk/@51.2066243,6.7787055,17z",
+    "address": "Brunnenstraße 30, 40223 Düsseldorf",
+    "coordinates": {
+      "lat": 51.206624299999994,
+      "lng": 6.7787055
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqicNW2VBbqI4dQ6Mr4JMvUsWm2nJZw1ISuot3EzVWXT3DCOF56-QiltF31aJCEFe1m1svHRZE_8yW5Iu0iW7gvVXnc9TXZX7kyXbzx_ndRCDYk0oqh3iRp5nFFFbNvuG4OtKOw7uy8ESAK=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "8983c2a8",
+    "name": "CUPZ CAFÉ",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.6,
+    "reviewCount": 82,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/CUPZ%20CAF%C3%89/@51.2393277,6.7803802,17z",
+    "address": "Nordstraße 86, 40477 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2393277,
+      "lng": 6.7803802
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoe16QhIUacbFwFF9sj0rBICnuV2Eqk7_7mA1gytMxaoSenWCLFpVkG_7BcwnjMjC2NP59q3hvTjt50COc-BMkYjLJTQu2Lyfpr52A6LI5LNNjb7vc38UKey5QyvMtVSYSgPTpBQH4Wi2bT=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "eeabab26",
+    "name": "Covent Garden coffeehouse-Düsseldorf",
+    "categories": [],
+    "rating": 4.5,
+    "reviewCount": 1113,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Covent%20Garden%20coffeehouse-D%C3%BCsseldorf/@51.2107645,6.7740062,17z",
+    "address": "Bilker Allee 126, 40217 Düsseldorf",
+    "coordinates": {
+      "lat": 51.210764499999996,
+      "lng": 6.7740062
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqbZF9rF3iLikSSMgdYIBURhxQ3Sh-KJaEr3zfRTGIFiTT_h2o8XErrS-DvvgahvFLERgll8UyzvQQn6JU4kENict_mcVsZowejYRl8LNrV2WTdFfohX5GAT2rKmfjU3kKLJouc=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "49c6b208",
+    "name": "Nooij Booijs",
+    "categories": [
+      "work-friendly"
+    ],
+    "rating": 3.9,
+    "reviewCount": 49,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Nooij%20Booijs/@51.2272131,6.8093945,17z",
+    "address": "Birkenstraße 110, 40233 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2272131,
+      "lng": 6.8093945
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerIZWoKS9w_bbcYjZnk1L-pzxRyE4EQTO8tIrHZEP4GqT17MAN_RcFO6dNDHUuXWxd1CxthOt4vWYzk3A-HgIPSKo2oZANoGmgYb4sQEhxoPPX42jG8Fm0b61LwoaIkhFq3TAudUUnKut0X=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "b1d38bf0",
+    "name": "KASPER Coffee",
+    "categories": [],
+    "rating": 5,
+    "reviewCount": 138,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/KASPER%20Coffee/@51.2286537,6.7927568,17z",
+    "address": "Am Wehrhahn 55, 40211 Düsseldorf",
+    "coordinates": {
+      "lat": 51.228653699999995,
+      "lng": 6.792756799999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepZAnx6PMyDBnhJbOXLfoQ5urY5I1B1tQLIigkOPicpx_wqCkOxg_sd_FmA6D5Dux49HKmooo37Aw-5OZh6D60AYCL_UoIl2WbG9XrTqcfERnbNlGUwNnm_-4ATkMw4RC2qMGXr=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "36ad32bf",
+    "name": "Brew",
+    "categories": [
+      "work-friendly"
+    ],
+    "rating": 4.7,
+    "reviewCount": 209,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Brew/@51.2044717,6.7735585,17z",
+    "address": "Aachener Str. 58, 40223 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2044717,
+      "lng": 6.7735585
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweraq1FqGbkCY073piOKLM06bIqRx3FP_ull9Bxu0be5qYkY9V-4POKmbFkiY1PXfUtZXX10YYLXDfqe38DK8riyXM0bBj2JWO0X13_IgoCRNYhW8zDllky5y-3MBlqq=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "627bd636",
+    "name": "Das Lilo - Parkcafé Bar",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.8,
+    "reviewCount": 214,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Das%20Lilo%20-%20Parkcaf%C3%A9%20Bar/@51.2082547,6.7990827,17z",
+    "address": "Emmastraße 36a, 40227 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2082547,
+      "lng": 6.7990827
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqpZnM148DpQ78BlgWcOoVvPoeVcsfyMLM1BA_zYswHNCnS9eeqtzHeiFlzyOIdZi-xMNiy7PVXGvoTdADsz63sqBT0OV8GYk_bnplTFedB0-cQbPO6hV3zH3LWDqnkI4Q3XlajpzpgETzg=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "361d4ac3",
+    "name": "Café Kucheneck",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.8,
+    "reviewCount": 126,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20Kucheneck/@51.2104613,6.7829045,17z",
+    "address": "Corneliusstraße 110, 40215 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2104613,
+      "lng": 6.7829045
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoofCgLkm1mg2iBTF3C4NA5ojS0-qhRi46Zz3Coq2wZs5nsWHqOsWlcqo9pRs1gYTMUNTbUEbQee71IVlFg0lSumuYNv_GYG8yUkuqpDZJC82C18CNBtYZ7FCXFuc_a7opuMcFYow=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "111ff1da",
+    "name": "Dream Pottery Café",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.9,
+    "reviewCount": 135,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Dream%20Pottery%20Caf%C3%A9/@51.2080058,6.7609320,17z",
+    "address": "Dianastraße 1, 40223 Düsseldorf",
+    "coordinates": {
+      "lat": 51.208005799999995,
+      "lng": 6.7609319999999995
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqjZeK23NtZmjSH-D2HxSN255FwKkJq_GhlYKD03sxdjYSPQPaVlNOQspwqJfjxOhaTcVYfsZXXVS_xMPBW6JJq64kxuOzytSmQ4-MLKdkbxcKbIXDrZf66Li-Cv22kj0Kk_PX5=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "77a9b88d",
+    "name": "Café VND",
+    "categories": [
+      "specialty-coffee",
+      "late-evening"
+    ],
+    "rating": null,
+    "reviewCount": null,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20VND/@51.2223626,6.7858040,17z",
+    "address": "Bismarckstraße 54A, 40210 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2223626,
+      "lng": 6.785804
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweofqBpzgOXED3-dTj4ZbNF7bLHtt82E_mJYItDHUwT__jRpfP_YS4SzIS3au1jQZhu0OGyTUWr2VF96UsOck-6Vqc--yoowdxSI1gkmK3z2rxD5JfgeZiWFQ013St55fRlza3HLzQH-yNU6=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "9496d416",
+    "name": "Dritan Alsela Coffee.",
+    "categories": [
+      "late-evening"
+    ],
+    "rating": 4.7,
+    "reviewCount": 2284,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Dritan%20Alsela%20Coffee./@51.2378419,6.8225168,17z",
+    "address": "Schlüterstraße 3A, 40235 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2378419,
+      "lng": 6.8225168
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweosBoREXTEU5BMzb4Z_270EhO9mYOTafiFrYL8_Kya_Geda4goOCQfHqDOtK7HquyK-jd4ERZYKBVeTusqaj-vJqLkECPAh24wforOaWivRbWvGROlXUc_605Xw-bPR71-2UTRX=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "89f85dce",
+    "name": "JICKIE Café Boutique",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.7,
+    "reviewCount": 396,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/JICKIE%20Caf%C3%A9%20Boutique/@51.2262314,6.7723964,17z",
+    "address": "Burgpl. 9, 40213 Düsseldorf",
+    "coordinates": {
+      "lat": 51.226231399999996,
+      "lng": 6.7723964
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepY3-lXt0wFnEFI2kqTirD5hBhOtTbHRaTw8C0t4rkcecB_Ym7xvsdNxof-S9R0jsMSy-hy4Q1-usTKl-96REDPYkKojxNNgFoMJ1W5HpM2EBqYSmDBcZrtzcnR-7-Hc243XqY-UA=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "2c80111f",
+    "name": "Soulbrunch - Düsseldorf",
+    "categories": [
+      "brunch"
+    ],
+    "rating": 4.8,
+    "reviewCount": 1870,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Soulbrunch%20-%20D%C3%BCsseldorf/@51.2362709,6.7795228,17z",
+    "address": "Nord Carree 11, 40477 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2362709,
+      "lng": 6.7795228
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqhLkCVlc96nUhL91RPPi8vYFXjX98OCuanNKStG3Ld1d6gFeFrgyIqjtcdtDH2MqZasDVw27n_3_hqDGr9ZuVQQqZt1vi09qK6ddq3nJer-vu4fLnR-kK8HSAEt1wQ2OOPBdh87QIkl-LV=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "d0af7b3e",
+    "name": "Café nebenan",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.7,
+    "reviewCount": 177,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20nebenan/@51.2318296,6.8095355,17z",
+    "address": "Grafenberger Allee 145, 40237 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2318296,
+      "lng": 6.8095355
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqcvAmpmCHegUdZ2XHFW9694RGdzUPMtpRvEFqKwzE1qpthvssLbZTdB5YMHyyqfon9KMtw3SlB-mGrBNkXFoAc2i2T9DDWObNv7Nh_i8d1qRLUD8tI6zzTtch5jnq0xb-C-8FGDA=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "29298bfe",
+    "name": "Café Liebe",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.6,
+    "reviewCount": 347,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20Liebe/@51.2282545,6.8102896,17z",
+    "address": "Platanenstraße 22, 40233 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2282545,
+      "lng": 6.8102896
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweq_txYqck7pBWVlmoZMDPGoFuemrwktyu6956YnuRsPsMRjbeLw4XLsUgYcsYhrBcKVol-wIrb_d3-yhS7DTRYt_HiAozr7k4IJztBQA_3Z1Hscd9lEaCFPXK8tpES8QNOpf3kq=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "39327621",
+    "name": "Cafe Couture",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.3,
+    "reviewCount": 55,
+    "priceTier": null,
+    "status": "temporarily-closed",
+    "openingHours": "Temporarily closed",
+    "mapsUrl": "https://www.google.com/maps/search/Cafe%20Couture/@51.2229690,6.7862360,17z",
+    "address": "Steinstraße 34, 40210 Düsseldorf",
+    "coordinates": {
+      "lat": 51.222969,
+      "lng": 6.786236
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerRfhMLujNtuAOsOE1QHdFmUA9I64-1hzNet40La8h293SgIAm_aOi0ilE9MMiao72AYGsB4mFWIQxuzvnECxI3uvPkSgFwy9fRK8CZX9PGTfdCApw6sfOYEwwSIlOM1zzHUhiD=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "c7fdf4f5",
+    "name": "COCO Café",
+    "categories": [
+      "specialty-coffee",
+      "late-evening"
+    ],
+    "rating": 4.3,
+    "reviewCount": 1052,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/COCO%20Caf%C3%A9/@51.2224829,6.7876250,17z",
+    "address": "Friedrich-Ebert-Straße 10, 40210 Düsseldorf",
+    "coordinates": {
+      "lat": 51.222482899999996,
+      "lng": 6.787624999999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweq6TJ1jHRaremS9phDh8LhIGx0Zhnltc4uxrF4S01Et35yy5vXIZP9OkgL6HqJSq_cRMfJ3N28WbnFhCwXvma2vQPLVCjd3ai8sldLtkYTzlws0N5ghuXlXLor_dcou9A=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "adc1b223",
+    "name": "Chocolaterie bittersüß & edelweiß",
+    "categories": [],
+    "rating": 4.9,
+    "reviewCount": 178,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Chocolaterie%20bitters%C3%BC%C3%9F%20%26%20edelwei%C3%9F/@51.2133560,6.7649724,17z",
+    "address": "Lorettostraße 35, 40219 Düsseldorf",
+    "coordinates": {
+      "lat": 51.213356,
+      "lng": 6.7649723999999996
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweo4ig2G802e6spuCeC1d1PMdtDceRvxG4HGOXRw9ZQUGlV5yXnwO6pWVymux-sRmheSYOmariQzh-rEP7Rp1TBziJNoqsgCzY59IKgXGqWAZleaWPtMvHiQRLyt8MvVg0Y9Zi_5ho05XQvA=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "407a45bf",
+    "name": "Seifen Horst",
+    "categories": [],
+    "rating": 4.4,
+    "reviewCount": 446,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Seifen%20Horst/@51.2120658,6.7633792,17z",
+    "address": null,
+    "coordinates": {
+      "lat": 51.2120658,
+      "lng": 6.763379199999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerKjqnJ5EWjDHZg9A6fy_fFiQQeFQqAkaHda9MpE7WZw0FsP245QOtXgSNBK6fIpcO3r96VlQ796K1IzvlWCkhd0cFDao2x-zucNqcVzwtB2aXpP7t6TYiGm7c0SiZh0DD4ZdkEM2NfApyb=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "56ee8633",
+    "name": "tammani · japanese deli + cafe",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.8,
+    "reviewCount": 304,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/tammani%20%C2%B7%20japanese%20deli%20%2B%20cafe/@51.2112492,6.7633196,17z",
+    "address": null,
+    "coordinates": {
+      "lat": 51.2112492,
+      "lng": 6.7633196
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwer0oEFKGiL4KZs21YMg_WtTawepXLeYxH885o1dQszd_V8-6eTwJ7HiEQg6uhMWs39mTNyg3eO9T9UT6RWs2DLz3ailK0oxO5g2XNCVQvfhCHe5RelVMOBS4M4wl-OWgR28JLEE=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "a11b1f47",
+    "name": "Café Calma",
+    "categories": [
+      "specialty-coffee",
+      "late-evening"
+    ],
+    "rating": 4.8,
+    "reviewCount": 342,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20Calma/@51.2014305,6.7813040,17z",
+    "address": null,
+    "coordinates": {
+      "lat": 51.2014305,
+      "lng": 6.7813039999999996
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerv8zpMywaZK3LUB8qcJcicXRGo-et5JbO_PqW_LjLghL4S_cwn6lqyGhDjKYxPgehhwAwmFQ9BY7zfnMEaP7aZEDJBTGrBlWIfVIzU-QAppgdDHSjJeyZcjpbd-OS92ZU0OixCDPiTYqE=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "b79428db",
+    "name": "Eis-Café Belluno",
+    "categories": [
+      "specialty-coffee",
+      "late-evening"
+    ],
+    "rating": 4.5,
+    "reviewCount": 269,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Eis-Caf%C3%A9%20Belluno/@51.2144477,6.7866708,17z",
+    "address": "Helmholtzstraße 47, 40215 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2144477,
+      "lng": 6.7866708
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwep3dT3jRxXpVxEpAG9315272liD3mWBVX6SKSIlxD6WS2f8Bwf7yCWZJMQMaTGlPljjUnufW77ReDC-JHMGvZf0is4e3st1psmjCgOOCYPIZHQ6gSOumX-62krNZV5a_BB1G3wgKA=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "d19d4d04",
+    "name": "Stoak",
+    "categories": [],
+    "rating": 4.8,
+    "reviewCount": 444,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Stoak/@51.2180963,6.7829752,17z",
+    "address": "Adersstraße 48, 40215 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2180963,
+      "lng": 6.7829752
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqc6U6BTwR1ftUWAnyTpBj2N6tP7rY74G3Rdj24FYGsDZy3bVn479pUVTbri6cUOTHMPuUyDgk893XNEM3C27jZ_YI0UBw6b_TENaRilH0WPsMCy4c-QtzkKkgsOYVN6rBo5uvr=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "92ca1a0a",
+    "name": "No Worries Coffee",
+    "categories": [],
+    "rating": 4.9,
+    "reviewCount": 161,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/No%20Worries%20Coffee/@51.2285064,6.8074572,17z",
+    "address": "Lindenstraße 142, 40233 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2285064,
+      "lng": 6.8074572
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweq9hqKPVe9phAEpnNGNbfVJCTPtSO9BEn3I0Gis8j_gyn5xgVvaSwPtW80DAiZm1MlJEWVAOUeYZHbbB8pbVMmm_yWiq0o56ww3dNzwLejOBvPBSKYI4UQnsd1NIhURSZdCXR9E_VL7KtzW=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "1f47dff1",
+    "name": "Fjaka Café & Rösterei",
+    "categories": [
+      "roastery",
+      "specialty-coffee",
+      "work-friendly"
+    ],
+    "rating": 4.5,
+    "reviewCount": 110,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Fjaka%20Caf%C3%A9%20%26%20R%C3%B6sterei/@51.2317513,6.8119436,17z",
+    "address": "Ackerstraße 204, 40235 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2317513,
+      "lng": 6.811943599999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqgfCqhGFTMgiZakcrASE99FzdKwSKuINoNPOf-p__YyoFrp44rVCw0KXhrlojqpkMv_pZAaZuPrsAPlhlpWKFCjyaIuZ7CVuwzPP-Mr95ggRpQmT7gTPU-nysVa3f4QgpD-tKrz621r7JM=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "7d2634fc",
+    "name": "Hokuto - Art & Café",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.9,
+    "reviewCount": 67,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Hokuto%20-%20Art%20%26%20Caf%C3%A9/@51.2314750,6.7836526,17z",
+    "address": "Gartenstraße 27A, 40479 Düsseldorf",
+    "coordinates": {
+      "lat": 51.231474999999996,
+      "lng": 6.7836526
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoOhFljagtnkHBObzYTwK2Y1l4aiaWOj7lVYkU31YZpLGY-X7Mg-RtDQBip8Gex4HQYkQV2ZfUAKDCmD907E1vWhPL_amKufZDtIGdfBlZjVLq4MzRk4gx6h_Z0Bv8meZigYEpd=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "d1cb058b",
+    "name": "CoffeePact Düsseldorf",
+    "categories": [
+      "roastery"
+    ],
+    "rating": 4.8,
+    "reviewCount": 19,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/CoffeePact%20D%C3%BCsseldorf/@51.2380865,6.7993320,17z",
+    "address": "Rethelstraße 136, 40237 Düsseldorf",
+    "coordinates": {
+      "lat": 51.238086499999994,
+      "lng": 6.799332
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerS-6OX7s7kzkZjHU3BLbuIXsdWZQhqf1AxJOSec05qM4uY0zSXnBgGY11lbbGJLDxEW4uLazXC-E9KNqNMZDxPEk1vv5N9nVPY5BN0lgNAJHh9AwAa9HuupqM7MlIGEKhAE8PPmGqgkN8H=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "4b17bd00",
+    "name": "Rotkäppchen Coffee & more",
+    "categories": [],
+    "rating": 5,
+    "reviewCount": 243,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Rotk%C3%A4ppchen%20Coffee%20%26%20more/@51.2420350,6.7834713,17z",
+    "address": "Münsterstraße 26, 40477 Düsseldorf",
+    "coordinates": {
+      "lat": 51.242034999999994,
+      "lng": 6.7834712999999995
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqp4trgV4rsWaku0lo_tYyANvyiRFLj5OKZ1A6TpkM73VFzdiNCOKNJNwd33YMZ698vM1w7Sr0H6GshII3XXoWx1NdQfaUOcGmXoZWR62CTQBzW23ASYvxA3WjBm2VMuRZt7HmO7rbgtQ4=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "3110be1d",
+    "name": "Café Daily Dose",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.4,
+    "reviewCount": 240,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20Daily%20Dose/@51.2265706,6.7818716,17z",
+    "address": "Joachim-Erwin-Platz 1, 40212 Düsseldorf",
+    "coordinates": {
+      "lat": 51.226570599999995,
+      "lng": 6.7818716
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweo5XRuLp_iacwoYLOiAk0_TxQqNIW1UdvkvzTMEXnWdpEbXtX1f5VMhPIna_Zcgg2DE5WBrEGky1eafoOHfFCAtsK7UVZmlM46388jTXFUMyo2dhntpSSytAqucVyzvyv_txan-4w=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "8792abb6",
+    "name": "Suli's",
+    "categories": [],
+    "rating": 4.6,
+    "reviewCount": 443,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Suli's/@51.2365599,6.7938495,17z",
+    "address": null,
+    "coordinates": {
+      "lat": 51.236559899999996,
+      "lng": 6.793849499999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqWA_nadKZ9rkFmey3Y3ipJA4q5Au1gEAl2h8SMyoN6HbOry73mJKj05IbphCO-vmmoCQVXWYmnbQXKC1-8gA4lxga2Id4LiO2jele7MGLXnR6ImB4AJHKgIQ7XF1g4ktpE5A=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "ceb12fe4",
+    "name": "Cafe Bistro à midi",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.5,
+    "reviewCount": 221,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Cafe%20Bistro%20%C3%A0%20midi/@51.2391696,6.7800285,17z",
+    "address": null,
+    "coordinates": {
+      "lat": 51.2391696,
+      "lng": 6.780028499999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqdvZcAHbT-gc8N0Fw_JdTMLN19HePw0M0bOKtv84Vtc5pcCNxH7myFg0PIEbsRe3QNTZUf9GQGb11Ms6E6f3MoRpkp8qXKcRb-df1g78MNU59h7RkBLRYrT7QUGdBTctwQSYCiBQ=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "82d395b5",
+    "name": "Remé",
+    "categories": [],
+    "rating": 4.7,
+    "reviewCount": 319,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Rem%C3%A9/@51.2116221,6.7693846,17z",
+    "address": "Im „The Sparkle, Kronprinzenstraße 97, 40217 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2116221,
+      "lng": 6.7693845999999995
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwervRGlfXlR2gz_kOtAacdY91Y0U-N1gk6bB2HFkwGUC4fmtYv4jEFQ77AJb9NiF0C0QPp71wx1JnTKzW1alM6Q1rODW3xMqLKgp_QTt67xd9th6dcoTS0sGySFbnbAZciPWl2sndw=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "a3e91781",
+    "name": "The funky Deli",
+    "categories": [],
+    "rating": 4.7,
+    "reviewCount": 112,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/The%20funky%20Deli/@51.2067418,6.7784886,17z",
+    "address": "Brunnenstraße 22, 40223 Düsseldorf",
+    "coordinates": {
+      "lat": 51.206741799999996,
+      "lng": 6.778488599999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwep33ul83mxJYvCgcpVzmInvM1twYQ32j23GQDp4k6McfbMcxavrrO5tx0TtNQfIAon801P7eHmZG2IF2JyJksbYj9ucrlr3OXBsXTaBK1P5-0dlxdVYjATekWGdGDdoodTMDIsN=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "7244f74f",
+    "name": "Die Fliese - Café Bar Kultur",
+    "categories": [
+      "specialty-coffee",
+      "late-evening"
+    ],
+    "rating": 4.9,
+    "reviewCount": 189,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Die%20Fliese%20-%20Caf%C3%A9%20Bar%20Kultur/@51.2115611,6.8009493,17z",
+    "address": "Flügelstraße 58, 40227 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2115611,
+      "lng": 6.8009493
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerq6NHpfFLLz0e3YtEHciK6_R7joEcsraxN_QPs704tXgsI74yoh2-wyGbVj9uZiZ_fKVNcY-aQROJxMK5pWCah-EevvCKULZhhRWLoHAb-ONo1X25BDmY2vGag6J1zL3XTuwxpQ6_IzxmF=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "d77717e7",
+    "name": "Caramela",
+    "categories": [],
+    "rating": 4.7,
+    "reviewCount": 128,
+    "priceTier": null,
+    "status": "closed",
+    "openingHours": "Permanently closed",
+    "mapsUrl": "https://www.google.com/maps/search/Caramela/@51.2372631,6.8020345,17z",
+    "address": "Paulusstraße 2, 40237 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2372631,
+      "lng": 6.8020344999999995
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwer02WWgmP8eFoQExkoLGEuUVRzT19bpAvLJ1m4cYopj1ytzFD9WWI3HKX0SulmvIgk4ONNfk3N5M3HjYOtMFHpJOLP7bY7ik0iwdP4wiHVBCCiQRK9IzS1wNnMn4_heVqIEUHsZGw=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "fea64a08",
+    "name": "Soul's",
+    "categories": [],
+    "rating": 4.7,
+    "reviewCount": 284,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Soul's/@51.2671173,6.8271805,17z",
+    "address": "Liliencronstraße 1A, 40472 Düsseldorf",
+    "coordinates": {
+      "lat": 51.267117299999995,
+      "lng": 6.8271805
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwer83zXLDrwDi9zG_k_o-68MvGPqZb_e9Bg6qUg5SgqcS4jwQyDKvSBRINU8JOIy1_ux6U156ubnQpp3_mwi8-7FKcehFf8zcf82qXmAl6jcOOIijrOjsJlQ_ApD-zsYfm_cokmZ=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "c2b500d2",
+    "name": "Café BBLO",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.8,
+    "reviewCount": 318,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20BBLO/@51.2401560,6.7823087,17z",
+    "address": "Blücherstraße 3, 40477 Düsseldorf",
+    "coordinates": {
+      "lat": 51.240156,
+      "lng": 6.7823087
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweo-SP8KE63K7Zee8RlhhMFeQYn7foHzhF1g7BRbUT8p6dZJSQneEXLwhqoQUGgmeUPK2FievwxSArBDhbM3aZR1QSlWk9Dw9KvOsq9YUL7wiS8IYRLC8rGl5WZCfuO39GzB0LpgdA=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "a91945b3",
+    "name": "BARISTAPAS Breakfast",
+    "categories": [
+      "brunch"
+    ],
+    "rating": null,
+    "reviewCount": null,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/BARISTAPAS%20Breakfast/@51.2104617,6.7629147,17z",
+    "address": "Volmerswerther Str. 2, 40221 Düsseldorf",
+    "coordinates": {
+      "lat": 51.210461699999996,
+      "lng": 6.7629147
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhHea2gLbpNrQROsBcF4azsjYyfRxUoWWD1aD_P09HA7McNyYh7M1ZvqEv1CW3bGqJLJR_ZNfXLmQaDWiTrkRdROKr6P-sBRLyT0TwO93n2dGut9XvBmkja9xXREH95XbNEaqjnqU0JIQuqKTfCaWdtM09NCb94DuHcBkbOEy6DoXPQsxmyRLj6P5A=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "fc173dac",
+    "name": "Lækkert Deli",
+    "categories": [
+      "work-friendly"
+    ],
+    "rating": 4.9,
+    "reviewCount": 65,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/L%C3%A6kkert%20Deli/@51.2291354,6.8054502,17z",
+    "address": "Ackerstraße 137, 40233 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2291354,
+      "lng": 6.8054502
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoZQbEjHjgoqNmXTTsz_LO_9UBcJQmmQHSaipkoR9RoUXTy0ZmucBYEdwdpRfJ2SDIfEXjxhCpBf8JYnqNKQwhdvTP8JFrjRuZQVZRyh4SNCmARFJY1d0d4MUVfH9kYjBNSou0c3A=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "bf5e86e8",
+    "name": "ONEONE11 Café & Bakery",
+    "categories": [
+      "bakery",
+      "specialty-coffee"
+    ],
+    "rating": 4.3,
+    "reviewCount": 135,
+    "priceTier": null,
+    "status": "temporarily-closed",
+    "openingHours": "Temporarily closed",
+    "mapsUrl": "https://www.google.com/maps/search/ONEONE11%20Caf%C3%A9%20%26%20Bakery/@51.2401651,6.8240266,17z",
+    "address": "Grafenberger Allee 368, 40235 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2401651,
+      "lng": 6.8240266
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwersQB1VdQ_w17qPc04bxXYtcyH7IoQGOPeXYh2plRLJ2cKyrR51tS_KWgX8-KwFUSZXJcibVcRsYNMBbq7muNkO90KWvmKUuIcEa4LeBYI4zqSjQcg_G5h8sb0fMFWO8CrVvxT_=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "843a1ff1",
+    "name": "Jaenner Modern Coffee",
+    "categories": [
+      "work-friendly"
+    ],
+    "rating": 4.8,
+    "reviewCount": 206,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Jaenner%20Modern%20Coffee/@51.2272307,6.8004383,17z",
+    "address": "Ackerstraße 80, 40233 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2272307,
+      "lng": 6.8004383
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwer3E1NBZfld0XoFMT3I331-49jv5L7xyruPeufZjYxBbNX9-H-zRSDyq7WhowxZLK-xOwMiynKD7pxLAAIaRna0FPpmYiadmOiF14gdL7iC57cnQmvextB0LQHg7pPaPtF1PXDH=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "1f847aaf",
+    "name": "Lightroast Coffee",
+    "categories": [
+      "roastery"
+    ],
+    "rating": 4.7,
+    "reviewCount": 166,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Lightroast%20Coffee/@51.2268277,6.8173655,17z",
+    "address": "Hoffeldstraße 104/Hof 2, 40235 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2268277,
+      "lng": 6.817365499999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqznRNdlGaKVdI6BatL8MJ24Ts8gP93fkfoXSQXR9Uca50P-T48FI-iK0eCtvYh0XRejT3nCyBnlzUD-zkenxQo8yz9x3yGFoBzNtnCYUuRTfdOsn8-edzcqbRb0LwuR_T1kDXVWg=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "abbd69b7",
+    "name": "Espresso Perfetto Friedrichstadt",
+    "categories": [],
+    "rating": 4.7,
+    "reviewCount": 282,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Espresso%20Perfetto%20Friedrichstadt/@51.2172854,6.7770537,17z",
+    "address": "Luisenstraße 1a, 40215 Düsseldorf",
+    "coordinates": {
+      "lat": 51.217285399999994,
+      "lng": 6.7770537
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepqEQSufp3jupVrVS0ik6LUXdnnakkXthmT7Sj1BTS_lgXp3LLJ8GERLSGyhrR4MrwYWmplJYDLDp-bt39_MXCpe-Xci2aFAxyw_K9m3myoEmyKUXjZMWISsCma82iQF-IepQurnQ=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "f7e7e75a",
+    "name": "Cøffe",
+    "categories": [],
+    "rating": null,
+    "reviewCount": null,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/C%C3%B8ffe/@51.2231311,6.7728537,17z",
+    "address": "Benrather Str. 6B, 40213 Düsseldorf",
+    "coordinates": {
+      "lat": 51.223131099999996,
+      "lng": 6.7728537
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqHGKuFKniRGVF71zIRKCRhUQGx_woIqrfZNrHd8hrXl7GOFYiixlXrF1DuzUvXY7v4-5OLySFzrWd-yIp-T_ItaiP81lyHIiUltrRZ_r_Dl6de-MwmnWnrdcA6ow7oflg6wQkq6A=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "fc61e663",
+    "name": "Café Zen",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.4,
+    "reviewCount": 395,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20Zen/@51.2191921,6.7749685,17z",
+    "address": "Haroldstraße 34, 40213 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2191921,
+      "lng": 6.7749685
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerUgMYhQpNPascfA_SsqHPgEYObaeMDcEmpFnQC5pHcRbcnmHGVaIxXBpB2wAmEmwIscVLL5aaaJPAPXI1ibJ4CMX4OiSs7qh7cemGSOgAFYgkNs1punKal2pby1PmU4MkxF9dtNQ=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "1f9a5539",
+    "name": "Orange - Finest Coffee",
+    "categories": [],
+    "rating": 4.2,
+    "reviewCount": 355,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Orange%20-%20Finest%20Coffee/@51.2231897,6.7760150,17z",
+    "address": "Im Benrather Karree, Benrather Str. 18, 40213 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2231897,
+      "lng": 6.776015
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoF-06EZkcH9OQEnMNb2yQGGeNfDwl2bOPP0KSwifmgROEUc3NMUE_u6z466plFmh-6Xyg-yAZegAzaTNpa5THJoQWggNvDHSpAAxhSJ1o2t59kYoDt7bjq9J5WU-WreBDjqXzp=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "3206b38c",
+    "name": "Copenhagen Coffee Lab - Carlsplatz",
+    "categories": [
+      "work-friendly"
+    ],
+    "rating": 3.8,
+    "reviewCount": 1085,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Copenhagen%20Coffee%20Lab%20-%20Carlsplatz/@51.2238370,6.7739042,17z",
+    "address": "Carlspl. 20-21, 40213 Düsseldorf",
+    "coordinates": {
+      "lat": 51.223836999999996,
+      "lng": 6.7739042
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwequIXxJv2qKulNAW1SFamx9hawLgDPVbWFXyS-C4ue2Lfwi3lq3rOc15w2uTJes8LI7yWDnBqL_tQtADGJKINmnc6JswCazLMr93EVfY_3t16pASu-_J66K7AhCy02I8BbQuLBa=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "92f45f80",
+    "name": "Café Kirchplatz Düsseldorf",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.9,
+    "reviewCount": 53,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20Kirchplatz%20D%C3%BCsseldorf/@51.2137657,6.7763913,17z",
+    "address": "Kirchpl., 40217 Düsseldorf",
+    "coordinates": {
+      "lat": 51.213765699999996,
+      "lng": 6.776391299999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqeiWLHrhjPw8l_f1mO3q2_2fCw52W-T4Fb3N42DvWmSJossFrO-3mzRNxCwN08cQXQXzQW9-cEp_dtT9rrkrXwEqyDXdaLY39xlFW6A8-J8UQS7qUD8u_0cxhJ8WcJAakvUMKZ=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "6129d3d9",
+    "name": "PYC cheesecake & gallery",
+    "categories": [
+      "bakery",
+      "work-friendly"
+    ],
+    "rating": 4.5,
+    "reviewCount": 406,
+    "priceTier": "€€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/PYC%20cheesecake%20%26%20gallery/@51.2388375,6.8016798,17z",
+    "address": "Weseler Str. 65, 40239 Düsseldorf",
+    "coordinates": {
+      "lat": 51.238837499999995,
+      "lng": 6.8016798
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwep6zlhYzt48fooL3xjPZGqh03_wa8TtSSpsnCHT00TeQc1ueBFWjTtX1c2fjV3KkwOJyu5_U4p8d7VkD1rzJCfa4dU1Oi92K6gdDpIEISEv6_vgEvXvdL9pxmHbGqG3CbD-5plj=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "7434adc0",
+    "name": "Kioki Coffee - Matcha - Cheesecake",
+    "categories": [
+      "bakery"
+    ],
+    "rating": null,
+    "reviewCount": null,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Kioki%20Coffee%20-%20Matcha%20-%20Cheesecake/@51.2264549,6.7846008,17z",
+    "address": "Wagnerstraße 3, 40212 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2264549,
+      "lng": 6.7846008
+    },
+    "photoUrl": null,
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "780d30d9",
+    "name": "MERCY coffee company",
+    "categories": [
+      "work-friendly"
+    ],
+    "rating": 4.8,
+    "reviewCount": 325,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/MERCY%20coffee%20company/@51.2267840,6.8045656,17z",
+    "address": "Birkenstraße 73, 40233 Düsseldorf",
+    "coordinates": {
+      "lat": 51.226783999999995,
+      "lng": 6.8045656
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoMYMpMiNXTa_D-28zYLLGN_rHjr5Y06-QWbmOGOx3DVezWX_IiINqO0tw7QHxoF4KwNQTfX-Iuthk7czbI_i9EMDYRWkYfQ6X3honpkO8n9ePs1Zqoc7Yd48lTq-dKGJmbJkG6=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "fc669dc1",
+    "name": "Die Röstmeister Flingern",
+    "categories": [],
+    "rating": 4.6,
+    "reviewCount": 280,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Die%20R%C3%B6stmeister%20Flingern/@51.2269348,6.8090659,17z",
+    "address": "Birkenstraße 127, 40233 Düsseldorf",
+    "coordinates": {
+      "lat": 51.226934799999995,
+      "lng": 6.809065899999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqHu1Uh47VzQwk6wduPKv4Nsh6z1hwuz6y61VXyocP_RAwIaP7b9xpByTwz-U3mj_0fp0_QANJQI-_nL4nYxZq7WOOF_JM5ZJzhFNXoxYX2TJ8bz7ZvUiUwl30cJmTF5r6MqOsA=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "24448b86",
+    "name": "SCHVARZ KAFFEE",
+    "categories": [
+      "roastery"
+    ],
+    "rating": 4.8,
+    "reviewCount": 603,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/SCHVARZ%20KAFFEE/@51.2195532,6.8239407,17z",
+    "address": "Ronsdorfer Str. 74/Halle 31, 40233 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2195532,
+      "lng": 6.8239407
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepebmln1VWqPK6e0CSbKboGNF-q2_560gSKkapyZab089ef4FO87b-W8DBixMumdlsqPo-3nCGfQ7aPHFCK4l4E2U30Fv39l4U8XD417PDPadZUuL59mScmmrOOBf6qE-d5sxXU=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "39a434e3",
+    "name": "KYTO Coffee Wehrhahn",
+    "categories": [
+      "work-friendly"
+    ],
+    "rating": 4.7,
+    "reviewCount": 553,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/KYTO%20Coffee%20Wehrhahn/@51.2284494,6.7912231,17z",
+    "address": "Am Wehrhahn 42, 40211 Düsseldorf",
+    "coordinates": {
+      "lat": 51.228449399999995,
+      "lng": 6.7912231
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweq9glHhtK2t3Nv9gCv9u5MLhghwiJdbReQ3ZjihoKrG70ITOoG_6uIIvbsfal31DxKIgeWT9jeiHAukaf_WhxQH90HZ2dRSChZbaSNlxGKBmvWAnfxLfxnly588SdXHzMwd2hZ6oZlrn9uW=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "457757fd",
+    "name": "Tomo Cafè",
+    "categories": [
+      "work-friendly",
+      "late-evening"
+    ],
+    "rating": 4.7,
+    "reviewCount": 1095,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Tomo%20Caf%C3%A8/@51.2241017,6.7912716,17z",
+    "address": "Klosterstraße 67, 40211 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2241017,
+      "lng": 6.7912716
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweq2BUPjJLnCSuxkoT8LErNJjwk5gB7NdDT0MwvOj9MvkI6WsBoV4eS-C6-dN7Pb5uBP2UkLTeHnJx4KtJTKqGHdsaBzvMBmd7WXElBopbsCbCAk3xABiYvsK40WdWgSbharH6m-nA=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "3006a60b",
+    "name": "Caffè MA. grande",
+    "categories": [],
+    "rating": null,
+    "reviewCount": null,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caff%C3%A8%20MA.%20grande/@51.2112549,6.7661961,17z",
+    "address": "Bilker Allee 38, 40219 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2112549,
+      "lng": 6.766196099999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepWGBxxpyRZLYLtxOm-3gbCtm7OjsbF5_7pjpAz6q6HT_clhw3qGJuUIUgzT1noh_zhtsUS0omusv_ukc6ZRU-Wsc8i4avxRrhVcef7H-28P5TR676_X3NEuMxTbDPmK_3hdAh-zQ=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "10cc9291",
+    "name": "Goldsheim Coffee",
+    "categories": [],
+    "rating": 4.4,
+    "reviewCount": 700,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Goldsheim%20Coffee/@51.2506308,6.7643736,17z",
+    "address": "Kaiserswerther Str. 239, 40474 Düsseldorf",
+    "coordinates": {
+      "lat": 51.250630799999996,
+      "lng": 6.7643736
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqReaMJUe8Z6AOl1OXS__PDoVl0D_WcTg_-GWUl2gsk5t7c1hTFuQoIA8QJp1pphWkIClBAL8DoWhBq5VbuSvlEUL9MLVj_cE1CMHktJ4deTmoh4KrcRzdpKaqBJiPkGwbJ1muW=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "b32c897a",
+    "name": "RVTC Rösterei VIER Immermann",
+    "categories": [],
+    "rating": 4.7,
+    "reviewCount": 273,
+    "priceTier": null,
+    "status": "closed",
+    "openingHours": "Permanently closed",
+    "mapsUrl": "https://www.google.com/maps/search/RVTC%20R%C3%B6sterei%20VIER%20Immermann/@51.2238568,6.7870901,17z",
+    "address": "Immermannstraße 23, 40210 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2238568,
+      "lng": 6.7870900999999995
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqaxYhoWYPIkTrNM6LnmBbVoAvIpW8HLmoDONoqqnzmUYSaJBnvh-G6CHFRUrfBN0W_OF5yl8X_zZJq85T7ec1MkZGNx-anBICr6WgXYMUYpxqXJ8V7uNvJ7BMbgJ_ho8cYJVH5=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "63248e62",
+    "name": "Café Hüftgold",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.4,
+    "reviewCount": 1640,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20H%C3%BCftgold/@51.2286364,6.8037087,17z",
+    "address": "Ackerstraße 113, 40233 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2286364,
+      "lng": 6.8037087
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepTi7D44FSKzRU4hPs3KRV8IxOLSPZgDkuictiOw6SxtNqlNiSMZCeT-47s9wwWXW_CS1Gsd6JCPdtD0mhlDuy8xKngr2ZFawpwfZv-NWdj9dZYAQ9MO6wo4mliP2dZ1cBkGH7tDxBI8bv3=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "887ced07",
+    "name": "Weird Space Café Friedrichstadt",
+    "categories": [
+      "specialty-coffee",
+      "work-friendly"
+    ],
+    "rating": 4.4,
+    "reviewCount": 205,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Weird%20Space%20Caf%C3%A9%20Friedrichstadt/@51.2150985,6.7866078,17z",
+    "address": "Hüttenstraße 76, 40215 Düsseldorf",
+    "coordinates": {
+      "lat": 51.215098499999996,
+      "lng": 6.7866078
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqFHiyUXJMBxbGC1YKD51wynNFkUGQk27ldoY-mP8AYKj2Fx3E80XJwxYDw7QewS51682noc9J_JQoPcCB3sPfF8iGThGr8nWx5kNCyzav9DljKrpQdhkBuNFaaN6CnqT1zURg=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "0c46c053",
+    "name": "Boho Brunch Café",
+    "categories": [
+      "brunch",
+      "specialty-coffee"
+    ],
+    "rating": 4.8,
+    "reviewCount": 943,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Boho%20Brunch%20Caf%C3%A9/@51.2374551,6.8021916,17z",
+    "address": "Herderstraße 71B, 40237 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2374551,
+      "lng": 6.8021916
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoZ5qjINRNCKEkmoz4ajsQco8sWzJ5HQJptHm5JaiCf7JUTfA6iJqezib31ZqGVOHfF7-O-cBZ8LBboSBKQ3SAdOPaa8SjtmJ22UqM13DLAc8X-PvcuvmrQbX4GkNIyubQjloHFF-7vsM0O=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "f792429c",
+    "name": "ARTA Café",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": null,
+    "reviewCount": null,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/ARTA%20Caf%C3%A9/@51.2220290,6.7828886,17z",
+    "address": "Berliner Allee 30, 40212 Düsseldorf",
+    "coordinates": {
+      "lat": 51.222029,
+      "lng": 6.7828886
+    },
+    "photoUrl": null,
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "74b4311e",
+    "name": "Oma Erika - 1925-Düsseldorf",
+    "categories": [],
+    "rating": null,
+    "reviewCount": null,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Oma%20Erika%20-%201925-D%C3%BCsseldorf/@51.2290322,6.8081686,17z",
+    "address": "Hermannstraße 34B, 40233 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2290322,
+      "lng": 6.8081686
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepOHZrgGtS12LbQnrGdSdxfQ0YK60Z1wT8-jG1rCUlnBdr15o5NK6eKQGHGiYr8Tfrr83eMY-FC4k9PZzxXQVQg4agzPF0p4C_yY2_KXkVD4xphbakHDyH-roYp1QQhGN3pJANWgA=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "ddeb676e",
+    "name": "Café N°18",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.5,
+    "reviewCount": 298,
+    "priceTier": null,
+    "status": "closed",
+    "openingHours": "Permanently closed",
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20N%C2%B018/@51.2234199,6.7907650,17z",
+    "address": "Bendemannstraße 18, 40210 Düsseldorf",
+    "coordinates": {
+      "lat": 51.223419899999996,
+      "lng": 6.7907649999999995
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqOKPi2M16qgsL_GskPGjK1sc4O-Gwm7_YcRy9t14ko6a73ka7ZEtCDwRhRKamwK81itgqpIBUK84KxHpz71BsSJaMODyVoA2nXoHOk9kjzEDes-Gm7-jGYuu4BQli6vFZlM9axTQ=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "7d69abca",
+    "name": "Kausal",
+    "categories": [],
+    "rating": 4.5,
+    "reviewCount": 429,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Kausal/@51.2273278,6.8120533,17z",
+    "address": "Flurstraße 1, 40235 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2273278,
+      "lng": 6.8120533
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwequVOO5WTcZ9RTSfLvrDTwnH5Zo4-HjL0Y-KovdbcTBGNk4vLd9iIN7V5rOoH6_e2otrOlHgpoEczzNafZHJJsny_xny4rnl6k2pj3EbAU3QuEiP6svc3wChZAe5mbp5LjxK948pQ=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "fb9278bd",
+    "name": "Café Nikan - private Kaffeerösterei Düsseldorf",
+    "categories": [
+      "roastery",
+      "specialty-coffee"
+    ],
+    "rating": 4.7,
+    "reviewCount": 407,
+    "priceTier": "€€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Caf%C3%A9%20Nikan%20-%20private%20Kaffeer%C3%B6sterei%20D%C3%BCsseldorf/@51.2368901,6.7978257,17z",
+    "address": "Rethelstraße 98-100, 40237 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2368901,
+      "lng": 6.7978257
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqxez7LfO8j-nqVfYl_JLxiTx1tkaVncPoTaKF92BqSQgojO_3dLNi-RrIipzjLltmWEvnMyGDtKoD_-44kotmzIMDrP14-AGLs0sOKO7j4UZ7-vX-BpAV_lj0x3UZH_FtC4UIwMBTP9KDB=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "bb41100d",
+    "name": "Roasted Kaffeebar - Düsseldorf",
+    "categories": [
+      "roastery"
+    ],
+    "rating": 4.7,
+    "reviewCount": 543,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Roasted%20Kaffeebar%20-%20D%C3%BCsseldorf/@51.2377047,6.7896666,17z",
+    "address": "Moltkestraße 75, 40479 Düsseldorf",
+    "coordinates": {
+      "lat": 51.237704699999995,
+      "lng": 6.789666599999999
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepe9B0UOhc7jjf36KM5gcnJEEQUj4deQFlw6ACGGC6VG6u-WM6IKVldf9dP9Du06WLGxnwguPYmqxVo8MT6tgmkqj1qdVVfyf_EUdanngv9akDsm6QsW6RzKs8BEvyl-w8HNz1K=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "6faa2a45",
+    "name": "Carl Ferdinand Röstfabrik",
+    "categories": [
+      "roastery"
+    ],
+    "rating": 4.8,
+    "reviewCount": 175,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Carl%20Ferdinand%20R%C3%B6stfabrik/@51.2335224,6.7925499,17z",
+    "address": "Düsselthaler Str. 39, 40211 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2335224,
+      "lng": 6.7925499
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqvwWbYrb2J9cV8U9myHDhqBJ97KhntDRq5lXnN2IBeeIgAF05T6VGmfl-7tC6b2Bz73g8igcfzkuQOM6vQb9VRfGcwGRYoHYAj8A1t2Mu6VJ9-cSgiZhW-Fbs9b6b0SSvhnMaSWA=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  },
+  {
+    "id": "9072aadb",
+    "name": "The good coffee by Dave Phoenix",
+    "categories": [],
+    "rating": null,
+    "reviewCount": null,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/The%20good%20coffee%20by%20Dave%20Phoenix/@51.2368218,6.7788419,17z",
+    "address": "Nordstraße 32, 40477 Düsseldorf",
+    "coordinates": {
+      "lat": 51.236821799999994,
+      "lng": 6.7788419
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerPwyb-FuMRX5x9pc9QSzOV-Q4npbw5XJJ7pPI0sEUsB1XAR4OxgH5EdShcw-eakrcrgpPRQxJZQ1MxgiGvcwIoyST7gv629OeOLWT9R7ZovcQae5PbyO3QkLjKC3XCUX8ntuBvuVhV3GRM=w600-h400-k-no",
+    "addedAt": "2026-03-23"
+  }
+]

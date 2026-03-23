@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sync": "tsx scripts/sync-google-maps-list.ts",
+    "sync:headed": "tsx scripts/sync-google-maps-list.ts --headed",
+    "validate": "tsx scripts/validate-cafes.ts"
   },
   "dependencies": {
     "next": "16.2.1",
@@ -14,13 +17,16 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@playwright/browser-chromium": "^1.58.2",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
+    "playwright": "^1.58.2",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }
