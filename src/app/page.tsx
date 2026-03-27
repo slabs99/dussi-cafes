@@ -110,6 +110,7 @@ function CafeDirectory() {
   const [apparel, setApparel] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [filters, setFilters] = useState<FilterState>(() => paramsToFilters(searchParams));
+  const [visibleCount, setVisibleCount] = useState(12);
   const [randomCafe, setRandomCafe] = useState<Cafe | null>(null);
   const [sparkling, setSparkling] = useState(false);
   const [btnAnimating, setBtnAnimating] = useState(false);
@@ -147,9 +148,13 @@ function CafeDirectory() {
 
   const handleChange = useCallback((next: Partial<FilterState>) => {
     setFilters((prev) => ({ ...prev, ...next }));
+    setVisibleCount(12);
   }, []);
 
-  const handleClear = useCallback(() => setFilters(DEFAULT_FILTERS), []);
+  const handleClear = useCallback(() => {
+    setFilters(DEFAULT_FILTERS);
+    setVisibleCount(12);
+  }, []);
 
   const filtered = applyFilters(cafes, filters);
 
@@ -241,11 +246,26 @@ function CafeDirectory() {
               </button>
             </div>
           ) : (
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-6 sm:gap-x-8 sm:gap-y-12">
-              {filtered.map((cafe, i) => (
-                <CafeCard key={cafe.id} cafe={cafe} index={i} />
-              ))}
-            </div>
+            <>
+              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-6 sm:gap-x-8 sm:gap-y-12">
+                {filtered.slice(0, visibleCount).map((cafe, i) => (
+                  <CafeCard key={cafe.id} cafe={cafe} index={i} />
+                ))}
+              </div>
+              {visibleCount < filtered.length && (
+                <div className="text-center mt-10 sm:mt-14">
+                  <button
+                    onClick={() => setVisibleCount((n) => n + 12)}
+                    className="text-xs uppercase tracking-widest border border-stone-300 text-stone-600 px-8 py-3 hover:border-[#2D6A4F] hover:text-[#2D6A4F] transition-colors"
+                  >
+                    Show more
+                    <span className="ml-2 text-stone-400">
+                      ({filtered.length - visibleCount} left)
+                    </span>
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </div>
       </section>
