@@ -1,8 +1,8 @@
 /**
  * Enriches cafes.json with data from the Google Places API (New).
  *
- * Adds per-cafe: placeId, weekdayHours, website, phone.
- * Only fetches cafes that are missing placeId (incremental — safe to re-run).
+ * Adds per-cafe: placeId, rating, userRatingCount, weekdayHours, website, phone.
+ * Only fetches cafes that are missing placeId OR have a stale rating of 5.0 (incremental — safe to re-run).
  *
  * Prerequisites:
  *   1. Enable "Places API (New)" in Google Cloud Console
@@ -29,6 +29,8 @@ interface CafeRecord {
   name: string;
   address: string | null;
   placeId: string | null;
+  rating: number | null;
+  userRatingCount: number | null;
   weekdayHours: string[] | null;
   website: string | null;
   phone: string | null;
@@ -61,11 +63,13 @@ async function findPlaceId(name: string, address: string | null): Promise<string
 }
 
 async function fetchPlaceDetails(placeId: string): Promise<{
+  rating: number | null;
+  userRatingCount: number | null;
   weekdayHours: string[] | null;
   website: string | null;
   phone: string | null;
 }> {
-  const fields = "regularOpeningHours,websiteUri,nationalPhoneNumber";
+  const fields = "rating,userRatingCount,regularOpeningHours,websiteUri,nationalPhoneNumber";
   const res = await fetch(`${PLACES_BASE}/places/${placeId}?languageCode=en`, {
     headers: {
       "X-Goog-Api-Key": API_KEY!,
@@ -75,11 +79,13 @@ async function fetchPlaceDetails(placeId: string): Promise<{
 
   if (!res.ok) {
     console.warn(`   getPlace failed (${res.status})`);
-    return { weekdayHours: null, website: null, phone: null };
+    return { rating: null, userRatingCount: null, weekdayHours: null, website: null, phone: null };
   }
 
   const data = await res.json();
   return {
+    rating: (data.rating as number) ?? null,
+    userRatingCount: (data.userRatingCount as number) ?? null,
     weekdayHours: (data.regularOpeningHours?.weekdayDescriptions as string[]) ?? null,
     website: (data.websiteUri as string) ?? null,
     phone: (data.nationalPhoneNumber as string) ?? null,
@@ -90,7 +96,8 @@ async function fetchPlaceDetails(placeId: string): Promise<{
 
 async function main() {
   const cafes: CafeRecord[] = JSON.parse(fs.readFileSync(DATA_PATH, "utf-8"));
-  const toEnrich = cafes.filter((c) => !c.placeId);
+  // Also re-fetch cafes with a placeId but stale/missing rating data
+  const toEnrich = cafes.filter((c) => !c.placeId || c.rating === null || c.rating === undefined);
 
   console.log(`\n🔍 Enriching ${toEnrich.length} cafes (${cafes.length - toEnrich.length} already done)\n`);
 
@@ -110,11 +117,14 @@ async function main() {
 
       const details = await fetchPlaceDetails(placeId);
       cafe.placeId = placeId;
+      cafe.rating = details.rating;
+      cafe.userRatingCount = details.userRatingCount;
       cafe.weekdayHours = details.weekdayHours;
       cafe.website = details.website;
       cafe.phone = details.phone;
 
       const tags = [
+        details.rating != null ? `⭐ ${details.rating} (${details.userRatingCount})` : null,
         details.weekdayHours ? "hours" : null,
         details.website ? "website" : null,
         details.phone ? "phone" : null,

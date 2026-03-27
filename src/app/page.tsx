@@ -220,7 +220,7 @@ function CafeDirectory() {
             </div>
           </div>
         </div>
-        <div className="mt-6 sm:mt-10 border-t border-[#E0DDD9]" />
+        <div className="mt-6 sm:mt-10" />
       </header>
 
       {/* Filter bar */}

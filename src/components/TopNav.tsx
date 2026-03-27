@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { LANG_NAMES, LANG_FLAGS, type LangCode } from "@/lib/translations";
 
-const ACTIVE_LANGS: LangCode[] = ["en", "de", "nl", "es", "ar", "fr", "it", "pt", "hi"];
+const ACTIVE_LANGS: LangCode[] = ["en", "de"];
 
 type SectionKey = "beans" | "gear" | "kits" | "apparel";
 const LIFESTYLE_SECTIONS: SectionKey[] = ["beans", "gear", "kits", "apparel"];

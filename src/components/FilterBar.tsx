@@ -84,19 +84,36 @@ export default function FilterBar({
         {/* Divider */}
         <span className="h-4 w-px bg-stone-300 flex-shrink-0" />
 
-        {/* Category dropdown */}
+        {/* Mobile: category dropdown */}
         <select
           value={filters.category}
           onChange={(e) => onChange({ category: e.target.value as Category | "" })}
-          className={`${selectCls} flex-shrink-0`}
+          className={`${selectCls} flex-shrink-0 sm:hidden`}
         >
           {CATEGORIES.map((c) => (
             <option key={c.value} value={c.value}>{c.label}</option>
           ))}
         </select>
 
+        {/* Desktop: category tag buttons */}
+        <div className="hidden sm:flex items-center gap-0.5 flex-1 overflow-x-auto scrollbar-none -mx-1 px-1">
+          {CATEGORIES.map((c) => (
+            <button
+              key={c.value}
+              onClick={() => onChange({ category: c.value as Category | "" })}
+              className={`flex-shrink-0 px-2.5 py-1 text-xs rounded-sm transition-colors ${
+                filters.category === c.value
+                  ? "text-[#2D6A4F] font-semibold bg-[#2D6A4F]/8"
+                  : "text-stone-500 hover:text-stone-900"
+              }`}
+            >
+              {c.label}
+            </button>
+          ))}
+        </div>
+
         {/* Sort + count — right side */}
-        <div className="ml-auto flex items-center gap-3 flex-shrink-0">
+        <div className="ml-auto sm:ml-0 flex items-center gap-3 flex-shrink-0">
           <select
             value={filters.sort}
             onChange={(e) => onChange({ sort: e.target.value as SortKey })}
