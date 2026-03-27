@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 
 const PREVIEW_COOKIE = "preview-access";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // ── Preview gate ──────────────────────────────────────────────────────────
