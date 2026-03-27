@@ -1882,5 +1882,63 @@
     },
     "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerPwyb-FuMRX5x9pc9QSzOV-Q4npbw5XJJ7pPI0sEUsB1XAR4OxgH5EdShcw-eakrcrgpPRQxJZQ1MxgiGvcwIoyST7gv629OeOLWT9R7ZovcQae5PbyO3QkLjKC3XCUX8ntuBvuVhV3GRM=w600-h400-k-no",
     "addedAt": "2026-03-23"
+  },
+  {
+    "id": "c0c4b2b8",
+    "name": "das Alfreds - Café & Restaurant",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.6,
+    "reviewCount": 342,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/das%20Alfreds%20-%20Caf%C3%A9%20%26%20Restaurant/@51.2387487,6.8033299,17z",
+    "address": "Brehmpl. 1, 40239 Düsseldorf",
+    "coordinates": {
+      "lat": 51.238748699999995,
+      "lng": 6.8033299
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweq0DrATwc2Xz1mGt1Xrlb59UHRAopFFQrbvHFCrlOkHTn7HJrVoNJJDFAhLEwDfMddu9w1JPCHxLfwUZtWMM5qGa7X3M7xUpe2K0HyPDak-QCGZlJ0223jLGTyEQrtRSrV4zdQa=w600-h400-k-no",
+    "addedAt": "2026-03-27"
+  },
+  {
+    "id": "3ea85837",
+    "name": "Align Café",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": 4.9,
+    "reviewCount": 68,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/Align%20Caf%C3%A9/@51.2250544,6.7885744,17z",
+    "address": "Oststraße 54, 40211 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2250544,
+      "lng": 6.7885744
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwep-J-bRUCQpOb1Tyw3cHDDdyoKe1ctG_FqPc6nsS5vOEPX9UP65PUoPreeampf-fqzork3YDCtLhpDaSaaJo_ETdb1aoRWOxLdEhA_8fjz3jzu1H2Z_vBpRBeVYlue8orSVQzKlChnVJ2Ny=w600-h400-k-no",
+    "addedAt": "2026-03-27"
+  },
+  {
+    "id": "627eb9e4",
+    "name": "TENTEN COFFEE",
+    "categories": [],
+    "rating": 4.3,
+    "reviewCount": 1246,
+    "priceTier": "€",
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://www.google.com/maps/search/TENTEN%20COFFEE/@51.2248006,6.7879838,17z",
+    "address": "Oststraße 57, 40210 Düsseldorf",
+    "coordinates": {
+      "lat": 51.224800599999995,
+      "lng": 6.7879838
+    },
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwer5E7ODXvzjWSDO97NCEkiJzX3PTwb8VIS_u_T26ExQ3pL5pWZxbpdlN9-VjOtteSaECGyS96KmHEBHeGskIkCUoQ4HlyKoTVTM8EOoulSan4PppCTmKG3LcKDSC7M60J8rIR6qKg=w600-h400-k-no",
+    "addedAt": "2026-03-27"
   }
 ]
