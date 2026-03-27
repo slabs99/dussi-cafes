@@ -67,13 +67,17 @@ function CafeDirectory() {
   const [randomCafe, setRandomCafe] = useState<Cafe | null>(null);
 
   useEffect(() => {
-    fetch("/data/cafes.json")
-      .then((r) => r.json())
-      .then((data) => {
-        setCafes(data);
-        setLoading(false);
-      })
-      .catch(console.error);
+    Promise.all([
+      fetch("/data/cafes.json").then((r) => r.json()),
+      fetch("/data/overrides.json").then((r) => r.json()).catch(() => ({})),
+    ]).then(([rawCafes, overrides]: [Cafe[], Record<string, Partial<Cafe>>]) => {
+      const merged = rawCafes.map((cafe) => {
+        const ov = overrides[cafe.id];
+        return ov ? { ...cafe, ...ov } : cafe;
+      });
+      setCafes(merged);
+      setLoading(false);
+    });
   }, []);
 
   useEffect(() => {

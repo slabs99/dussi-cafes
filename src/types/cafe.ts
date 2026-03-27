@@ -24,6 +24,7 @@ export interface Cafe {
   coordinates: { lat: number; lng: number } | null;
   photoUrl: string | null;
   addedAt: string | null;
+  comment: string | null;   // editorial note set from admin panel
   // Enriched via Google Places API (null until enrich script is run)
   placeId: string | null;
   weekdayHours: string[] | null;  // ["Monday: 8 AM – 6 PM", ...]

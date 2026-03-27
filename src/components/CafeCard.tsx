@@ -91,6 +91,12 @@ export default function CafeCard({
             {hoursDisplay}
           </p>
         )}
+
+        {cafe.comment && (
+          <p className="text-[0.7rem] text-stone-400 italic leading-snug line-clamp-2 mt-0.5">
+            {cafe.comment}
+          </p>
+        )}
       </div>
     </a>
   );

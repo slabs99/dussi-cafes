@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import AdminDashboard from "./AdminDashboard";
 import cafesData from "../../../public/data/cafes.json";
+import overridesData from "../../../public/data/overrides.json";
 import type { Cafe } from "@/types/cafe";
 
 export const dynamic = "force-dynamic";
@@ -12,11 +13,13 @@ export default async function AdminPage() {
   if (!token || token !== process.env.ADMIN_SECRET) redirect("/admin/login");
 
   const cafes = cafesData as Cafe[];
+  const overrides = overridesData as Record<string, unknown>;
+
   const stats = {
     total: cafes.length,
     withPhoto: cafes.filter((c) => c.photoUrl).length,
     withRating: cafes.filter((c) => c.rating !== null).length,
-    enriched: cafes.filter((c) => c.placeId).length,
+    enriched: Object.keys(overrides).length,
     categories: Object.entries(
       cafes.reduce<Record<string, number>>((acc, c) => {
         c.categories.forEach((cat) => { acc[cat] = (acc[cat] ?? 0) + 1; });
@@ -26,8 +29,5 @@ export default async function AdminPage() {
     lastSync: cafes[0]?.addedAt ?? null,
   };
 
-  const hasGithubToken = !!process.env.GITHUB_TOKEN;
-  const hasPlacesKey = !!process.env.GOOGLE_PLACES_API_KEY;
-
-  return <AdminDashboard stats={stats} hasGithubToken={hasGithubToken} hasPlacesKey={hasPlacesKey} />;
+  return <AdminDashboard stats={stats} hasGithubToken={!!process.env.GITHUB_TOKEN} />;
 }
