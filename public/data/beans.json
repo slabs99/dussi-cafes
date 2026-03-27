@@ -1,20 +1,33 @@
 [
   {
     "id": "five-elephant-guji",
-    "name": "Ethiopia Guji Natural",
-    "brand": "Five Elephant",
-    "description": "Juicy and bright with notes of blueberry, jasmine, and dark chocolate. One of our all-time favourites from Berlin's finest.",
-    "tags": ["Ethiopia", "Light Roast", "Natural", "Filter"],
-    "price": "€14.50",
-    "buyUrl": "https://www.five-elephant.de/collections/filter-coffee",
-    "imageUrl": "https://picsum.photos/seed/beans-guji/800/600"
+    "name": "Carl",
+    "brand": "Das Cøffe (CØFFE Rösterei & Café)",
+    "description": "A smooth, balanced Brazilian espresso with chocolate depth and a subtle plum sweetness. A versatile everyday coffee that works beautifully both black and with milk.",
+    "tags": [
+      "Brazil",
+      "Single origin",
+      "Medium roast",
+      "Espresso",
+      "Filter",
+      "Plum",
+      "Chocolate"
+    ],
+    "price": "€11.90/250g",
+    "buyUrl": "https://dascoffe.store/products/carl-250g",
+    "imageUrl": "/photos/beans-five-elephant-guji.webp"
   },
   {
     "id": "the-barn-yirgacheffe",
     "name": "Yirgacheffe Kochere",
     "brand": "The Barn",
     "description": "Delicate and tea-like. Expect bergamot, white peach, and a clean finish. Perfect for a slow morning pour-over.",
-    "tags": ["Ethiopia", "Light Roast", "Washed", "Filter"],
+    "tags": [
+      "Ethiopia",
+      "Light Roast",
+      "Washed",
+      "Filter"
+    ],
     "price": "€16.00",
     "buyUrl": "https://the-barn.de/collections/filter",
     "imageUrl": "https://picsum.photos/seed/beans-yirg/800/600"
@@ -24,7 +37,12 @@
     "name": "Signature Blend",
     "brand": "Fjaka",
     "description": "Roasted right here in Düsseldorf. A balanced medium roast with caramel, hazelnut, and a smooth finish — works beautifully as espresso or filter.",
-    "tags": ["Blend", "Medium Roast", "Espresso & Filter", "Local"],
+    "tags": [
+      "Blend",
+      "Medium Roast",
+      "Espresso & Filter",
+      "Local"
+    ],
     "price": "€12.00",
     "buyUrl": "https://www.fjaka.de",
     "imageUrl": "https://picsum.photos/seed/beans-fjaka/800/600"
@@ -34,7 +52,12 @@
     "name": "Finca El Suelo",
     "brand": "Tim Wendelboe",
     "description": "From the legendary Oslo roaster. Stone fruit, honey sweetness, and a silky body. Worth every cent.",
-    "tags": ["Colombia", "Light Roast", "Washed", "Filter"],
+    "tags": [
+      "Colombia",
+      "Light Roast",
+      "Washed",
+      "Filter"
+    ],
     "price": "€22.00",
     "buyUrl": "https://timwendelboe.no/collections/coffee",
     "imageUrl": "https://picsum.photos/seed/beans-wendelboe/800/600"
@@ -44,7 +67,11 @@
     "name": "Red Brick Espresso",
     "brand": "Square Mile",
     "description": "The gold standard espresso blend from London. Rich, sweet, and consistent — works with milk or straight.",
-    "tags": ["Blend", "Medium Roast", "Espresso"],
+    "tags": [
+      "Blend",
+      "Medium Roast",
+      "Espresso"
+    ],
     "price": "€13.50",
     "buyUrl": "https://shop.squaremilecoffee.com",
     "imageUrl": "https://picsum.photos/seed/beans-squaremile/800/600"
@@ -54,7 +81,12 @@
     "name": "Colombia La Palma",
     "brand": "Nomad Coffee",
     "description": "Barcelona's finest brings a stunning Colombian lot — milk chocolate, brown sugar, and a gentle citrus brightness.",
-    "tags": ["Colombia", "Medium-Light", "Washed", "Filter & Espresso"],
+    "tags": [
+      "Colombia",
+      "Medium-Light",
+      "Washed",
+      "Filter & Espresso"
+    ],
     "price": "€15.00",
     "buyUrl": "https://nomadcoffee.es/en/collections/coffee",
     "imageUrl": "https://picsum.photos/seed/beans-nomad/800/600"
