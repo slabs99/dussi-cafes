@@ -7,7 +7,7 @@
   "gear": {
     "title": "Coffee Gear",
     "subtitle": "The tools worth having. No fluff.",
-    "enabled": true
+    "enabled": false
   },
   "kits": {
     "title": "Home Barista Kits",
