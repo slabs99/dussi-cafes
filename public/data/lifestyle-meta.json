@@ -12,7 +12,7 @@
   "kits": {
     "title": "Home Barista Kits",
     "subtitle": "Start somewhere good.",
-    "enabled": true
+    "enabled": false
   },
   "apparel": {
     "title": "Apparel",
