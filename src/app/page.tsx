@@ -12,6 +12,7 @@ import {
 } from "@/lib/filters";
 import FilterBar from "@/components/FilterBar";
 import CafeCard from "@/components/CafeCard";
+import RandomCafeModal from "@/components/RandomCafeModal";
 
 function LoadingSkeleton() {
   return (
@@ -63,6 +64,7 @@ function CafeDirectory() {
   const [filters, setFilters] = useState<FilterState>(() =>
     paramsToFilters(searchParams)
   );
+  const [randomCafe, setRandomCafe] = useState<Cafe | null>(null);
 
   useEffect(() => {
     fetch("/data/cafes.json")
@@ -91,6 +93,23 @@ function CafeDirectory() {
   const filtered = applyFilters(cafes, filters);
   const totalCount = cafes.length;
 
+  const openRandom = useCallback(() => {
+    const pool = filtered.length > 0 ? filtered : cafes;
+    if (!pool.length) return;
+    setRandomCafe(pool[Math.floor(Math.random() * pool.length)]);
+  }, [filtered, cafes]);
+
+  const nextRandom = useCallback(() => {
+    const pool = filtered.length > 0 ? filtered : cafes;
+    if (pool.length < 2) return;
+    setRandomCafe((prev) => {
+      let next: Cafe;
+      do { next = pool[Math.floor(Math.random() * pool.length)]; }
+      while (next.id === prev?.id);
+      return next;
+    });
+  }, [filtered, cafes]);
+
   return (
     <>
       {/* Hero header */}
@@ -115,9 +134,16 @@ function CafeDirectory() {
             <p className="text-xs uppercase tracking-widest text-stone-500 mb-2">
               Düsseldorf
             </p>
-            <p className="text-stone-600 text-sm leading-relaxed">
+            <p className="text-stone-600 text-sm leading-relaxed mb-4">
               A personal guide to the best coffee spots, hand-picked by coffee lovers.
             </p>
+            <button
+              onClick={openRandom}
+              disabled={loading}
+              className="text-xs uppercase tracking-widest border border-[#2D6A4F] text-[#2D6A4F] px-4 py-2 hover:bg-[#2D6A4F] hover:text-white transition-colors disabled:opacity-40"
+            >
+              Surprise me
+            </button>
           </div>
 
         </div>
@@ -159,6 +185,14 @@ function CafeDirectory() {
       <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8 border-t border-[#E0DDD9] text-center text-xs text-stone-500 tracking-wider">
         Made with love in Düsseldorf
       </footer>
+
+      {randomCafe && (
+        <RandomCafeModal
+          cafe={randomCafe}
+          onClose={() => setRandomCafe(null)}
+          onNext={nextRandom}
+        />
+      )}
     </>
   );
 }

@@ -1,0 +1,42 @@
+name: Sync cafes
+
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Reason for sync"
+        required: false
+        default: "Manual sync from admin panel"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci
+
+      - run: npx playwright install chromium --with-deps
+
+      - run: npm run sync
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/cafes.json
+          if git diff --staged --quiet; then
+            echo "No changes to cafes.json"
+          else
+            git commit -m "chore: sync cafes data"
+            git push
+            echo "Pushed — Vercel will redeploy automatically"
+          fi
