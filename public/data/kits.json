@@ -8,7 +8,7 @@
     "tags": ["Beginner", "Filter Coffee", "Under €80"],
     "price": "~€75",
     "buyUrl": "https://www.amazon.de/s?k=pour+over+coffee+starter+kit",
-    "imageUrl": "https://images.unsplash.com/photo-1511920183353-b0800cc62c9d?w=800&h=600&fit=crop&q=80"
+    "imageUrl": "https://picsum.photos/seed/kit-pourover/800/600"
   },
   {
     "id": "aeropress-travel",
@@ -19,7 +19,7 @@
     "tags": ["Travel", "Compact", "All-in-One"],
     "price": "~€120",
     "buyUrl": "https://www.amazon.de/s?k=aeropress+travel+kit",
-    "imageUrl": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&h=600&fit=crop&q=80"
+    "imageUrl": "https://picsum.photos/seed/kit-travel/800/600"
   },
   {
     "id": "upgrade-kit",
@@ -30,7 +30,7 @@
     "tags": ["Intermediate", "Serious Brewer", "Gift-Worthy"],
     "price": "~€500",
     "buyUrl": "https://www.amazon.de/s?k=coffee+enthusiast+kit",
-    "imageUrl": "https://images.unsplash.com/photo-1442975631134-6f74a4b4b9db?w=800&h=600&fit=crop&q=80"
+    "imageUrl": "https://picsum.photos/seed/kit-upgrade/800/600"
   },
   {
     "id": "espresso-home",
@@ -41,6 +41,6 @@
     "tags": ["Espresso-Style", "No Machine", "Budget-Friendly"],
     "price": "~€100",
     "buyUrl": "https://www.amazon.de/s?k=moka+pot+coffee+kit",
-    "imageUrl": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&h=600&fit=crop&q=80"
+    "imageUrl": "https://picsum.photos/seed/kit-espresso/800/600"
   }
 ]

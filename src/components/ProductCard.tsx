@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
 export interface Product {
@@ -22,6 +23,7 @@ export default function ProductCard({
   index?: number;
 }) {
   const { t } = useLanguage();
+  const [imgError, setImgError] = useState(false);
 
   return (
     <div
@@ -33,11 +35,12 @@ export default function ProductCard({
         className="relative overflow-hidden bg-[#EDE8E2] flex items-center justify-center"
         style={{ aspectRatio: "4/3" }}
       >
-        {product.imageUrl ? (
+        {product.imageUrl && !imgError ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={product.imageUrl}
             alt={product.name}
+            onError={() => setImgError(true)}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
         ) : (
