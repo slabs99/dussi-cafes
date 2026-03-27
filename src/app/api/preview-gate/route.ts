@@ -7,7 +7,8 @@ export async function POST(req: Request) {
   const { pin, next } = await req.json() as { pin: string; next?: string };
   const expected = process.env.PREVIEW_PIN;
 
-  if (!expected || pin.trim() !== expected.trim()) {
+  const clean = (s: string) => s.replace(/[\s\u200B-\u200D\uFEFF\r\n]/g, "");
+  if (!expected || clean(pin) !== clean(expected)) {
     return NextResponse.json({ error: "Wrong PIN" }, { status: 401 });
   }
 
