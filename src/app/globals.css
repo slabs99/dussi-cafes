@@ -22,19 +22,15 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
+/* ── Base animations ───────────────────────────────────────────────────────── */
+
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes shimmer {
-  0% { background-position: -400px 0; }
+  0%   { background-position: -400px 0; }
   100% { background-position: 400px 0; }
 }
 
@@ -52,7 +48,8 @@ body {
   font-family: var(--font-playfair), Georgia, serif;
 }
 
-/* Coffee bean scatter animation */
+/* ── Coffee bean scatter ───────────────────────────────────────────────────── */
+
 .coffee-bean {
   display: block;
   opacity: 0;
@@ -69,4 +66,96 @@ body {
 .bean-host:hover h1 {
   color: #2D6A4F;
   transition: color 0.4s ease;
+}
+
+/* ── Modal spring entrance ─────────────────────────────────────────────────── */
+
+@keyframes modalSpring {
+  0%   { opacity: 0; transform: scale(0.86) translateY(28px); }
+  55%  { opacity: 1; transform: scale(1.03) translateY(-5px); }
+  80%  { transform: scale(0.99) translateY(1px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-modal-spring {
+  animation: modalSpring 0.52s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* ── Language dropdown slide ───────────────────────────────────────────────── */
+
+@keyframes dropdownIn {
+  from { opacity: 0; transform: translateY(-8px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-dropdown {
+  animation: dropdownIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Surprise me button pop ────────────────────────────────────────────────── */
+
+@keyframes surprisePop {
+  0%   { transform: scale(1); }
+  25%  { transform: scale(1.1); }
+  65%  { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.animate-surprise-pop {
+  animation: surprisePop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ── Sparkle burst particles ───────────────────────────────────────────────── */
+
+@keyframes sparkleBurst {
+  0%   { opacity: 1; transform: translate(0, 0) scale(1) rotate(0deg); }
+  100% { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(0.2) rotate(180deg); }
+}
+
+.sparkle-particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  margin: -3.5px 0 0 -3.5px;
+  pointer-events: none;
+  animation: sparkleBurst 0.65s ease-out forwards;
+  color: #2D6A4F;
+  font-size: 9px;
+  line-height: 1;
+}
+
+/* ── Filter category pop ───────────────────────────────────────────────────── */
+
+@keyframes filterPop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.14); }
+  100% { transform: scale(1); }
+}
+
+.animate-filter-pop {
+  animation: filterPop 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ── Page hero float ───────────────────────────────────────────────────────── */
+
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-5px); }
+}
+
+.animate-hero-float {
+  animation: heroFloat 5s ease-in-out infinite;
+}
+
+/* ── Card grid stagger helper ──────────────────────────────────────────────── */
+
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-card {
+  animation: cardFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
 }

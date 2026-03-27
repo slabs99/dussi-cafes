@@ -2,9 +2,9 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { LANG_NAMES, type LangCode } from "@/lib/translations";
+import { LANG_NAMES, LANG_FLAGS, type LangCode } from "@/lib/translations";
 
-const ACTIVE_LANGS: LangCode[] = ["en", "de", "nl", "es", "ar", "fr", "it", "pt"];
+const ACTIVE_LANGS: LangCode[] = ["en", "de", "nl", "es", "ar", "fr", "it", "pt", "hi"];
 
 export default function LanguageSwitcher() {
   const { lang, setLang } = useLanguage();
@@ -20,37 +20,47 @@ export default function LanguageSwitcher() {
   }, []);
 
   return (
-    <div ref={ref} className="relative">
+    <div ref={ref} className="fixed top-4 right-4 z-50">
+      {/* Trigger */}
       <button
         onClick={() => setOpen((o) => !o)}
-        className="flex items-center gap-1.5 text-xs uppercase tracking-wider text-stone-500 hover:text-stone-800 transition-colors"
+        className="flex items-center gap-1.5 bg-white/90 backdrop-blur-sm border border-[#E0DDD9] shadow-sm px-3 py-1.5 text-xs text-stone-600 hover:text-stone-900 hover:border-stone-400 transition-all"
       >
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.2" />
-          <ellipse cx="7" cy="7" rx="2.5" ry="5.5" stroke="currentColor" strokeWidth="1.2" />
-          <path d="M1.5 5h11M1.5 9h11" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-        </svg>
-        <span>{LANG_NAMES[lang]}</span>
-        <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
-          <path d="M1.5 3L4 5.5L6.5 3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+        <span className="text-base leading-none">{LANG_FLAGS[lang]}</span>
+        <span className="hidden sm:inline tracking-wide">{LANG_NAMES[lang]}</span>
+        <svg
+          width="8"
+          height="8"
+          viewBox="0 0 8 8"
+          fill="none"
+          className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+        >
+          <path d="M1.5 3L4 5.5L6.5 3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </button>
 
+      {/* Dropdown */}
       {open && (
-        <div className="absolute top-full right-0 mt-1.5 bg-white border border-[#E0DDD9] shadow-lg min-w-[160px] py-1 z-50">
+        <div className="animate-dropdown absolute top-full right-0 mt-1.5 bg-white border border-[#E0DDD9] shadow-lg min-w-[165px] py-1 z-50 origin-top-right">
           {ACTIVE_LANGS.map((l) => (
             <button
               key={l}
               onClick={() => { setLang(l); setOpen(false); }}
-              className={`w-full text-left px-4 py-2 text-xs hover:bg-stone-50 transition-colors ${
-                l === lang ? "text-[#2D6A4F] font-medium" : "text-stone-700"
+              className={`w-full text-left px-3 py-2 text-xs flex items-center gap-2.5 hover:bg-stone-50 transition-colors ${
+                l === lang ? "text-[#2D6A4F] font-medium bg-[#2D6A4F]/5" : "text-stone-700"
               }`}
             >
-              {LANG_NAMES[l]}
+              <span className="text-base leading-none">{LANG_FLAGS[l]}</span>
+              <span>{LANG_NAMES[l]}</span>
+              {l === lang && (
+                <svg className="ml-auto" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M2 5L4.2 7.5L8 2.5" stroke="#2D6A4F" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              )}
             </button>
           ))}
           <div className="border-t border-[#E0DDD9] mt-1 pt-1">
-            <p className="px-4 py-2 text-[0.65rem] text-stone-400 italic">More languages coming</p>
+            <p className="px-3 py-1.5 text-[0.62rem] text-stone-400 italic">More languages coming</p>
           </div>
         </div>
       )}

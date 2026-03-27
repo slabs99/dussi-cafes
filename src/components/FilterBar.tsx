@@ -96,12 +96,17 @@ export default function FilterBar({
             <button
               key={c.value}
               onClick={() => toggleCategory(c.value)}
-              className={
+              className={`flex items-center gap-1 transition-colors ${
                 filters.category === c.value
                   ? "text-xs uppercase tracking-wider font-semibold text-[#2D6A4F] underline underline-offset-4"
-                  : "text-xs uppercase tracking-wider text-stone-500 hover:text-stone-800 transition-colors"
-              }
+                  : "text-xs uppercase tracking-wider text-stone-500 hover:text-stone-800"
+              }`}
             >
+              {c.value === "our-picks" && (
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" className="flex-shrink-0">
+                  <path d="M5 0.8L6.2 3.7L9.3 3.9L7 6L7.8 9.2L5 7.5L2.2 9.2L3 6L0.7 3.9L3.8 3.7Z" />
+                </svg>
+              )}
               {c.label}
             </button>
           ))}

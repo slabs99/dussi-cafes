@@ -1,4 +1,4 @@
-export type LangCode = "en" | "de" | "nl" | "es" | "ar" | "fr" | "it" | "pt";
+export type LangCode = "en" | "de" | "nl" | "es" | "ar" | "fr" | "it" | "pt" | "hi";
 
 export const LANG_NAMES: Record<LangCode, string> = {
   en: "English",
@@ -9,6 +9,19 @@ export const LANG_NAMES: Record<LangCode, string> = {
   fr: "Français",
   it: "Italiano",
   pt: "Português",
+  hi: "हिन्दी",
+};
+
+export const LANG_FLAGS: Record<LangCode, string> = {
+  en: "🇬🇧",
+  de: "🇩🇪",
+  nl: "🇳🇱",
+  es: "🇪🇸",
+  ar: "🇸🇦",
+  fr: "🇫🇷",
+  it: "🇮🇹",
+  pt: "🇵🇹",
+  hi: "🇮🇳",
 };
 
 export const RTL_LANGS: LangCode[] = ["ar"];
@@ -248,5 +261,31 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     noPhoto: "Sem foto",
     tryAnother: "Tentar outro",
     moreLanguagesComing: "Mais idiomas em breve",
+  },
+  hi: {
+    search: "खोजें...",
+    clear: "साफ़ करें",
+    places: "जगहें",
+    of: "में से",
+    sortTopRated: "सर्वश्रेष्ठ",
+    sortAtoZ: "A से Z",
+    sortMostReviewed: "अधिक रेटेड",
+    catSpecialtyCoffee: "स्पेशलिटी कॉफी",
+    catBakery: "बेकरी",
+    catBrunch: "ब्रंच",
+    catRoastery: "रोस्टरी",
+    catWorkFriendly: "वर्क-फ्रेंडली",
+    catLateEvening: "रात का समय",
+    catOurPicks: "हमारी पसंद",
+    tagline: "कॉफी प्रेमियों द्वारा चुने गए डसेलडोर्फ के सर्वश्रेष्ठ कैफे की व्यक्तिगत गाइड।",
+    location: "डसेलडोर्फ",
+    surpriseMe: "चौंकाइए मुझे",
+    noCafesMatch: "आपके फ़िल्टर से कोई कैफे नहीं मिला",
+    clearAllFilters: "सभी फ़िल्टर हटाएं",
+    madeWithLove: "डसेलडोर्फ में प्यार से बनाया",
+    openInMaps: "मैप में खोलें",
+    noPhoto: "कोई फ़ोटो नहीं",
+    tryAnother: "दूसरा देखें",
+    moreLanguagesComing: "अधिक भाषाएं आ रही हैं",
   },
 };

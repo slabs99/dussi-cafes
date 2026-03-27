@@ -41,7 +41,7 @@ export default function RandomCafeModal({
       onClick={onClose}
     >
       <div
-        className="bg-white w-full max-w-sm overflow-hidden shadow-2xl animate-fade-up"
+        className="bg-white w-full max-w-sm overflow-hidden shadow-2xl animate-modal-spring"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Photo */}
