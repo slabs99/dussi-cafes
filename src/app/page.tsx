@@ -251,7 +251,7 @@ function CafeDirectory() {
       </main>
 
       <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8 border-t border-[#E0DDD9] text-center text-xs text-stone-500 tracking-wider animate-fade-up">
-        {t.madeWithLove}
+        Made with ❤️ in Düsseldorf
       </footer>
 
       {randomCafe && (
