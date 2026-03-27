@@ -71,21 +71,6 @@
     "imageUrl": "/photos/beans-fjaka-signature.webp"
   },
   {
-    "id": "tim-wendelboe-finca",
-    "name": "Finca El Suelo",
-    "brand": "Tim Wendelboe",
-    "description": "From the legendary Oslo roaster. Stone fruit, honey sweetness, and a silky body. Worth every cent.",
-    "tags": [
-      "Colombia",
-      "Light Roast",
-      "Washed",
-      "Filter"
-    ],
-    "price": "€22.00",
-    "buyUrl": "https://timwendelboe.no/collections/coffee",
-    "imageUrl": "https://picsum.photos/seed/beans-wendelboe/800/600"
-  },
-  {
     "id": "square-mile-red-brick",
     "name": "Red Brick Espresso",
     "brand": "Square Mile",
