@@ -71,20 +71,6 @@
     "imageUrl": "/photos/beans-fjaka-signature.webp"
   },
   {
-    "id": "square-mile-red-brick",
-    "name": "Red Brick Espresso",
-    "brand": "Square Mile",
-    "description": "The gold standard espresso blend from London. Rich, sweet, and consistent — works with milk or straight.",
-    "tags": [
-      "Blend",
-      "Medium Roast",
-      "Espresso"
-    ],
-    "price": "€13.50",
-    "buyUrl": "https://shop.squaremilecoffee.com",
-    "imageUrl": "https://picsum.photos/seed/beans-squaremile/800/600"
-  },
-  {
     "id": "nomad-colombia",
     "name": "Colombia La Palma",
     "brand": "Nomad Coffee",
