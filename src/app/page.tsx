@@ -189,8 +189,8 @@ function CafeDirectory() {
   return (
     <>
       {/* Hero */}
-      <header id="top" className="bg-[#F5F2EE] max-w-6xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-8 sm:pb-10">
-        <div className="flex items-end justify-between flex-wrap gap-6 sm:gap-8">
+      <header id="top" className="bg-[#F5F2EE] max-w-6xl mx-auto px-4 sm:px-6 pt-6 sm:pt-16 pb-6 sm:pb-10">
+        <div className="flex items-end justify-between flex-wrap gap-2 sm:gap-8">
           <div className="bean-host relative cursor-default select-none animate-fade-up" style={{ width: "fit-content" }}>
             {BEAN_POSITIONS.map((style, i) => <CoffeeBean key={i} style={style} />)}
             <h1
@@ -203,9 +203,8 @@ function CafeDirectory() {
             </h1>
           </div>
 
-          <div className="pb-2 max-w-xs animate-fade-up" style={{ animationDelay: "80ms" }}>
-            <p className="text-xs uppercase tracking-widest text-stone-500 mb-2">{t.location}</p>
-            <p className="text-stone-600 text-sm leading-relaxed mb-4">{t.tagline}</p>
+          <div className="max-w-xs sm:pb-2 animate-fade-up" style={{ animationDelay: "80ms" }}>
+            <p className="text-stone-600 text-sm leading-relaxed mb-3">{t.tagline}</p>
             <div className="relative inline-block">
               <SparkleBurst active={sparkling} />
               <button
@@ -221,7 +220,7 @@ function CafeDirectory() {
             </div>
           </div>
         </div>
-        <div className="mt-10 border-t border-[#E0DDD9]" />
+        <div className="mt-6 sm:mt-10 border-t border-[#E0DDD9]" />
       </header>
 
       {/* Filter bar */}

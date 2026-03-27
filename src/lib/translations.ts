@@ -72,6 +72,7 @@ export interface Translations {
   contactSending: string;
   contactSuccess: string;
   contactError: string;
+  allCafes: string;
   // Pagination
   showMore: string;
   showLess: string;
@@ -129,6 +130,7 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "Sending…",
     contactSuccess: "Message sent. Thank you!",
     contactError: "Something went wrong. Please try again.",
+    allCafes: "All cafes",
     showMore: "Show more",
     showLess: "Show less",
     left: "left",
@@ -182,6 +184,7 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "Wird gesendet…",
     contactSuccess: "Nachricht gesendet. Danke!",
     contactError: "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    allCafes: "Alle Cafés",
     showMore: "Mehr anzeigen",
     showLess: "Weniger anzeigen",
     left: "übrig",
@@ -235,6 +238,7 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "Verzenden…",
     contactSuccess: "Bericht verzonden. Bedankt!",
     contactError: "Er ging iets mis. Probeer het opnieuw.",
+    allCafes: "Alle cafés",
     showMore: "Meer tonen",
     showLess: "Minder tonen",
     left: "over",
@@ -288,6 +292,7 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "Enviando…",
     contactSuccess: "Mensaje enviado. ¡Gracias!",
     contactError: "Algo salió mal. Por favor, inténtalo de nuevo.",
+    allCafes: "Todos los cafés",
     showMore: "Mostrar más",
     showLess: "Mostrar menos",
     left: "restantes",
@@ -341,6 +346,7 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "جارٍ الإرسال…",
     contactSuccess: "تم إرسال الرسالة. شكراً!",
     contactError: "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+    allCafes: "جميع المقاهي",
     showMore: "عرض المزيد",
     showLess: "عرض أقل",
     left: "متبقية",
@@ -394,6 +400,7 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "Envoi…",
     contactSuccess: "Message envoyé. Merci !",
     contactError: "Quelque chose s'est mal passé. Veuillez réessayer.",
+    allCafes: "Tous les cafés",
     showMore: "Afficher plus",
     showLess: "Afficher moins",
     left: "restants",
@@ -447,6 +454,7 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "Invio…",
     contactSuccess: "Messaggio inviato. Grazie!",
     contactError: "Qualcosa è andato storto. Riprova.",
+    allCafes: "Tutti i caffè",
     showMore: "Mostra altri",
     showLess: "Mostra meno",
     left: "rimasti",
@@ -500,6 +508,7 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "Enviando…",
     contactSuccess: "Mensagem enviada. Obrigado!",
     contactError: "Algo deu errado. Por favor, tente novamente.",
+    allCafes: "Todos os cafés",
     showMore: "Mostrar mais",
     showLess: "Mostrar menos",
     left: "restantes",
@@ -553,6 +562,7 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "भेजा जा रहा है…",
     contactSuccess: "संदेश भेज दिया। धन्यवाद!",
     contactError: "कुछ गलत हुआ। कृपया पुनः प्रयास करें।",
+    allCafes: "सभी कैफे",
     showMore: "और दिखाएं",
     showLess: "कम दिखाएं",
     left: "बाकी",
