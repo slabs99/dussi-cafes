@@ -149,6 +149,16 @@ body {
   animation: heroFloat 5s ease-in-out infinite;
 }
 
+/* ── Hide scrollbar (tab bar on mobile) ───────────────────────────────────── */
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
 /* ── Card grid stagger helper ──────────────────────────────────────────────── */
 
 @keyframes cardFadeIn {

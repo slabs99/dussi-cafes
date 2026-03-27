@@ -13,7 +13,7 @@ import {
 import FilterBar from "@/components/FilterBar";
 import CafeCard from "@/components/CafeCard";
 import RandomCafeModal from "@/components/RandomCafeModal";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+import TopNav from "@/components/TopNav";
 import CuratedSection from "@/components/CuratedSection";
 import ContactSection from "@/components/ContactSection";
 import type { Product } from "@/components/ProductCard";
@@ -23,8 +23,8 @@ function LoadingSkeleton() {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-6 sm:gap-x-8 sm:gap-y-12">
       {Array.from({ length: 9 }).map((_, i) => (
-        <div key={i} className="flex flex-col" style={{ animationDelay: `${i * 60}ms` }}>
-          <div className="skeleton animate-card" style={{ aspectRatio: "4/3" }} />
+        <div key={i} className="flex flex-col">
+          <div className="skeleton animate-card" style={{ aspectRatio: "4/3", animationDelay: `${i * 60}ms` } as React.CSSProperties} />
           <div className="pt-4 flex flex-col gap-2">
             <div className="h-4 skeleton rounded w-3/4" />
             <div className="h-3 skeleton rounded w-1/2" />
@@ -49,18 +49,17 @@ function CoffeeBean({ style }: { style: React.CSSProperties }) {
 }
 
 const BEAN_POSITIONS: React.CSSProperties[] = [
-  { top: "-22px", left: "6%",   transform: "rotate(20deg)",  transitionDelay: "0ms"   },
-  { top: "-26px", left: "28%",  transform: "rotate(-30deg)", transitionDelay: "55ms"  },
-  { top: "-20px", left: "52%",  transform: "rotate(10deg)",  transitionDelay: "30ms"  },
-  { top: "-18px", right: "18%", transform: "rotate(-50deg)", transitionDelay: "80ms"  },
-  { top: "18%",   left: "-24px",transform: "rotate(65deg)",  transitionDelay: "110ms" },
-  { top: "18%",   right: "-22px",transform: "rotate(-15deg)",transitionDelay: "70ms"  },
+  { top: "-22px", left: "6%",    transform: "rotate(20deg)",  transitionDelay: "0ms"   },
+  { top: "-26px", left: "28%",   transform: "rotate(-30deg)", transitionDelay: "55ms"  },
+  { top: "-20px", left: "52%",   transform: "rotate(10deg)",  transitionDelay: "30ms"  },
+  { top: "-18px", right: "18%",  transform: "rotate(-50deg)", transitionDelay: "80ms"  },
+  { top: "18%",   left: "-24px", transform: "rotate(65deg)",  transitionDelay: "110ms" },
+  { top: "18%",   right: "-22px",transform: "rotate(-15deg)", transitionDelay: "70ms"  },
   { bottom: "-22px", left: "22%",  transform: "rotate(-20deg)", transitionDelay: "90ms"  },
   { bottom: "-20px", left: "55%",  transform: "rotate(40deg)",  transitionDelay: "40ms"  },
   { bottom: "-18px", right: "12%", transform: "rotate(-60deg)", transitionDelay: "130ms" },
 ];
 
-// Sparkle icon SVG
 function SparkleIcon({ className }: { className?: string }) {
   return (
     <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" className={className}>
@@ -69,7 +68,6 @@ function SparkleIcon({ className }: { className?: string }) {
   );
 }
 
-// Burst particles emitted on "Surprise me" click
 const BURST_ANGLES = [0, 60, 120, 180, 240, 300];
 const BURST_COLORS = ["#2D6A4F", "#4CAF7D", "#C8A96E", "#7CB9A0", "#2D6A4F", "#8FCA9C"];
 
@@ -111,9 +109,7 @@ function CafeDirectory() {
   const [kits, setKits] = useState<Product[]>([]);
   const [apparel, setApparel] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
-  const [filters, setFilters] = useState<FilterState>(() =>
-    paramsToFilters(searchParams)
-  );
+  const [filters, setFilters] = useState<FilterState>(() => paramsToFilters(searchParams));
   const [randomCafe, setRandomCafe] = useState<Cafe | null>(null);
   const [sparkling, setSparkling] = useState(false);
   const [btnAnimating, setBtnAnimating] = useState(false);
@@ -153,24 +149,18 @@ function CafeDirectory() {
     setFilters((prev) => ({ ...prev, ...next }));
   }, []);
 
-  const handleClear = useCallback(() => {
-    setFilters(DEFAULT_FILTERS);
-  }, []);
+  const handleClear = useCallback(() => setFilters(DEFAULT_FILTERS), []);
 
   const filtered = applyFilters(cafes, filters);
-  const totalCount = cafes.length;
 
   const openRandom = useCallback(() => {
     const pool = filtered.length > 0 ? filtered : cafes;
     if (!pool.length) return;
-
-    // Trigger animations
     setSparkling(true);
     setBtnAnimating(true);
     clearTimeout(sparkleTimer.current);
     sparkleTimer.current = setTimeout(() => setSparkling(false), 750);
     setTimeout(() => setBtnAnimating(false), 500);
-
     setRandomCafe(pool[Math.floor(Math.random() * pool.length)]);
   }, [filtered, cafes]);
 
@@ -190,14 +180,11 @@ function CafeDirectory() {
 
   return (
     <>
-      {/* Hero header */}
-      <header className="max-w-6xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-8 sm:pb-10">
+      {/* Hero */}
+      <header id="top" className="bg-[#F5F2EE] max-w-6xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-8 sm:pb-10">
         <div className="flex items-end justify-between flex-wrap gap-6 sm:gap-8">
-          {/* Title with coffee bean scatter on hover */}
           <div className="bean-host relative cursor-default select-none animate-fade-up" style={{ width: "fit-content" }}>
-            {BEAN_POSITIONS.map((style, i) => (
-              <CoffeeBean key={i} style={style} />
-            ))}
+            {BEAN_POSITIONS.map((style, i) => <CoffeeBean key={i} style={style} />)}
             <h1
               className="font-playfair font-bold leading-none text-stone-900"
               style={{ fontSize: "clamp(3.5rem, 8vw, 7rem)" }}
@@ -209,14 +196,8 @@ function CafeDirectory() {
           </div>
 
           <div className="pb-2 max-w-xs animate-fade-up" style={{ animationDelay: "80ms" }}>
-            <p className="text-xs uppercase tracking-widest text-stone-500 mb-2">
-              {t.location}
-            </p>
-            <p className="text-stone-600 text-sm leading-relaxed mb-4">
-              {t.tagline}
-            </p>
-
-            {/* Surprise me button with sparkle burst */}
+            <p className="text-xs uppercase tracking-widest text-stone-500 mb-2">{t.location}</p>
+            <p className="text-stone-600 text-sm leading-relaxed mb-4">{t.tagline}</p>
             <div className="relative inline-block">
               <SparkleBurst active={sparkling} />
               <button
@@ -235,118 +216,113 @@ function CafeDirectory() {
         <div className="mt-10 border-t border-[#E0DDD9]" />
       </header>
 
+      {/* Filter bar */}
       <FilterBar
         filters={filters}
-        totalCount={totalCount}
+        totalCount={cafes.length}
         filteredCount={filtered.length}
         onChange={handleChange}
         onClear={handleClear}
       />
 
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-        {loading ? (
-          <LoadingSkeleton />
-        ) : filtered.length === 0 ? (
-          <div className="text-center py-16 sm:py-24 animate-fade-up">
-            <p className="font-playfair text-2xl text-stone-700 mb-3">
-              {t.noCafesMatch}
-            </p>
-            <button
-              onClick={handleClear}
-              className="text-sm text-stone-500 hover:text-[#2D6A4F] underline underline-offset-4 transition-colors"
-            >
-              {t.clearAllFilters}
-            </button>
-          </div>
-        ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-6 sm:gap-x-8 sm:gap-y-12">
-            {filtered.map((cafe, i) => (
-              <CafeCard key={cafe.id} cafe={cafe} index={i} />
-            ))}
-          </div>
-        )}
-      </main>
+      {/* Cafe grid */}
+      <section id="cafes" className="bg-[#F5F2EE] scroll-mt-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          {loading ? (
+            <LoadingSkeleton />
+          ) : filtered.length === 0 ? (
+            <div className="text-center py-16 sm:py-24 animate-fade-up">
+              <p className="font-playfair text-2xl text-stone-700 mb-3">{t.noCafesMatch}</p>
+              <button
+                onClick={handleClear}
+                className="text-sm text-stone-500 hover:text-[#2D6A4F] underline underline-offset-4 transition-colors"
+              >
+                {t.clearAllFilters}
+              </button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-6 sm:gap-x-8 sm:gap-y-12">
+              {filtered.map((cafe, i) => (
+                <CafeCard key={cafe.id} cafe={cafe} index={i} />
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
 
-      {/* ── Lifestyle sections ─────────────────────────────────────────────── */}
+      {/* Lifestyle sections — only after data loads */}
       {!loading && (
         <>
-          <div className="border-t border-[#E0DDD9]" />
-
           {beans.length > 0 && (
             <CuratedSection
               id="beans"
+              variant="white"
               title={t.sectionBeans}
               subtitle={t.sectionBeansSub}
               products={beans}
               icon={
-                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                  <ellipse cx="11" cy="11" rx="8" ry="10" stroke="currentColor" strokeWidth="1.5" />
-                  <path d="M11 2.5 C8 7 8 15 11 19.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <ellipse cx="9" cy="9" rx="6.5" ry="8" stroke="currentColor" strokeWidth="1.4" />
+                  <path d="M9 1.5 C6.5 5.5 6.5 12.5 9 16.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" fill="none" />
                 </svg>
               }
             />
           )}
 
           {gear.length > 0 && (
-            <>
-              <div className="border-t border-[#E0DDD9]" />
-              <CuratedSection
-                id="gear"
-                title={t.sectionGear}
-                subtitle={t.sectionGearSub}
-                products={gear}
-                icon={
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <circle cx="11" cy="11" r="3" stroke="currentColor" strokeWidth="1.5" />
-                    <path d="M11 2v3M11 17v3M2 11h3M17 11h3M4.22 4.22l2.12 2.12M15.66 15.66l2.12 2.12M4.22 17.78l2.12-2.12M15.66 6.34l2.12-2.12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                  </svg>
-                }
-              />
-            </>
+            <CuratedSection
+              id="gear"
+              variant="cream"
+              title={t.sectionGear}
+              subtitle={t.sectionGearSub}
+              products={gear}
+              icon={
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <circle cx="9" cy="9" r="2.5" stroke="currentColor" strokeWidth="1.4" />
+                  <path d="M9 1.5v2.5M9 14v2.5M1.5 9H4M14 9h2.5M3.2 3.2l1.8 1.8M13 13l1.8 1.8M3.2 14.8l1.8-1.8M13 5l1.8-1.8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+                </svg>
+              }
+            />
           )}
 
           {kits.length > 0 && (
-            <>
-              <div className="border-t border-[#E0DDD9]" />
-              <CuratedSection
-                id="kits"
-                title={t.sectionKits}
-                subtitle={t.sectionKitsSub}
-                products={kits}
-                icon={
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <rect x="3" y="7" width="16" height="12" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
-                    <path d="M7 7V5.5A4 4 0 0 1 15 5.5V7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                    <path d="M8 13h6M11 10v6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                  </svg>
-                }
-              />
-            </>
+            <CuratedSection
+              id="kits"
+              variant="white"
+              title={t.sectionKits}
+              subtitle={t.sectionKitsSub}
+              products={kits}
+              icon={
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <rect x="2" y="6" width="14" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.4" />
+                  <path d="M6 6V5A3 3 0 0 1 12 5V6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+                  <path d="M6.5 11h5M9 8.5v5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+                </svg>
+              }
+            />
           )}
 
           {apparel.length > 0 && (
-            <>
-              <div className="border-t border-[#E0DDD9]" />
-              <CuratedSection
-                id="apparel"
-                title={t.sectionApparel}
-                subtitle={t.sectionApparelSub}
-                products={apparel}
-                icon={
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M8 3L3 6.5V10H6V19H16V10H19V6.5L14 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M8 3C8 3 9.5 5.5 11 5.5C12.5 5.5 14 3 14 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                  </svg>
-                }
-              />
-            </>
+            <CuratedSection
+              id="apparel"
+              variant="cream"
+              title={t.sectionApparel}
+              subtitle={t.sectionApparelSub}
+              products={apparel}
+              icon={
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M6.5 2.5L2 5.5V8.5H5V16H13V8.5H16V5.5L11.5 2.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M6.5 2.5C6.5 2.5 7.5 4.5 9 4.5C10.5 4.5 11.5 2.5 11.5 2.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+                </svg>
+              }
+            />
           )}
 
           <ContactSection />
         </>
       )}
 
-      <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8 border-t border-[#E0DDD9] text-center text-xs text-stone-500 tracking-wider animate-fade-up">
+      <footer className="bg-white border-t border-[#E0DDD9] text-center py-6 text-xs text-stone-400 tracking-wider">
         Made with ❤️ in Düsseldorf
       </footer>
 
@@ -365,7 +341,7 @@ export default function HomePage() {
   return (
     <LanguageProvider>
       <div className="min-h-screen bg-[#F5F2EE]">
-        <LanguageSwitcher />
+        <TopNav />
         <Suspense>
           <CafeDirectory />
         </Suspense>

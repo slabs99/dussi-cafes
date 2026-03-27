@@ -7,7 +7,7 @@
     "tags": ["Pour-Over", "Beginner-Friendly", "Ceramic"],
     "price": "From €12",
     "buyUrl": "https://www.amazon.de/s?k=hario+v60+ceramic",
-    "imageUrl": null
+    "imageUrl": "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=800&h=600&fit=crop&q=80"
   },
   {
     "id": "comandante-c40",
@@ -17,7 +17,7 @@
     "tags": ["Hand Grinder", "All-Purpose", "Made in Germany"],
     "price": "€200",
     "buyUrl": "https://comandantegrinder.com",
-    "imageUrl": null
+    "imageUrl": "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=800&h=600&fit=crop&q=80"
   },
   {
     "id": "fellow-stagg-ekg",
@@ -27,7 +27,7 @@
     "tags": ["Electric Kettle", "Temperature Control", "Pour-Over Essential"],
     "price": "€165",
     "buyUrl": "https://fellowproducts.com/products/stagg-ekg-electric-pour-over-kettle",
-    "imageUrl": null
+    "imageUrl": "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=800&h=600&fit=crop&q=80"
   },
   {
     "id": "acaia-pearl",
@@ -37,7 +37,7 @@
     "tags": ["Scale", "Bluetooth", "Precision"],
     "price": "€150",
     "buyUrl": "https://acaia.co/products/pearl",
-    "imageUrl": null
+    "imageUrl": "https://images.unsplash.com/photo-1611920187529-a43dc5a77e93?w=800&h=600&fit=crop&q=80"
   },
   {
     "id": "aeropress-go",
@@ -47,7 +47,7 @@
     "tags": ["Brewer", "Travel", "Beginner-Friendly"],
     "price": "€35",
     "buyUrl": "https://www.amazon.de/s?k=aeropress+go",
-    "imageUrl": null
+    "imageUrl": "https://images.unsplash.com/photo-1521302080334-4bedac2b1082?w=800&h=600&fit=crop&q=80"
   },
   {
     "id": "chemex-classic",
@@ -57,6 +57,6 @@
     "tags": ["Pour-Over", "For Two+", "Design Classic"],
     "price": "€45",
     "buyUrl": "https://www.amazon.de/s?k=chemex+6+cup",
-    "imageUrl": null
+    "imageUrl": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=600&fit=crop&q=80"
   }
 ]

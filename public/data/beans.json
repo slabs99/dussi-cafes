@@ -7,7 +7,7 @@
     "tags": ["Ethiopia", "Light Roast", "Natural", "Filter"],
     "price": "€14.50",
     "buyUrl": "https://www.five-elephant.de/collections/filter-coffee",
-    "imageUrl": null
+    "imageUrl": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&h=600&fit=crop&q=80"
   },
   {
     "id": "the-barn-yirgacheffe",
@@ -17,7 +17,7 @@
     "tags": ["Ethiopia", "Light Roast", "Washed", "Filter"],
     "price": "€16.00",
     "buyUrl": "https://the-barn.de/collections/filter",
-    "imageUrl": null
+    "imageUrl": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=600&fit=crop&q=80"
   },
   {
     "id": "fjaka-signature",
@@ -27,7 +27,7 @@
     "tags": ["Blend", "Medium Roast", "Espresso & Filter", "Local"],
     "price": "€12.00",
     "buyUrl": "https://www.fjaka.de",
-    "imageUrl": null
+    "imageUrl": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&h=600&fit=crop&q=80"
   },
   {
     "id": "tim-wendelboe-finca",
@@ -37,7 +37,7 @@
     "tags": ["Colombia", "Light Roast", "Washed", "Filter"],
     "price": "€22.00",
     "buyUrl": "https://timwendelboe.no/collections/coffee",
-    "imageUrl": null
+    "imageUrl": "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800&h=600&fit=crop&q=80"
   },
   {
     "id": "square-mile-red-brick",
@@ -47,7 +47,7 @@
     "tags": ["Blend", "Medium Roast", "Espresso"],
     "price": "€13.50",
     "buyUrl": "https://shop.squaremilecoffee.com",
-    "imageUrl": null
+    "imageUrl": "https://images.unsplash.com/photo-1504630083203-b8793cf5d58b?w=800&h=600&fit=crop&q=80"
   },
   {
     "id": "nomad-colombia",
@@ -57,6 +57,6 @@
     "tags": ["Colombia", "Medium-Light", "Washed", "Filter & Espresso"],
     "price": "€15.00",
     "buyUrl": "https://nomadcoffee.es/en/collections/coffee",
-    "imageUrl": null
+    "imageUrl": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800&h=600&fit=crop&q=80"
   }
 ]

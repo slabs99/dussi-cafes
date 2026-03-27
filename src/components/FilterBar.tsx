@@ -59,7 +59,7 @@ export default function FilterBar({
   const hasActiveFilters = filters.category || filters.search;
 
   return (
-    <div className="sticky top-0 z-10 bg-[#F5F2EE]/90 backdrop-blur-md border-b border-[#E0DDD9]">
+    <div className="sticky top-12 z-20 bg-[#F5F2EE]/90 backdrop-blur-md border-b border-[#E0DDD9]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-2.5 flex items-center gap-4 sm:gap-5 flex-wrap">
 
         {/* Search icon + expandable input */}
