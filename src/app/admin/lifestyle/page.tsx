@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import type { Product } from "@/components/ProductCard";
 
 type SectionKey = "beans" | "gear" | "kits" | "apparel";
-interface SectionMeta { title: string; subtitle: string }
+interface SectionMeta { title: string; subtitle: string; enabled: boolean }
 type AllMeta = Record<SectionKey, SectionMeta>;
 
 const SECTIONS: { key: SectionKey; label: string }[] = [
@@ -187,10 +187,10 @@ export default function AdminLifestylePage() {
     beans: [], gear: [], kits: [], apparel: [],
   });
   const [meta, setMeta] = useState<AllMeta>({
-    beans:   { title: "Coffee Beans",      subtitle: "" },
-    gear:    { title: "Coffee Gear",        subtitle: "" },
-    kits:    { title: "Home Barista Kits",  subtitle: "" },
-    apparel: { title: "Apparel",            subtitle: "" },
+    beans:   { title: "Coffee Beans",      subtitle: "", enabled: true },
+    gear:    { title: "Coffee Gear",        subtitle: "", enabled: true },
+    kits:    { title: "Home Barista Kits",  subtitle: "", enabled: true },
+    apparel: { title: "Apparel",            subtitle: "", enabled: true },
   });
   const [loading, setLoading] = useState(true);
   const [saving,  setSaving]  = useState(false);
@@ -288,13 +288,16 @@ export default function AdminLifestylePage() {
             <button
               key={key}
               onClick={() => setActiveSection(key)}
-              className={`px-4 py-2 text-xs uppercase tracking-wider transition-colors ${
+              className={`px-4 py-2 text-xs uppercase tracking-wider transition-colors flex items-center gap-2 ${
                 activeSection === key
                   ? "bg-[#2D6A4F] text-white"
                   : "text-stone-500 hover:text-stone-800"
               }`}
             >
               {label}
+              <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${
+                meta[key]?.enabled !== false ? "bg-emerald-400" : "bg-stone-300"
+              } ${activeSection === key ? "opacity-80" : ""}`} />
             </button>
           ))}
         </div>
@@ -305,7 +308,24 @@ export default function AdminLifestylePage() {
           <>
             {/* Section meta editor */}
             <div className="bg-white border border-[#E0DDD9] p-6 flex flex-col gap-4">
-              <h2 className="text-xs uppercase tracking-widest text-stone-400">Section Info</h2>
+              <div className="flex items-center justify-between">
+                <h2 className="text-xs uppercase tracking-widest text-stone-400">Section Info</h2>
+                {/* Visible toggle */}
+                <button
+                  onClick={() => setMeta((m) => ({
+                    ...m,
+                    [activeSection]: { ...m[activeSection], enabled: !m[activeSection].enabled },
+                  }))}
+                  className={`flex items-center gap-2 px-3 py-1.5 text-xs uppercase tracking-wider border transition-colors ${
+                    currentMeta.enabled
+                      ? "border-emerald-300 text-emerald-700 bg-emerald-50 hover:bg-emerald-100"
+                      : "border-stone-300 text-stone-500 bg-stone-50 hover:bg-stone-100"
+                  }`}
+                >
+                  <span className={`w-1.5 h-1.5 rounded-full ${currentMeta.enabled ? "bg-emerald-500" : "bg-stone-300"}`} />
+                  {currentMeta.enabled ? "Visible on site" : "Hidden from site"}
+                </button>
+              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="text-[0.65rem] uppercase tracking-wider text-stone-400 block mb-1.5">Section Title</label>

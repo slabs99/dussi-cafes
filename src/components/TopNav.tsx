@@ -6,13 +6,8 @@ import { LANG_NAMES, LANG_FLAGS, type LangCode } from "@/lib/translations";
 
 const ACTIVE_LANGS: LangCode[] = ["en", "de", "nl", "es", "ar", "fr", "it", "pt", "hi"];
 
-const TABS = [
-  { id: "cafes",   label: "Cafes"   },
-  { id: "beans",   label: "Beans"   },
-  { id: "gear",    label: "Gear"    },
-  { id: "kits",    label: "Kits"    },
-  { id: "apparel", label: "Apparel" },
-] as const;
+type SectionKey = "beans" | "gear" | "kits" | "apparel";
+const LIFESTYLE_SECTIONS: SectionKey[] = ["beans", "gear", "kits", "apparel"];
 
 function scrollToSection(id: string) {
   if (id === "cafes") {
@@ -21,7 +16,6 @@ function scrollToSection(id: string) {
   }
   const el = document.getElementById(id);
   if (!el) return;
-  // offset for the sticky nav (48px) + a little breathing room
   const y = el.getBoundingClientRect().top + window.scrollY - 56;
   window.scrollTo({ top: y, behavior: "smooth" });
 }
@@ -31,28 +25,51 @@ export default function TopNav() {
   const [activeTab, setActiveTab] = useState<string>("cafes");
   const [scrolled, setScrolled] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [enabledSections, setEnabledSections] = useState<Record<SectionKey, boolean>>({
+    beans: true, gear: true, kits: true, apparel: true,
+  });
   const langRef = useRef<HTMLDivElement>(null);
 
-  // Shadow on scroll
+  // Load lifestyle-meta to know which sections are enabled
+  useEffect(() => {
+    fetch("/data/lifestyle-meta.json")
+      .then((r) => r.json())
+      .then((meta: Record<SectionKey, { enabled?: boolean }>) => {
+        setEnabledSections({
+          beans:   meta.beans?.enabled   !== false,
+          gear:    meta.gear?.enabled    !== false,
+          kits:    meta.kits?.enabled    !== false,
+          apparel: meta.apparel?.enabled !== false,
+        });
+      })
+      .catch(() => {/* keep defaults */});
+  }, []);
+
+  // Tab definitions — always show Cafes, lifestyle tabs depend on enabled state
+  const tabs = [
+    { id: "cafes",   label: t.tabCafes   },
+    ...(enabledSections.beans   ? [{ id: "beans",   label: t.tabBeans   }] : []),
+    ...(enabledSections.gear    ? [{ id: "gear",    label: t.tabGear    }] : []),
+    ...(enabledSections.kits    ? [{ id: "kits",    label: t.tabKits    }] : []),
+    ...(enabledSections.apparel ? [{ id: "apparel", label: t.tabApparel }] : []),
+  ];
+
+  // Shadow on scroll + active tab tracking
   useEffect(() => {
     function onScroll() {
       setScrolled(window.scrollY > 40);
-
-      // Update active tab based on scroll position
-      const offsets = TABS.slice(1).map(({ id }) => {
-        const el = document.getElementById(id);
-        return { id, top: el ? el.getBoundingClientRect().top : Infinity };
-      });
+      const offsets = LIFESTYLE_SECTIONS
+        .filter((id) => enabledSections[id])
+        .map((id) => {
+          const el = document.getElementById(id);
+          return { id, top: el ? el.getBoundingClientRect().top : Infinity };
+        });
       const inView = offsets.filter((o) => o.top <= 120);
-      if (inView.length === 0) {
-        setActiveTab("cafes");
-      } else {
-        setActiveTab(inView[inView.length - 1].id);
-      }
+      setActiveTab(inView.length === 0 ? "cafes" : inView[inView.length - 1].id);
     }
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [enabledSections]);
 
   // Close lang dropdown on outside click
   useEffect(() => {
@@ -82,9 +99,9 @@ export default function TopNav() {
         {/* Divider */}
         <span className="h-4 w-px bg-stone-200 flex-shrink-0" />
 
-        {/* Section tabs — horizontally scrollable on mobile */}
+        {/* Section tabs */}
         <div className="flex items-center gap-0.5 overflow-x-auto scrollbar-none flex-1 -mx-1 px-1">
-          {TABS.map(({ id, label }) => (
+          {tabs.map(({ id, label }) => (
             <button
               key={id}
               onClick={() => { scrollToSection(id); setActiveTab(id); }}

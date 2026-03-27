@@ -72,6 +72,16 @@ export interface Translations {
   contactSending: string;
   contactSuccess: string;
   contactError: string;
+  // Pagination
+  showMore: string;
+  showLess: string;
+  left: string;
+  // Nav tabs
+  tabCafes: string;
+  tabBeans: string;
+  tabGear: string;
+  tabKits: string;
+  tabApparel: string;
 }
 
 export const TRANSLATIONS: Record<LangCode, Translations> = {
@@ -119,6 +129,14 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "Sending…",
     contactSuccess: "Message sent. Thank you!",
     contactError: "Something went wrong. Please try again.",
+    showMore: "Show more",
+    showLess: "Show less",
+    left: "left",
+    tabCafes: "Cafes",
+    tabBeans: "Beans",
+    tabGear: "Gear",
+    tabKits: "Kits",
+    tabApparel: "Apparel",
   },
   de: {
     search: "Suchen...",
@@ -164,6 +182,14 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "Wird gesendet…",
     contactSuccess: "Nachricht gesendet. Danke!",
     contactError: "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    showMore: "Mehr anzeigen",
+    showLess: "Weniger anzeigen",
+    left: "übrig",
+    tabCafes: "Cafés",
+    tabBeans: "Bohnen",
+    tabGear: "Ausrüstung",
+    tabKits: "Sets",
+    tabApparel: "Kleidung",
   },
   nl: {
     search: "Zoeken...",
@@ -209,6 +235,14 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "Verzenden…",
     contactSuccess: "Bericht verzonden. Bedankt!",
     contactError: "Er ging iets mis. Probeer het opnieuw.",
+    showMore: "Meer tonen",
+    showLess: "Minder tonen",
+    left: "over",
+    tabCafes: "Cafés",
+    tabBeans: "Bonen",
+    tabGear: "Apparatuur",
+    tabKits: "Sets",
+    tabApparel: "Kleding",
   },
   es: {
     search: "Buscar...",
@@ -254,6 +288,14 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "Enviando…",
     contactSuccess: "Mensaje enviado. ¡Gracias!",
     contactError: "Algo salió mal. Por favor, inténtalo de nuevo.",
+    showMore: "Mostrar más",
+    showLess: "Mostrar menos",
+    left: "restantes",
+    tabCafes: "Cafés",
+    tabBeans: "Granos",
+    tabGear: "Equipo",
+    tabKits: "Kits",
+    tabApparel: "Ropa",
   },
   ar: {
     search: "ابحث...",
@@ -299,6 +341,14 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "جارٍ الإرسال…",
     contactSuccess: "تم إرسال الرسالة. شكراً!",
     contactError: "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+    showMore: "عرض المزيد",
+    showLess: "عرض أقل",
+    left: "متبقية",
+    tabCafes: "مقاهي",
+    tabBeans: "حبوب",
+    tabGear: "أدوات",
+    tabKits: "مجموعات",
+    tabApparel: "ملابس",
   },
   fr: {
     search: "Rechercher...",
@@ -344,6 +394,14 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "Envoi…",
     contactSuccess: "Message envoyé. Merci !",
     contactError: "Quelque chose s'est mal passé. Veuillez réessayer.",
+    showMore: "Afficher plus",
+    showLess: "Afficher moins",
+    left: "restants",
+    tabCafes: "Cafés",
+    tabBeans: "Grains",
+    tabGear: "Matériel",
+    tabKits: "Kits",
+    tabApparel: "Vêtements",
   },
   it: {
     search: "Cerca...",
@@ -389,6 +447,14 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "Invio…",
     contactSuccess: "Messaggio inviato. Grazie!",
     contactError: "Qualcosa è andato storto. Riprova.",
+    showMore: "Mostra altri",
+    showLess: "Mostra meno",
+    left: "rimasti",
+    tabCafes: "Caffè",
+    tabBeans: "Chicchi",
+    tabGear: "Attrezzatura",
+    tabKits: "Kit",
+    tabApparel: "Abbigliamento",
   },
   pt: {
     search: "Pesquisar...",
@@ -434,6 +500,14 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "Enviando…",
     contactSuccess: "Mensagem enviada. Obrigado!",
     contactError: "Algo deu errado. Por favor, tente novamente.",
+    showMore: "Mostrar mais",
+    showLess: "Mostrar menos",
+    left: "restantes",
+    tabCafes: "Cafés",
+    tabBeans: "Grãos",
+    tabGear: "Equipamento",
+    tabKits: "Kits",
+    tabApparel: "Vestuário",
   },
   hi: {
     search: "खोजें...",
@@ -479,5 +553,13 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactSending: "भेजा जा रहा है…",
     contactSuccess: "संदेश भेज दिया। धन्यवाद!",
     contactError: "कुछ गलत हुआ। कृपया पुनः प्रयास करें।",
+    showMore: "और दिखाएं",
+    showLess: "कम दिखाएं",
+    left: "बाकी",
+    tabCafes: "कैफे",
+    tabBeans: "बीन्स",
+    tabGear: "उपकरण",
+    tabKits: "किट्स",
+    tabApparel: "परिधान",
   },
 };

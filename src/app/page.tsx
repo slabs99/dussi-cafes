@@ -108,7 +108,7 @@ function CafeDirectory() {
   const [gear, setGear] = useState<Product[]>([]);
   const [kits, setKits] = useState<Product[]>([]);
   const [apparel, setApparel] = useState<Product[]>([]);
-  const [lifestyleMeta, setLifestyleMeta] = useState<Record<string, { title: string; subtitle: string }>>({});
+  const [lifestyleMeta, setLifestyleMeta] = useState<Record<string, { title: string; subtitle: string; enabled?: boolean }>>({});
   const [loading, setLoading] = useState(true);
   const [filters, setFilters] = useState<FilterState>(() => paramsToFilters(searchParams));
   const [visibleCount, setVisibleCount] = useState(9);
@@ -261,9 +261,9 @@ function CafeDirectory() {
                     onClick={() => setVisibleCount((n) => n + 9)}
                     className="text-xs uppercase tracking-widest border border-stone-300 text-stone-600 px-8 py-3 hover:border-[#2D6A4F] hover:text-[#2D6A4F] transition-colors"
                   >
-                    Show more
+                    {t.showMore}
                     <span className="ml-2 text-stone-400">
-                      ({filtered.length - visibleCount} left)
+                      ({filtered.length - visibleCount} {t.left})
                     </span>
                   </button>
                 )}
@@ -275,7 +275,7 @@ function CafeDirectory() {
                     }}
                     className="text-xs uppercase tracking-widest border border-stone-300 text-stone-600 px-8 py-3 hover:border-stone-500 hover:text-stone-800 transition-colors"
                   >
-                    Show less
+                    {t.showLess}
                   </button>
                 )}
               </div>
@@ -287,7 +287,7 @@ function CafeDirectory() {
       {/* Lifestyle sections — only after data loads */}
       {!loading && (
         <>
-          {beans.length > 0 && (
+          {beans.length > 0 && lifestyleMeta.beans?.enabled !== false && (
             <CuratedSection
               id="beans"
               variant="white"
@@ -303,7 +303,7 @@ function CafeDirectory() {
             />
           )}
 
-          {gear.length > 0 && (
+          {gear.length > 0 && lifestyleMeta.gear?.enabled !== false && (
             <CuratedSection
               id="gear"
               variant="cream"
@@ -319,7 +319,7 @@ function CafeDirectory() {
             />
           )}
 
-          {kits.length > 0 && (
+          {kits.length > 0 && lifestyleMeta.kits?.enabled !== false && (
             <CuratedSection
               id="kits"
               variant="white"
@@ -336,7 +336,7 @@ function CafeDirectory() {
             />
           )}
 
-          {apparel.length > 0 && (
+          {apparel.length > 0 && lifestyleMeta.apparel?.enabled !== false && (
             <CuratedSection
               id="apparel"
               variant="cream"

@@ -1,18 +1,22 @@
 {
   "beans": {
     "title": "Coffee Beans",
-    "subtitle": "Bags we've actually loved — order online and brew at home."
+    "subtitle": "Bags we've actually loved — order online and brew at home.",
+    "enabled": true
   },
   "gear": {
     "title": "Coffee Gear",
-    "subtitle": "The tools worth having. No fluff."
+    "subtitle": "The tools worth having. No fluff.",
+    "enabled": true
   },
   "kits": {
     "title": "Home Barista Kits",
-    "subtitle": "Start somewhere good."
+    "subtitle": "Start somewhere good.",
+    "enabled": true
   },
   "apparel": {
     "title": "Apparel",
-    "subtitle": "Wear your obsession with some dignity."
+    "subtitle": "Wear your obsession with some dignity.",
+    "enabled": true
   }
 }
