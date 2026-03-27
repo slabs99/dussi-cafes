@@ -125,7 +125,7 @@ function CafeDirectory() {
       fetch("/data/gear.json").then((r) => r.json()).catch(() => []),
       fetch("/data/kits.json").then((r) => r.json()).catch(() => []),
       fetch("/data/apparel.json").then((r) => r.json()).catch(() => []),
-      fetch("/data/lifestyle-meta.json").then((r) => r.json()).catch(() => ({})),
+      fetch("/api/lifestyle-meta").then((r) => r.json()).catch(() => ({})),
     ]).then(([rawCafes, overrides, beansData, gearData, kitsData, apparelData, metaData]: [
       Cafe[], Record<string, Partial<Cafe>>, Product[], Product[], Product[], Product[], Record<string, { title: string; subtitle: string }>
     ]) => {

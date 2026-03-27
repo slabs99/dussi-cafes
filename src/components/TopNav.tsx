@@ -32,7 +32,7 @@ export default function TopNav() {
 
   // Load lifestyle-meta to know which sections are enabled
   useEffect(() => {
-    fetch("/data/lifestyle-meta.json")
+    fetch("/api/lifestyle-meta")
       .then((r) => r.json())
       .then((meta: Record<SectionKey, { enabled?: boolean }>) => {
         setEnabledSections({
