@@ -14,6 +14,9 @@ import FilterBar from "@/components/FilterBar";
 import CafeCard from "@/components/CafeCard";
 import RandomCafeModal from "@/components/RandomCafeModal";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import CuratedSection from "@/components/CuratedSection";
+import ContactSection from "@/components/ContactSection";
+import type { Product } from "@/components/ProductCard";
 import { LanguageProvider, useLanguage } from "@/context/LanguageContext";
 
 function LoadingSkeleton() {
@@ -103,6 +106,10 @@ function CafeDirectory() {
   const { t } = useLanguage();
 
   const [cafes, setCafes] = useState<Cafe[]>([]);
+  const [beans, setBeans] = useState<Product[]>([]);
+  const [gear, setGear] = useState<Product[]>([]);
+  const [kits, setKits] = useState<Product[]>([]);
+  const [apparel, setApparel] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [filters, setFilters] = useState<FilterState>(() =>
     paramsToFilters(searchParams)
@@ -116,12 +123,22 @@ function CafeDirectory() {
     Promise.all([
       fetch("/data/cafes.json").then((r) => r.json()),
       fetch("/data/overrides.json").then((r) => r.json()).catch(() => ({})),
-    ]).then(([rawCafes, overrides]: [Cafe[], Record<string, Partial<Cafe>>]) => {
+      fetch("/data/beans.json").then((r) => r.json()).catch(() => []),
+      fetch("/data/gear.json").then((r) => r.json()).catch(() => []),
+      fetch("/data/kits.json").then((r) => r.json()).catch(() => []),
+      fetch("/data/apparel.json").then((r) => r.json()).catch(() => []),
+    ]).then(([rawCafes, overrides, beansData, gearData, kitsData, apparelData]: [
+      Cafe[], Record<string, Partial<Cafe>>, Product[], Product[], Product[], Product[]
+    ]) => {
       const merged = rawCafes.map((cafe) => {
         const ov = overrides[cafe.id];
         return ov ? { ...cafe, ...ov } : cafe;
       });
       setCafes(merged);
+      setBeans(beansData);
+      setGear(gearData);
+      setKits(kitsData);
+      setApparel(apparelData);
       setLoading(false);
     });
   }, []);
@@ -249,6 +266,85 @@ function CafeDirectory() {
           </div>
         )}
       </main>
+
+      {/* ── Lifestyle sections ─────────────────────────────────────────────── */}
+      {!loading && (
+        <>
+          <div className="border-t border-[#E0DDD9]" />
+
+          {beans.length > 0 && (
+            <CuratedSection
+              id="beans"
+              title={t.sectionBeans}
+              subtitle={t.sectionBeansSub}
+              products={beans}
+              icon={
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <ellipse cx="11" cy="11" rx="8" ry="10" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M11 2.5 C8 7 8 15 11 19.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+                </svg>
+              }
+            />
+          )}
+
+          {gear.length > 0 && (
+            <>
+              <div className="border-t border-[#E0DDD9]" />
+              <CuratedSection
+                id="gear"
+                title={t.sectionGear}
+                subtitle={t.sectionGearSub}
+                products={gear}
+                icon={
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <circle cx="11" cy="11" r="3" stroke="currentColor" strokeWidth="1.5" />
+                    <path d="M11 2v3M11 17v3M2 11h3M17 11h3M4.22 4.22l2.12 2.12M15.66 15.66l2.12 2.12M4.22 17.78l2.12-2.12M15.66 6.34l2.12-2.12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                  </svg>
+                }
+              />
+            </>
+          )}
+
+          {kits.length > 0 && (
+            <>
+              <div className="border-t border-[#E0DDD9]" />
+              <CuratedSection
+                id="kits"
+                title={t.sectionKits}
+                subtitle={t.sectionKitsSub}
+                products={kits}
+                icon={
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <rect x="3" y="7" width="16" height="12" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
+                    <path d="M7 7V5.5A4 4 0 0 1 15 5.5V7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                    <path d="M8 13h6M11 10v6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                  </svg>
+                }
+              />
+            </>
+          )}
+
+          {apparel.length > 0 && (
+            <>
+              <div className="border-t border-[#E0DDD9]" />
+              <CuratedSection
+                id="apparel"
+                title={t.sectionApparel}
+                subtitle={t.sectionApparelSub}
+                products={apparel}
+                icon={
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M8 3L3 6.5V10H6V19H16V10H19V6.5L14 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M8 3C8 3 9.5 5.5 11 5.5C12.5 5.5 14 3 14 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                  </svg>
+                }
+              />
+            </>
+          )}
+
+          <ContactSection />
+        </>
+      )}
 
       <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8 border-t border-[#E0DDD9] text-center text-xs text-stone-500 tracking-wider animate-fade-up">
         Made with ❤️ in Düsseldorf

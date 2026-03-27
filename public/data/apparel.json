@@ -1,0 +1,52 @@
+[
+  {
+    "id": "five-elephant-tote",
+    "name": "Canvas Tote Bag",
+    "brand": "Five Elephant",
+    "description": "Clean, minimal, and sturdy. The perfect bag for your Saturday morning market and coffee shop run.",
+    "tags": ["Tote", "Unisex", "Everyday"],
+    "price": "€18",
+    "buyUrl": "https://www.five-elephant.de/collections/merchandise",
+    "imageUrl": null
+  },
+  {
+    "id": "normcore-apron",
+    "name": "Barista Apron",
+    "brand": "Normcore",
+    "description": "Waxed canvas, cross-back design, adjustable straps. Looks as good in a café as it does at home.",
+    "tags": ["Apron", "Waxed Canvas", "Unisex"],
+    "price": "€65",
+    "buyUrl": "https://www.amazon.de/s?k=barista+apron+waxed+canvas",
+    "imageUrl": null
+  },
+  {
+    "id": "square-mile-cap",
+    "name": "5-Panel Cap",
+    "brand": "Square Mile",
+    "description": "Minimal branding, great fit, and a conversation starter with any specialty coffee fan.",
+    "tags": ["Cap", "Unisex", "Minimal"],
+    "price": "€30",
+    "buyUrl": "https://shop.squaremilecoffee.com/collections/merchandise",
+    "imageUrl": null
+  },
+  {
+    "id": "the-barn-crewneck",
+    "name": "Logo Crewneck",
+    "brand": "The Barn",
+    "description": "Heavyweight cotton, oversized fit. The kind of thing you put on every weekend without thinking.",
+    "tags": ["Sweatshirt", "Unisex", "Heavyweight"],
+    "price": "€70",
+    "buyUrl": "https://the-barn.de/collections/merchandise",
+    "imageUrl": null
+  },
+  {
+    "id": "coffee-socks",
+    "name": "Coffee Socks",
+    "brand": "Many Mornings",
+    "description": "Colourful, fun, and oddly fitting as a gift. Polish brand, ships to DE.",
+    "tags": ["Socks", "Gift", "Fun"],
+    "price": "€10",
+    "buyUrl": "https://www.manymornings.com/en/socks/coffee",
+    "imageUrl": null
+  }
+]

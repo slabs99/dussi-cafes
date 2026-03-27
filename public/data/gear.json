@@ -1,0 +1,62 @@
+[
+  {
+    "id": "hario-v60",
+    "name": "V60 Ceramic Dripper",
+    "brand": "Hario",
+    "description": "The classic. Clean, precise, and infinitely rewarding. If you only own one brewer, make it this.",
+    "tags": ["Pour-Over", "Beginner-Friendly", "Ceramic"],
+    "price": "From €12",
+    "buyUrl": "https://www.amazon.de/s?k=hario+v60+ceramic",
+    "imageUrl": null
+  },
+  {
+    "id": "comandante-c40",
+    "name": "C40 MK4 Hand Grinder",
+    "brand": "Comandante",
+    "description": "Made in Germany. Exceptional grind consistency, beautiful build quality, and satisfying to use every single morning.",
+    "tags": ["Hand Grinder", "All-Purpose", "Made in Germany"],
+    "price": "€200",
+    "buyUrl": "https://comandantegrinder.com",
+    "imageUrl": null
+  },
+  {
+    "id": "fellow-stagg-ekg",
+    "name": "Stagg EKG Electric Kettle",
+    "brand": "Fellow",
+    "description": "Temperature control, slow pour spout, hold mode. The kettle that changed how we brew. Worth the investment.",
+    "tags": ["Electric Kettle", "Temperature Control", "Pour-Over Essential"],
+    "price": "€165",
+    "buyUrl": "https://fellowproducts.com/products/stagg-ekg-electric-pour-over-kettle",
+    "imageUrl": null
+  },
+  {
+    "id": "acaia-pearl",
+    "name": "Pearl Scale",
+    "brand": "Acaia",
+    "description": "Instant response, Bluetooth connectivity, and a minimalist design. The scale serious home brewers swear by.",
+    "tags": ["Scale", "Bluetooth", "Precision"],
+    "price": "€150",
+    "buyUrl": "https://acaia.co/products/pearl",
+    "imageUrl": null
+  },
+  {
+    "id": "aeropress-go",
+    "name": "AeroPress Go",
+    "brand": "AeroPress",
+    "description": "Compact, nearly indestructible, and produces fantastic coffee anywhere. The best travel companion.",
+    "tags": ["Brewer", "Travel", "Beginner-Friendly"],
+    "price": "€35",
+    "buyUrl": "https://www.amazon.de/s?k=aeropress+go",
+    "imageUrl": null
+  },
+  {
+    "id": "chemex-classic",
+    "name": "Classic 6-Cup Chemex",
+    "brand": "Chemex",
+    "description": "An icon. Brews a clean, bright, sediment-free cup. Doubles as a design object on your kitchen counter.",
+    "tags": ["Pour-Over", "For Two+", "Design Classic"],
+    "price": "€45",
+    "buyUrl": "https://www.amazon.de/s?k=chemex+6+cup",
+    "imageUrl": null
+  }
+]
