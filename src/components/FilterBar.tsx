@@ -3,6 +3,7 @@
 import { useCallback, useRef, useState } from "react";
 import type { FilterState, SortKey } from "@/lib/filters";
 import type { Category } from "@/types/cafe";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface Props {
   filters: FilterState;
@@ -12,21 +13,6 @@ interface Props {
   onClear: () => void;
 }
 
-const CATEGORIES: { value: Category; label: string }[] = [
-  { value: "specialty-coffee", label: "Specialty Coffee" },
-  { value: "bakery",           label: "Bakery"           },
-  { value: "brunch",           label: "Brunch"           },
-  { value: "roastery",         label: "Roastery"         },
-  { value: "work-friendly",    label: "Work-friendly"    },
-  { value: "late-evening",     label: "Late Evening"     },
-];
-
-const SORT_OPTIONS: { value: SortKey; label: string }[] = [
-  { value: "rating",       label: "Top Rated"     },
-  { value: "alpha",        label: "A to Z"        },
-  { value: "most-reviewed",label: "Most Reviewed" },
-];
-
 export default function FilterBar({
   filters,
   totalCount,
@@ -34,8 +20,25 @@ export default function FilterBar({
   onChange,
   onClear,
 }: Props) {
+  const { t } = useLanguage();
   const [searchOpen, setSearchOpen] = useState(!!filters.search);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const CATEGORIES: { value: Category; label: string }[] = [
+    { value: "our-picks",        label: t.catOurPicks        },
+    { value: "specialty-coffee", label: t.catSpecialtyCoffee },
+    { value: "bakery",           label: t.catBakery          },
+    { value: "brunch",           label: t.catBrunch          },
+    { value: "roastery",         label: t.catRoastery        },
+    { value: "work-friendly",    label: t.catWorkFriendly    },
+    { value: "late-evening",     label: t.catLateEvening     },
+  ];
+
+  const SORT_OPTIONS: { value: SortKey; label: string }[] = [
+    { value: "rating",        label: t.sortTopRated      },
+    { value: "alpha",         label: t.sortAtoZ          },
+    { value: "most-reviewed", label: t.sortMostReviewed  },
+  ];
 
   const toggleSearch = useCallback(() => {
     if (searchOpen && !filters.search) {
@@ -75,7 +78,7 @@ export default function FilterBar({
             <input
               ref={inputRef}
               type="search"
-              placeholder="Search..."
+              placeholder={t.search}
               value={filters.search}
               onChange={(e) => onChange({ search: e.target.value })}
               onBlur={() => { if (!filters.search) setSearchOpen(false); }}
@@ -112,7 +115,7 @@ export default function FilterBar({
               onClick={onClear}
               className="text-xs uppercase tracking-wider text-stone-500 hover:text-stone-800 transition-colors"
             >
-              Clear
+              {t.clear}
             </button>
           </>
         )}
@@ -132,8 +135,8 @@ export default function FilterBar({
           </select>
           <span className="text-xs text-stone-500">
             {filteredCount === totalCount
-              ? `${totalCount} places`
-              : `${filteredCount} of ${totalCount} places`}
+              ? `${totalCount} ${t.places}`
+              : `${filteredCount} ${t.of} ${totalCount} ${t.places}`}
           </span>
         </div>
       </div>

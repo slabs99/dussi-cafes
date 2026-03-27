@@ -329,6 +329,19 @@ async function main() {
   console.log(`   URL:  ${LIST_URL}`);
   console.log(`   Mode: ${HEADED ? "headed" : "headless"}\n`);
 
+  // Load existing cafes — new entries will be appended, existing ones untouched
+  let existingCafes: Cafe[] = [];
+  if (fs.existsSync(OUT_PATH)) {
+    try {
+      existingCafes = JSON.parse(fs.readFileSync(OUT_PATH, "utf-8"));
+      console.log(`📂 Loaded ${existingCafes.length} existing cafés`);
+    } catch {
+      console.warn("⚠️  Could not parse existing cafes.json, starting fresh");
+    }
+  }
+  const existingIds = new Set(existingCafes.map((c) => c.id));
+  const existingNames = new Set(existingCafes.map((c) => c.name.toLowerCase().trim()));
+
   const browser = await chromium.launch({ headless: !HEADED });
   const context = await browser.newContext({
     locale: "en-GB",
@@ -347,21 +360,28 @@ async function main() {
 
   try {
     console.log("📍 Loading list page…");
-    await page.goto(LIST_URL, { waitUntil: "networkidle", timeout: 30000 });
+    // Use domcontentloaded — Google Maps never reaches networkidle due to background requests
+    await page.goto(LIST_URL, { waitUntil: "domcontentloaded", timeout: 45000 });
 
     for (const label of ["Accept all", "Reject all"]) {
       const btn = page.locator(`button:has-text("${label}")`).first();
-      if (await btn.isVisible({ timeout: 2000 }).catch(() => false)) {
+      if (await btn.isVisible({ timeout: 3000 }).catch(() => false)) {
         await btn.click();
         await page.waitForTimeout(800);
         break;
       }
     }
 
-    await page.waitForTimeout(1500);
+    // Wait for the list to load — entitylist API fires shortly after page load
+    await page.waitForTimeout(4000);
 
     if (!entityListBody) {
-      throw new Error("entitylist/getlist not captured — list may require login.");
+      // Try waiting a bit longer for the API call
+      await page.waitForTimeout(5000);
+    }
+
+    if (!entityListBody) {
+      throw new Error("entitylist/getlist not captured — list may require login or URL may be invalid.");
     }
 
     console.log("📦 Parsing entitylist API response…");
@@ -376,9 +396,9 @@ async function main() {
     const domByName = await scrollAndCapture(page, apiPlaces.length);
     console.log(`   ${domByName.size} unique entries captured from DOM`);
 
-    // Build final café list using API order (authoritative)
+    // Build scraped café list
     const today = new Date().toISOString().slice(0, 10);
-    const cafes: Cafe[] = apiPlaces.map((api) => {
+    const scrapedCafes: Cafe[] = apiPlaces.map((api) => {
       const dom = domByName.get(api.name);
       return {
         id: makeId(api.name),
@@ -399,36 +419,38 @@ async function main() {
       };
     });
 
-    // Deduplicate by name — Google Maps lists can contain the same place multiple times
+    // Deduplicate scraped list by name
     const seen = new Set<string>();
-    const dedupedCafes = cafes.filter((c) => {
+    const dedupedScraped = scrapedCafes.filter((c) => {
       if (seen.has(c.name)) return false;
       seen.add(c.name);
       return true;
     });
-    if (dedupedCafes.length < cafes.length) {
-      console.log(`\n⚠️  Removed ${cafes.length - dedupedCafes.length} duplicate(s) by name`);
+    if (dedupedScraped.length < scrapedCafes.length) {
+      console.log(`\n⚠️  Removed ${scrapedCafes.length - dedupedScraped.length} duplicate(s) by name`);
     }
 
-    await fetchMissingPhotos(context, dedupedCafes);
+    // Find only NEW cafes — not already in the existing list
+    const newCafes = dedupedScraped.filter(
+      (c) => !existingIds.has(c.id) && !existingNames.has(c.name.toLowerCase().trim())
+    );
+
+    if (newCafes.length === 0) {
+      console.log("\n✅ No new cafés found — list is up to date");
+    } else {
+      console.log(`\n🆕 Found ${newCafes.length} new café(s):`);
+      newCafes.forEach((c) => console.log(`   + ${c.name}`));
+      await fetchMissingPhotos(context, newCafes);
+    }
+
+    // Merge: existing cafes first (unchanged), then new ones appended
+    const finalCafes = [...existingCafes, ...newCafes];
 
     fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
-    fs.writeFileSync(OUT_PATH, JSON.stringify(dedupedCafes, null, 2));
+    fs.writeFileSync(OUT_PATH, JSON.stringify(finalCafes, null, 2));
 
-    const withRating = dedupedCafes.filter((c) => c.rating !== null).length;
-    const withCoords = dedupedCafes.filter((c) => c.coordinates).length;
-
-    console.log(`\n✅ Wrote ${dedupedCafes.length} cafés → ${OUT_PATH}`);
-    console.log(`   📍 ${withCoords}/${dedupedCafes.length} have coordinates`);
-    console.log(`   ⭐ ${withRating}/${dedupedCafes.length} have ratings`);
-
-    console.log("\n📋 First 8:");
-    dedupedCafes.slice(0, 8).forEach((c, i) => {
-      const stars = c.rating ? `${c.rating}★` : "—";
-      const price = c.priceTier ?? "?";
-      const addr = c.address?.split(",")[0] ?? "no address";
-      console.log(`   ${i + 1}. ${c.name}  ${stars}  ${price}  (${addr})`);
-    });
+    console.log(`\n✅ Wrote ${finalCafes.length} cafés → ${OUT_PATH}`);
+    console.log(`   (${existingCafes.length} existing + ${newCafes.length} new)`);
   } finally {
     await browser.close();
   }

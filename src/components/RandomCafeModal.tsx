@@ -2,14 +2,16 @@
 
 import { useEffect } from "react";
 import type { Cafe } from "@/types/cafe";
+import { useLanguage } from "@/context/LanguageContext";
 
-const CATEGORY_LABELS: Record<string, string> = {
-  "specialty-coffee": "Specialty Coffee",
-  bakery: "Bakery",
-  brunch: "Brunch",
-  roastery: "Roastery",
-  "work-friendly": "Work-friendly",
-  "late-evening": "Late Evening",
+const CATEGORY_KEYS: Record<string, keyof import("@/lib/translations").Translations> = {
+  "specialty-coffee": "catSpecialtyCoffee",
+  bakery:             "catBakery",
+  brunch:             "catBrunch",
+  roastery:           "catRoastery",
+  "work-friendly":    "catWorkFriendly",
+  "late-evening":     "catLateEvening",
+  "our-picks":        "catOurPicks",
 };
 
 export default function RandomCafeModal({
@@ -21,7 +23,8 @@ export default function RandomCafeModal({
   onClose: () => void;
   onNext: () => void;
 }) {
-  // Close on Escape
+  const { t } = useLanguage();
+
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") onClose();
@@ -52,7 +55,7 @@ export default function RandomCafeModal({
             />
           ) : (
             <div className="w-full h-full bg-[#EDE8E2] flex items-center justify-center">
-              <span className="font-playfair text-3xl text-stone-300">No photo</span>
+              <span className="font-playfair text-3xl text-stone-300">{t.noPhoto}</span>
             </div>
           )}
 
@@ -93,7 +96,7 @@ export default function RandomCafeModal({
                   key={cat}
                   className="text-[0.65rem] uppercase tracking-wider border border-[#E0DDD9] px-2 py-0.5 text-stone-500"
                 >
-                  {CATEGORY_LABELS[cat] ?? cat}
+                  {CATEGORY_KEYS[cat] ? t[CATEGORY_KEYS[cat]] : cat}
                 </span>
               ))}
             </div>
@@ -106,13 +109,13 @@ export default function RandomCafeModal({
               rel="noopener noreferrer"
               className="flex-1 bg-[#2D6A4F] text-white text-xs uppercase tracking-widest py-2.5 text-center hover:bg-[#245a42] transition-colors"
             >
-              Open in Maps
+              {t.openInMaps}
             </a>
             <button
               onClick={onNext}
               className="flex-1 border border-[#E0DDD9] text-xs uppercase tracking-widest py-2.5 text-stone-600 hover:border-stone-400 hover:text-stone-900 transition-colors"
             >
-              Try another
+              {t.tryAnother}
             </button>
           </div>
         </div>

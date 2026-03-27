@@ -1,6 +1,7 @@
 "use client";
 
 import type { Cafe } from "@/types/cafe";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function CafeCard({
   cafe,
@@ -9,6 +10,7 @@ export default function CafeCard({
   cafe: Cafe;
   index?: number;
 }) {
+  const { t } = useLanguage();
   const rating = cafe.rating !== null ? cafe.rating.toFixed(1) : null;
   const priceTier = cafe.priceTier ?? null;
   const address = cafe.address ?? null;
@@ -52,7 +54,7 @@ export default function CafeCard({
         ) : (
           <div className="w-full h-full flex items-center justify-center">
             <span className="font-playfair text-3xl text-stone-300">
-              No photo
+              {t.noPhoto}
             </span>
           </div>
         )}
@@ -60,7 +62,7 @@ export default function CafeCard({
         {/* Subtle arrow on hover */}
         <div className="absolute inset-0 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <span className="text-white text-[0.7rem] uppercase tracking-widest font-medium bg-black/60 px-3 py-1.5 flex items-center gap-1.5">
-            Open in Maps
+            {t.openInMaps}
             <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
           </span>
         </div>

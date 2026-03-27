@@ -13,6 +13,8 @@ import {
 import FilterBar from "@/components/FilterBar";
 import CafeCard from "@/components/CafeCard";
 import RandomCafeModal from "@/components/RandomCafeModal";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { LanguageProvider, useLanguage } from "@/context/LanguageContext";
 
 function LoadingSkeleton() {
   return (
@@ -58,6 +60,7 @@ const BEAN_POSITIONS: React.CSSProperties[] = [
 function CafeDirectory() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const { t } = useLanguage();
 
   const [cafes, setCafes] = useState<Cafe[]>([]);
   const [loading, setLoading] = useState(true);
@@ -135,18 +138,21 @@ function CafeDirectory() {
           </div>
 
           <div className="pb-2 max-w-xs">
-            <p className="text-xs uppercase tracking-widest text-stone-500 mb-2">
-              Düsseldorf
-            </p>
+            <div className="flex items-center justify-between mb-2">
+              <p className="text-xs uppercase tracking-widest text-stone-500">
+                {t.location}
+              </p>
+              <LanguageSwitcher />
+            </div>
             <p className="text-stone-600 text-sm leading-relaxed mb-4">
-              A personal guide to the best coffee spots, hand-picked by coffee lovers.
+              {t.tagline}
             </p>
             <button
               onClick={openRandom}
               disabled={loading}
               className="text-xs uppercase tracking-widest border border-[#2D6A4F] text-[#2D6A4F] px-4 py-2 hover:bg-[#2D6A4F] hover:text-white transition-colors disabled:opacity-40"
             >
-              Surprise me
+              {t.surpriseMe}
             </button>
           </div>
 
@@ -168,13 +174,13 @@ function CafeDirectory() {
         ) : filtered.length === 0 ? (
           <div className="text-center py-16 sm:py-24">
             <p className="font-playfair text-2xl text-stone-700 mb-3">
-              No cafes match your filters
+              {t.noCafesMatch}
             </p>
             <button
               onClick={handleClear}
               className="text-sm text-stone-500 hover:text-[#2D6A4F] underline underline-offset-4 transition-colors"
             >
-              Clear all filters
+              {t.clearAllFilters}
             </button>
           </div>
         ) : (
@@ -187,7 +193,7 @@ function CafeDirectory() {
       </main>
 
       <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8 border-t border-[#E0DDD9] text-center text-xs text-stone-500 tracking-wider">
-        Made with love in Düsseldorf
+        {t.madeWithLove}
       </footer>
 
       {randomCafe && (
@@ -203,10 +209,12 @@ function CafeDirectory() {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#F5F2EE]">
-      <Suspense>
-        <CafeDirectory />
-      </Suspense>
-    </div>
+    <LanguageProvider>
+      <div className="min-h-screen bg-[#F5F2EE]">
+        <Suspense>
+          <CafeDirectory />
+        </Suspense>
+      </div>
+    </LanguageProvider>
   );
 }

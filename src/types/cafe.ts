@@ -4,7 +4,8 @@ export type Category =
   | "brunch"
   | "roastery"
   | "work-friendly"
-  | "late-evening";
+  | "late-evening"
+  | "our-picks";
 
 export type PriceTier = "€" | "€€" | "€€€";
 
