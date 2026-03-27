@@ -19,18 +19,28 @@
   },
   {
     "id": "the-barn-yirgacheffe",
-    "name": "Yirgacheffe Kochere",
-    "brand": "The Barn",
-    "description": "Delicate and tea-like. Expect bergamot, white peach, and a clean finish. Perfect for a slow morning pour-over.",
+    "name": "Espresso No. 3",
+    "brand": "Röstmeister Kaffee",
+    "description": "A bold espresso blend with chocolate depth, nutty notes, and a touch of spice. Balanced and versatile, it works great both as a straight espresso and in milk drinks.",
     "tags": [
-      "Ethiopia",
-      "Light Roast",
-      "Washed",
-      "Filter"
+      "Brazil",
+      "Guatemala",
+      "Uganda",
+      "blend",
+      "arabica",
+      "robusta",
+      "medium-dark roast",
+      "chocolate",
+      "nutty",
+      "spicy",
+      "low acidity",
+      "espresso",
+      "milk drinks",
+      "full-bodied"
     ],
     "price": "€16.00",
-    "buyUrl": "https://the-barn.de/collections/filter",
-    "imageUrl": "https://picsum.photos/seed/beans-yirg/800/600"
+    "buyUrl": "https://www.roestmeister.com/espresso-kaffee-no3.html",
+    "imageUrl": "/photos/beans-the-barn-yirgacheffe.webp"
   },
   {
     "id": "fjaka-signature",
