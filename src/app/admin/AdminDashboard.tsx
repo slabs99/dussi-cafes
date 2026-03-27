@@ -168,16 +168,28 @@ export default function AdminDashboard({
         {/* Quick links */}
         <section>
           <h2 className="text-xs uppercase tracking-widest text-stone-400 mb-5">Manage</h2>
-          <a
-            href="/admin/cafes"
-            className="flex items-center justify-between bg-white border border-[#E0DDD9] px-6 py-4 hover:border-stone-400 transition-colors group"
-          >
-            <div>
-              <p className="text-sm font-medium text-stone-900">Edit cafes</p>
-              <p className="text-xs text-stone-400 mt-0.5">Correct names, upload photos, add comments</p>
-            </div>
-            <span className="text-stone-300 group-hover:text-stone-600 transition-colors">&rarr;</span>
-          </a>
+          <div className="flex flex-col gap-3">
+            <a
+              href="/admin/cafes"
+              className="flex items-center justify-between bg-white border border-[#E0DDD9] px-6 py-4 hover:border-stone-400 transition-colors group"
+            >
+              <div>
+                <p className="text-sm font-medium text-stone-900">Edit cafes</p>
+                <p className="text-xs text-stone-400 mt-0.5">Correct names, upload photos, add comments</p>
+              </div>
+              <span className="text-stone-300 group-hover:text-stone-600 transition-colors">&rarr;</span>
+            </a>
+            <a
+              href="/admin/lifestyle"
+              className="flex items-center justify-between bg-white border border-[#E0DDD9] px-6 py-4 hover:border-stone-400 transition-colors group"
+            >
+              <div>
+                <p className="text-sm font-medium text-stone-900">Edit lifestyle sections</p>
+                <p className="text-xs text-stone-400 mt-0.5">Manage beans, gear, kits, and apparel picks</p>
+              </div>
+              <span className="text-stone-300 group-hover:text-stone-600 transition-colors">&rarr;</span>
+            </a>
+          </div>
         </section>
 
         {/* Sync */}

@@ -1,0 +1,18 @@
+{
+  "beans": {
+    "title": "Coffee Beans",
+    "subtitle": "Bags we've actually loved — order online and brew at home."
+  },
+  "gear": {
+    "title": "Coffee Gear",
+    "subtitle": "The tools worth having. No fluff."
+  },
+  "kits": {
+    "title": "Home Barista Kits",
+    "subtitle": "Start somewhere good."
+  },
+  "apparel": {
+    "title": "Apparel",
+    "subtitle": "Wear your obsession with some dignity."
+  }
+}

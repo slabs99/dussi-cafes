@@ -108,9 +108,10 @@ function CafeDirectory() {
   const [gear, setGear] = useState<Product[]>([]);
   const [kits, setKits] = useState<Product[]>([]);
   const [apparel, setApparel] = useState<Product[]>([]);
+  const [lifestyleMeta, setLifestyleMeta] = useState<Record<string, { title: string; subtitle: string }>>({});
   const [loading, setLoading] = useState(true);
   const [filters, setFilters] = useState<FilterState>(() => paramsToFilters(searchParams));
-  const [visibleCount, setVisibleCount] = useState(12);
+  const [visibleCount, setVisibleCount] = useState(9);
   const [randomCafe, setRandomCafe] = useState<Cafe | null>(null);
   const [sparkling, setSparkling] = useState(false);
   const [btnAnimating, setBtnAnimating] = useState(false);
@@ -124,8 +125,9 @@ function CafeDirectory() {
       fetch("/data/gear.json").then((r) => r.json()).catch(() => []),
       fetch("/data/kits.json").then((r) => r.json()).catch(() => []),
       fetch("/data/apparel.json").then((r) => r.json()).catch(() => []),
-    ]).then(([rawCafes, overrides, beansData, gearData, kitsData, apparelData]: [
-      Cafe[], Record<string, Partial<Cafe>>, Product[], Product[], Product[], Product[]
+      fetch("/data/lifestyle-meta.json").then((r) => r.json()).catch(() => ({})),
+    ]).then(([rawCafes, overrides, beansData, gearData, kitsData, apparelData, metaData]: [
+      Cafe[], Record<string, Partial<Cafe>>, Product[], Product[], Product[], Product[], Record<string, { title: string; subtitle: string }>
     ]) => {
       const merged = rawCafes.map((cafe) => {
         const ov = overrides[cafe.id];
@@ -136,6 +138,7 @@ function CafeDirectory() {
       setGear(gearData);
       setKits(kitsData);
       setApparel(apparelData);
+      setLifestyleMeta(metaData);
       setLoading(false);
     });
   }, []);
@@ -148,12 +151,12 @@ function CafeDirectory() {
 
   const handleChange = useCallback((next: Partial<FilterState>) => {
     setFilters((prev) => ({ ...prev, ...next }));
-    setVisibleCount(12);
+    setVisibleCount(9);
   }, []);
 
   const handleClear = useCallback(() => {
     setFilters(DEFAULT_FILTERS);
-    setVisibleCount(12);
+    setVisibleCount(9);
   }, []);
 
   const filtered = applyFilters(cafes, filters);
@@ -252,10 +255,10 @@ function CafeDirectory() {
                   <CafeCard key={cafe.id} cafe={cafe} index={i} />
                 ))}
               </div>
-              {visibleCount < filtered.length && (
-                <div className="text-center mt-10 sm:mt-14">
+              <div className="text-center mt-10 sm:mt-14 flex items-center justify-center gap-4">
+                {visibleCount < filtered.length && (
                   <button
-                    onClick={() => setVisibleCount((n) => n + 12)}
+                    onClick={() => setVisibleCount((n) => n + 9)}
                     className="text-xs uppercase tracking-widest border border-stone-300 text-stone-600 px-8 py-3 hover:border-[#2D6A4F] hover:text-[#2D6A4F] transition-colors"
                   >
                     Show more
@@ -263,8 +266,19 @@ function CafeDirectory() {
                       ({filtered.length - visibleCount} left)
                     </span>
                   </button>
-                </div>
-              )}
+                )}
+                {visibleCount > 9 && (
+                  <button
+                    onClick={() => {
+                      setVisibleCount(9);
+                      document.getElementById("cafes")?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    className="text-xs uppercase tracking-widest border border-stone-300 text-stone-600 px-8 py-3 hover:border-stone-500 hover:text-stone-800 transition-colors"
+                  >
+                    Show less
+                  </button>
+                )}
+              </div>
             </>
           )}
         </div>
@@ -277,9 +291,9 @@ function CafeDirectory() {
             <CuratedSection
               id="beans"
               variant="white"
-              title={t.sectionBeans}
-              subtitle={t.sectionBeansSub}
-              products={beans}
+              title={lifestyleMeta.beans?.title ?? t.sectionBeans}
+              subtitle={lifestyleMeta.beans?.subtitle ?? t.sectionBeansSub}
+              products={beans.slice(0, 9)}
               icon={
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                   <ellipse cx="9" cy="9" rx="6.5" ry="8" stroke="currentColor" strokeWidth="1.4" />
@@ -293,9 +307,9 @@ function CafeDirectory() {
             <CuratedSection
               id="gear"
               variant="cream"
-              title={t.sectionGear}
-              subtitle={t.sectionGearSub}
-              products={gear}
+              title={lifestyleMeta.gear?.title ?? t.sectionGear}
+              subtitle={lifestyleMeta.gear?.subtitle ?? t.sectionGearSub}
+              products={gear.slice(0, 9)}
               icon={
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                   <circle cx="9" cy="9" r="2.5" stroke="currentColor" strokeWidth="1.4" />
@@ -309,9 +323,9 @@ function CafeDirectory() {
             <CuratedSection
               id="kits"
               variant="white"
-              title={t.sectionKits}
-              subtitle={t.sectionKitsSub}
-              products={kits}
+              title={lifestyleMeta.kits?.title ?? t.sectionKits}
+              subtitle={lifestyleMeta.kits?.subtitle ?? t.sectionKitsSub}
+              products={kits.slice(0, 9)}
               icon={
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                   <rect x="2" y="6" width="14" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.4" />
@@ -326,9 +340,9 @@ function CafeDirectory() {
             <CuratedSection
               id="apparel"
               variant="cream"
-              title={t.sectionApparel}
-              subtitle={t.sectionApparelSub}
-              products={apparel}
+              title={lifestyleMeta.apparel?.title ?? t.sectionApparel}
+              subtitle={lifestyleMeta.apparel?.subtitle ?? t.sectionApparelSub}
+              products={apparel.slice(0, 9)}
               icon={
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                   <path d="M6.5 2.5L2 5.5V8.5H5V16H13V8.5H16V5.5L11.5 2.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
