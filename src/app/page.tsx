@@ -122,10 +122,10 @@ function CafeDirectory() {
     Promise.all([
       fetch("/data/cafes.json").then((r) => r.json()),
       fetch("/api/overrides").then((r) => r.json()).catch(() => ({})),
-      fetch("/data/beans.json").then((r) => r.json()).catch(() => []),
-      fetch("/data/gear.json").then((r) => r.json()).catch(() => []),
-      fetch("/data/kits.json").then((r) => r.json()).catch(() => []),
-      fetch("/data/apparel.json").then((r) => r.json()).catch(() => []),
+      fetch("/api/lifestyle/beans").then((r) => r.json()).catch(() => []),
+      fetch("/api/lifestyle/gear").then((r) => r.json()).catch(() => []),
+      fetch("/api/lifestyle/kits").then((r) => r.json()).catch(() => []),
+      fetch("/api/lifestyle/apparel").then((r) => r.json()).catch(() => []),
       fetch("/api/lifestyle-meta").then((r) => r.json()).catch(() => ({})),
       fetch("/api/categories-meta").then((r) => r.json()).catch(() => undefined),
     ]).then(([rawCafes, overrides, beansData, gearData, kitsData, apparelData, metaData, catMeta]: [
