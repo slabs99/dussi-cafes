@@ -2,12 +2,13 @@ import { NextResponse } from "next/server";
 
 const OWNER = "slabs99";
 const REPO = "dussi-cafes";
+const BRANCH = "extra-features";
 const FILE_PATH = "public/data/overrides.json";
 
 async function getFileFromGitHub(): Promise<{ content: Record<string, unknown>; sha: string }> {
   const token = process.env.GITHUB_TOKEN;
   const res = await fetch(
-    `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}`,
+    `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`,
     {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -36,7 +37,7 @@ async function commitToGitHub(content: Record<string, unknown>, sha: string, mes
         "X-GitHub-Api-Version": "2022-11-28",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ message, content: encoded, sha }),
+      body: JSON.stringify({ message, content: encoded, sha, branch: BRANCH }),
     }
   );
   if (!res.ok) {

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 
 const OWNER = "slabs99";
 const REPO = "dussi-cafes";
+const BRANCH = "extra-features";
 
 export async function POST(req: Request) {
   try {
@@ -25,7 +26,7 @@ export async function POST(req: Request) {
 
     // Check if file already exists (need its SHA to update)
     const checkRes = await fetch(
-      `https://api.github.com/repos/${OWNER}/${REPO}/contents/${filePath}`,
+      `https://api.github.com/repos/${OWNER}/${REPO}/contents/${filePath}?ref=${BRANCH}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -41,6 +42,7 @@ export async function POST(req: Request) {
       message: `admin: upload photo for cafe ${cafeId}`,
       content: base64,
     };
+    body.branch = BRANCH;
     if (existingSha) body.sha = existingSha;
 
     const putRes = await fetch(
