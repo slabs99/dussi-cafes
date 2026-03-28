@@ -1,0 +1,9 @@
+{
+  "our-picks":        { "label": "Our Picks",        "enabled": true },
+  "specialty-coffee": { "label": "Specialty Coffee", "enabled": true },
+  "bakery":           { "label": "Bakery",           "enabled": true },
+  "brunch":           { "label": "Brunch",           "enabled": true },
+  "roastery":         { "label": "Roastery",         "enabled": true },
+  "work-friendly":    { "label": "Work-friendly",    "enabled": true },
+  "late-evening":     { "label": "Late Evening",     "enabled": true }
+}

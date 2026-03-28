@@ -25,9 +25,8 @@ export default function TopNav() {
   const [activeTab, setActiveTab] = useState<string>("cafes");
   const [scrolled, setScrolled] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  const [enabledSections, setEnabledSections] = useState<Record<SectionKey, boolean>>({
-    beans: true, gear: true, kits: true, apparel: true,
-  });
+  // Start null so lifestyle tabs only appear once we know which are enabled (prevents flash)
+  const [enabledSections, setEnabledSections] = useState<Record<SectionKey, boolean> | null>(null);
   const langRef = useRef<HTMLDivElement>(null);
 
   // Load lifestyle-meta to know which sections are enabled
@@ -45,13 +44,15 @@ export default function TopNav() {
       .catch(() => {/* keep defaults */});
   }, []);
 
-  // Tab definitions — always show Cafes, lifestyle tabs depend on enabled state
+  // Tab definitions — Cafes always shown; lifestyle tabs only added once meta is loaded
   const tabs = [
-    { id: "cafes",   label: t.tabCafes   },
-    ...(enabledSections.beans   ? [{ id: "beans",   label: t.tabBeans   }] : []),
-    ...(enabledSections.gear    ? [{ id: "gear",    label: t.tabGear    }] : []),
-    ...(enabledSections.kits    ? [{ id: "kits",    label: t.tabKits    }] : []),
-    ...(enabledSections.apparel ? [{ id: "apparel", label: t.tabApparel }] : []),
+    { id: "cafes", label: t.tabCafes },
+    ...(enabledSections === null ? [] : [
+      ...(enabledSections.beans   ? [{ id: "beans",   label: t.tabBeans   }] : []),
+      ...(enabledSections.gear    ? [{ id: "gear",    label: t.tabGear    }] : []),
+      ...(enabledSections.kits    ? [{ id: "kits",    label: t.tabKits    }] : []),
+      ...(enabledSections.apparel ? [{ id: "apparel", label: t.tabApparel }] : []),
+    ]),
   ];
 
   // Shadow on scroll + active tab tracking
@@ -59,7 +60,7 @@ export default function TopNav() {
     function onScroll() {
       setScrolled(window.scrollY > 40);
       const offsets = LIFESTYLE_SECTIONS
-        .filter((id) => enabledSections[id])
+        .filter((id) => enabledSections?.[id])
         .map((id) => {
           const el = document.getElementById(id);
           return { id, top: el ? el.getBoundingClientRect().top : Infinity };

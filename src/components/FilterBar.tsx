@@ -5,12 +5,15 @@ import type { FilterState, SortKey } from "@/lib/filters";
 import type { Category } from "@/types/cafe";
 import { useLanguage } from "@/context/LanguageContext";
 
+interface CategoryMeta { label: string; enabled: boolean }
+
 interface Props {
   filters: FilterState;
   totalCount: number;
   filteredCount: number;
   onChange: (next: Partial<FilterState>) => void;
   onClear: () => void;
+  categoriesMeta?: Record<string, CategoryMeta>;
 }
 
 const selectCls = "text-sm text-stone-600 bg-transparent outline-none cursor-pointer hover:text-stone-900 transition-colors";
@@ -21,21 +24,28 @@ export default function FilterBar({
   filteredCount,
   onChange,
   onClear,
+  categoriesMeta,
 }: Props) {
   const { t } = useLanguage();
   const [searchOpen, setSearchOpen] = useState(!!filters.search);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const CATEGORIES: { value: Category | ""; label: string }[] = [
-    { value: "",               label: t.allCafes          },
-    { value: "our-picks",      label: t.catOurPicks        },
-    { value: "specialty-coffee", label: t.catSpecialtyCoffee },
-    { value: "bakery",         label: t.catBakery          },
-    { value: "brunch",         label: t.catBrunch          },
-    { value: "roastery",       label: t.catRoastery        },
-    { value: "work-friendly",  label: t.catWorkFriendly    },
-    { value: "late-evening",   label: t.catLateEvening     },
+  // All categories with fallback translation labels
+  const ALL_CATEGORIES: { value: Category | ""; label: string }[] = [
+    { value: "",                 label: t.allCafes },
+    { value: "our-picks",        label: categoriesMeta?.["our-picks"]?.label        ?? t.catOurPicks        },
+    { value: "specialty-coffee", label: categoriesMeta?.["specialty-coffee"]?.label ?? t.catSpecialtyCoffee },
+    { value: "bakery",           label: categoriesMeta?.["bakery"]?.label           ?? t.catBakery          },
+    { value: "brunch",           label: categoriesMeta?.["brunch"]?.label           ?? t.catBrunch          },
+    { value: "roastery",         label: categoriesMeta?.["roastery"]?.label         ?? t.catRoastery        },
+    { value: "work-friendly",    label: categoriesMeta?.["work-friendly"]?.label    ?? t.catWorkFriendly    },
+    { value: "late-evening",     label: categoriesMeta?.["late-evening"]?.label     ?? t.catLateEvening     },
   ];
+
+  // When meta is loaded, filter out disabled categories
+  const CATEGORIES = categoriesMeta
+    ? ALL_CATEGORIES.filter((c) => !c.value || categoriesMeta[c.value]?.enabled !== false)
+    : ALL_CATEGORIES;
 
   const SORT_OPTIONS: { value: SortKey; label: string }[] = [
     { value: "rating",        label: t.sortTopRated     },

@@ -109,6 +109,7 @@ function CafeDirectory() {
   const [kits, setKits] = useState<Product[]>([]);
   const [apparel, setApparel] = useState<Product[]>([]);
   const [lifestyleMeta, setLifestyleMeta] = useState<Record<string, { title: string; subtitle: string; enabled?: boolean }>>({});
+  const [categoriesMeta, setCategoriesMeta] = useState<Record<string, { label: string; enabled: boolean }> | undefined>(undefined);
   const [loading, setLoading] = useState(true);
   const [filters, setFilters] = useState<FilterState>(() => paramsToFilters(searchParams));
   const [visibleCount, setVisibleCount] = useState(9);
@@ -126,8 +127,9 @@ function CafeDirectory() {
       fetch("/data/kits.json").then((r) => r.json()).catch(() => []),
       fetch("/data/apparel.json").then((r) => r.json()).catch(() => []),
       fetch("/api/lifestyle-meta").then((r) => r.json()).catch(() => ({})),
-    ]).then(([rawCafes, overrides, beansData, gearData, kitsData, apparelData, metaData]: [
-      Cafe[], Record<string, Partial<Cafe> & { hidden?: boolean }>, Product[], Product[], Product[], Product[], Record<string, { title: string; subtitle: string }>
+      fetch("/api/categories-meta").then((r) => r.json()).catch(() => undefined),
+    ]).then(([rawCafes, overrides, beansData, gearData, kitsData, apparelData, metaData, catMeta]: [
+      Cafe[], Record<string, Partial<Cafe> & { hidden?: boolean }>, Product[], Product[], Product[], Product[], Record<string, { title: string; subtitle: string }>, Record<string, { label: string; enabled: boolean }> | undefined
     ]) => {
       const merged = rawCafes
         .filter((cafe) => !(overrides[cafe.id]?.hidden))
@@ -141,6 +143,7 @@ function CafeDirectory() {
       setKits(kitsData);
       setApparel(apparelData);
       setLifestyleMeta(metaData);
+      setCategoriesMeta(catMeta);
       setLoading(false);
     });
   }, []);
@@ -232,6 +235,7 @@ function CafeDirectory() {
         filteredCount={filtered.length}
         onChange={handleChange}
         onClear={handleClear}
+        categoriesMeta={categoriesMeta}
       />
 
       {/* Cafe grid */}
