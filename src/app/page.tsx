@@ -127,12 +127,14 @@ function CafeDirectory() {
       fetch("/data/apparel.json").then((r) => r.json()).catch(() => []),
       fetch("/api/lifestyle-meta").then((r) => r.json()).catch(() => ({})),
     ]).then(([rawCafes, overrides, beansData, gearData, kitsData, apparelData, metaData]: [
-      Cafe[], Record<string, Partial<Cafe>>, Product[], Product[], Product[], Product[], Record<string, { title: string; subtitle: string }>
+      Cafe[], Record<string, Partial<Cafe> & { hidden?: boolean }>, Product[], Product[], Product[], Product[], Record<string, { title: string; subtitle: string }>
     ]) => {
-      const merged = rawCafes.map((cafe) => {
-        const ov = overrides[cafe.id];
-        return ov ? { ...cafe, ...ov } : cafe;
-      });
+      const merged = rawCafes
+        .filter((cafe) => !(overrides[cafe.id]?.hidden))
+        .map((cafe) => {
+          const ov = overrides[cafe.id];
+          return ov ? { ...cafe, ...ov } : cafe;
+        });
       setCafes(merged);
       setBeans(beansData);
       setGear(gearData);

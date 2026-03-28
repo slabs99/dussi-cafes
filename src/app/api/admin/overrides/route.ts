@@ -81,6 +81,47 @@ export async function POST(req: Request) {
   }
 }
 
+// PATCH — bulk update multiple cafes in one commit
+export async function PATCH(req: Request) {
+  try {
+    const { cafeIds, override, removeFields } = await req.json() as {
+      cafeIds: string[];
+      override?: Record<string, unknown>;
+      removeFields?: string[];
+    };
+
+    const { content, sha } = await getFileFromGitHub();
+
+    for (const cafeId of cafeIds) {
+      const existing = (content[cafeId] as Record<string, unknown>) ?? {};
+
+      let entry: Record<string, unknown> = { ...existing };
+
+      if (override) {
+        const cleaned = Object.fromEntries(
+          Object.entries(override).filter(([, v]) => v !== "" && v !== null && v !== undefined)
+        );
+        entry = { ...entry, ...cleaned };
+      }
+
+      if (removeFields) {
+        for (const field of removeFields) delete entry[field];
+      }
+
+      if (Object.keys(entry).length === 0) {
+        delete content[cafeId];
+      } else {
+        content[cafeId] = entry;
+      }
+    }
+
+    await commitToGitHub(content, sha, `admin: bulk update ${cafeIds.length} cafe(s)`);
+    return NextResponse.json({ ok: true });
+  } catch (err) {
+    return NextResponse.json({ error: (err as Error).message }, { status: 500 });
+  }
+}
+
 // DELETE a single field or whole override
 export async function DELETE(req: Request) {
   try {
