@@ -121,7 +121,7 @@ function CafeDirectory() {
   useEffect(() => {
     Promise.all([
       fetch("/data/cafes.json").then((r) => r.json()),
-      fetch("/data/overrides.json").then((r) => r.json()).catch(() => ({})),
+      fetch("/api/overrides").then((r) => r.json()).catch(() => ({})),
       fetch("/data/beans.json").then((r) => r.json()).catch(() => []),
       fetch("/data/gear.json").then((r) => r.json()).catch(() => []),
       fetch("/data/kits.json").then((r) => r.json()).catch(() => []),

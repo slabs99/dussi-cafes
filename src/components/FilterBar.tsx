@@ -111,7 +111,7 @@ export default function FilterBar({
             <button
               key={c.value}
               onClick={() => onChange({ category: c.value as Category | "" })}
-              className={`flex-shrink-0 px-2.5 py-1 text-xs rounded-sm transition-colors ${
+              className={`flex-shrink-0 px-2.5 py-1 text-sm rounded-sm transition-colors ${
                 filters.category === c.value
                   ? "text-[#2D6A4F] font-semibold bg-[#2D6A4F]/8"
                   : "text-stone-500 hover:text-stone-900"
