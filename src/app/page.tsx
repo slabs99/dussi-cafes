@@ -215,7 +215,7 @@ function CafeDirectory() {
               <button
                 onClick={openRandom}
                 disabled={loading}
-                className={`flex items-center gap-2 text-xs uppercase tracking-widest border border-[#2D6A4F] text-[#2D6A4F] px-4 py-2 rounded-xl hover:bg-[#2D6A4F] hover:text-white transition-colors disabled:opacity-40 group ${
+                className={`flex items-center gap-2 text-xs uppercase tracking-widest border border-[#2D6A4F] text-[#2D6A4F] px-4 py-2 rounded-lg hover:bg-[#2D6A4F] hover:text-white transition-colors disabled:opacity-40 group ${
                   btnAnimating ? "animate-surprise-pop" : ""
                 }`}
               >
@@ -264,7 +264,7 @@ function CafeDirectory() {
                 {visibleCount < filtered.length && (
                   <button
                     onClick={() => setVisibleCount((n) => n + 9)}
-                    className="text-xs uppercase tracking-widest border border-stone-300 text-stone-600 px-8 py-3 rounded-xl hover:border-[#2D6A4F] hover:text-[#2D6A4F] transition-colors"
+                    className="text-xs uppercase tracking-widest border border-stone-300 text-stone-600 px-8 py-3 rounded-lg hover:border-[#2D6A4F] hover:text-[#2D6A4F] transition-colors"
                   >
                     {t.showMore}
                     <span className="ml-2 text-stone-400">
@@ -278,7 +278,7 @@ function CafeDirectory() {
                       setVisibleCount(9);
                       document.getElementById("cafes")?.scrollIntoView({ behavior: "smooth" });
                     }}
-                    className="text-xs uppercase tracking-widest border border-stone-300 text-stone-600 px-8 py-3 rounded-xl hover:border-stone-500 hover:text-stone-800 transition-colors"
+                    className="text-xs uppercase tracking-widest border border-stone-300 text-stone-600 px-8 py-3 rounded-lg hover:border-stone-500 hover:text-stone-800 transition-colors"
                   >
                     {t.showLess}
                   </button>
@@ -299,12 +299,6 @@ function CafeDirectory() {
               title={lifestyleMeta.beans?.title ?? t.sectionBeans}
               subtitle={lifestyleMeta.beans?.subtitle ?? t.sectionBeansSub}
               products={beans.slice(0, 9)}
-              icon={
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <ellipse cx="9" cy="9" rx="6.5" ry="8" stroke="currentColor" strokeWidth="1.4" />
-                  <path d="M9 1.5 C6.5 5.5 6.5 12.5 9 16.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" fill="none" />
-                </svg>
-              }
             />
           )}
 
@@ -315,12 +309,6 @@ function CafeDirectory() {
               title={lifestyleMeta.gear?.title ?? t.sectionGear}
               subtitle={lifestyleMeta.gear?.subtitle ?? t.sectionGearSub}
               products={gear.slice(0, 9)}
-              icon={
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <circle cx="9" cy="9" r="2.5" stroke="currentColor" strokeWidth="1.4" />
-                  <path d="M9 1.5v2.5M9 14v2.5M1.5 9H4M14 9h2.5M3.2 3.2l1.8 1.8M13 13l1.8 1.8M3.2 14.8l1.8-1.8M13 5l1.8-1.8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-                </svg>
-              }
             />
           )}
 
@@ -331,13 +319,6 @@ function CafeDirectory() {
               title={lifestyleMeta.kits?.title ?? t.sectionKits}
               subtitle={lifestyleMeta.kits?.subtitle ?? t.sectionKitsSub}
               products={kits.slice(0, 9)}
-              icon={
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <rect x="2" y="6" width="14" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.4" />
-                  <path d="M6 6V5A3 3 0 0 1 12 5V6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-                  <path d="M6.5 11h5M9 8.5v5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-                </svg>
-              }
             />
           )}
 
@@ -348,12 +329,6 @@ function CafeDirectory() {
               title={lifestyleMeta.apparel?.title ?? t.sectionApparel}
               subtitle={lifestyleMeta.apparel?.subtitle ?? t.sectionApparelSub}
               products={apparel.slice(0, 9)}
-              icon={
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <path d="M6.5 2.5L2 5.5V8.5H5V16H13V8.5H16V5.5L11.5 2.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M6.5 2.5C6.5 2.5 7.5 4.5 9 4.5C10.5 4.5 11.5 2.5 11.5 2.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-                </svg>
-              }
             />
           )}
 

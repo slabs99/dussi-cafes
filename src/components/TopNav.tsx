@@ -111,7 +111,7 @@ export default function TopNav() {
                   ? "text-[#2D6A4F] font-semibold bg-[#2D6A4F]/8"
                   : (id === "cafes" || id === "beans")
                     ? "text-stone-700 font-medium hover:text-stone-900"
-                    : "text-stone-500 hover:text-stone-900"
+                    : "text-stone-600 hover:text-stone-900"
               }`}
             >
               {label}

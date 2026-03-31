@@ -19,7 +19,6 @@ export default function CafeCard({
   index?: number;
 }) {
   const { t } = useLanguage();
-  const priceTier = cafe.priceTier ?? null;
   const address = cafe.address ?? null;
   const isOurPicks = cafe.categories.includes("our-picks");
 
@@ -90,29 +89,25 @@ export default function CafeCard({
         </h2>
 
         {cafe.comment && (
-          <p className="text-sm text-stone-500 italic leading-snug line-clamp-2">
+          <p className="text-sm text-stone-600 italic leading-snug line-clamp-2">
             {cafe.comment}
           </p>
         )}
 
-        {priceTier && (
-          <p className="text-sm text-stone-500">{priceTier}</p>
-        )}
-
         {address && (
-          <p className="text-sm text-stone-500 truncate leading-snug">
+          <p className="text-sm text-stone-600 truncate leading-snug">
             {address.split(",")[0]}
           </p>
         )}
 
         {/* Open in Maps CTA */}
-        <span className="inline-flex items-center gap-1 text-sm text-stone-400 group-hover:text-[#2D6A4F] transition-colors">
+        <span className="inline-flex items-center gap-1 text-sm text-stone-500 group-hover:text-[#2D6A4F] transition-colors">
           {t.openInMaps}
           <span className="inline-block transition-transform duration-200 group-hover:translate-x-0.5">&rarr;</span>
         </span>
 
         {hoursDisplay && (
-          <p className={`text-sm truncate leading-snug ${statusColor || "text-stone-500"}`}>
+          <p className={`text-sm truncate leading-snug ${statusColor || "text-stone-600"}`}>
             {hoursDisplay}
           </p>
         )}

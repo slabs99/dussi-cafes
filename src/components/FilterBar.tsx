@@ -75,7 +75,7 @@ export default function FilterBar({
                 className={`flex-shrink-0 px-2.5 py-1 text-sm rounded-lg transition-colors flex items-center gap-1.5 ${
                   isActive
                     ? "text-[#2D6A4F] font-semibold bg-[#2D6A4F]/8"
-                    : "text-stone-500 hover:text-stone-900"
+                    : "text-stone-600 hover:text-stone-900"
                 }`}
               >
                 {isOurPicks && (
@@ -93,7 +93,7 @@ export default function FilterBar({
 
         {/* Counter — right side */}
         <div className="ml-auto sm:ml-0 flex-shrink-0">
-          <span className="text-sm text-stone-400 hidden sm:inline">
+          <span className="text-sm text-stone-600 hidden sm:inline">
             {filteredCount === totalCount
               ? `${totalCount} ${t.places}`
               : `${filteredCount} ${t.of} ${totalCount} ${t.places}`}

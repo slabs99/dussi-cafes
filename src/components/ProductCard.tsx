@@ -27,7 +27,7 @@ export default function ProductCard({
 
   return (
     <div
-      className="group flex flex-col bg-white animate-card"
+      className="group flex flex-col bg-white rounded-xl overflow-hidden animate-card"
       style={{ animationDelay: `${Math.min(index * 50, 300)}ms` }}
     >
       {/* Image */}
@@ -54,18 +54,18 @@ export default function ProductCard({
         )}
 
         {/* Price badge */}
-        <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-0.5 text-[0.65rem] font-semibold text-stone-800 tracking-wide">
+        <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm rounded-lg px-2 py-0.5 text-[0.65rem] font-semibold text-stone-800 tracking-wide">
           {product.price}
         </div>
       </div>
 
       {/* Body */}
       <div className="px-4 pt-3 pb-4 flex flex-col gap-1.5 flex-1">
-        <p className="text-[0.65rem] uppercase tracking-widest text-stone-400">{product.brand}</p>
+        <p className="text-[0.65rem] uppercase tracking-widest text-stone-500">{product.brand}</p>
         <h3 className="font-playfair text-[1rem] leading-snug text-stone-900 line-clamp-2">
           {product.name}
         </h3>
-        <p className="text-[0.7rem] text-stone-500 leading-relaxed line-clamp-2 mt-0.5">
+        <p className="text-sm text-stone-600 leading-relaxed line-clamp-2 mt-0.5">
           {product.description}
         </p>
 
@@ -94,7 +94,7 @@ export default function ProductCard({
           {product.tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
-              className="text-[0.6rem] uppercase tracking-wide border border-[#E0DDD9] px-1.5 py-0.5 text-stone-400"
+              className="text-[0.6rem] uppercase tracking-wide border border-[#E0DDD9] rounded-sm px-1.5 py-0.5 text-stone-600"
             >
               {tag}
             </span>

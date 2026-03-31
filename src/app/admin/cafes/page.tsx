@@ -303,7 +303,7 @@ export default function AdminCafesPage() {
           placeholder="Search cafes…"
           value={search}
           onChange={(e) => { setSearch(e.target.value); setSelected(new Set()); }}
-          className="w-full bg-white border border-[#E0DDD9] rounded-xl px-4 py-3 text-sm text-stone-800 outline-none focus:border-[#2D6A4F] transition-colors placeholder:text-stone-400 mb-6"
+          className="w-full bg-white border border-[#E0DDD9] rounded-lg px-4 py-3 text-sm text-stone-800 outline-none focus:border-[#2D6A4F] transition-colors placeholder:text-stone-400 mb-6"
         />
 
         {loading ? (
