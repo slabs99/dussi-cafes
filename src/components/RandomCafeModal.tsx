@@ -26,12 +26,15 @@ export default function RandomCafeModal({
   cafe,
   onClose,
   onNext,
+  ourPicksLabel,
 }: {
   cafe: Cafe;
   onClose: () => void;
   onNext: () => void;
+  ourPicksLabel?: string;
 }) {
   const { t } = useLanguage();
+  const resolvedOurPicksLabel = ourPicksLabel ?? t.catOurPicks;
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -69,7 +72,7 @@ export default function RandomCafeModal({
           {cafe.categories.includes("our-picks") && (
             <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
               <CoffeeLoveIcon className="w-3.5 h-3.5 text-[#2D6A4F] flex-shrink-0" />
-              <span className="text-[0.65rem] uppercase tracking-wider font-semibold text-[#2D6A4F]">Our picks</span>
+              <span className="text-[0.65rem] uppercase tracking-wider font-semibold text-[#2D6A4F]">{resolvedOurPicksLabel}</span>
             </div>
           )}
 

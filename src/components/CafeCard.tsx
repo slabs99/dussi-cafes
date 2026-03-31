@@ -14,11 +14,14 @@ function CoffeeLoveIcon({ className }: { className?: string }) {
 export default function CafeCard({
   cafe,
   index = 0,
+  ourPicksLabel,
 }: {
   cafe: Cafe;
   index?: number;
+  ourPicksLabel?: string;
 }) {
   const { t } = useLanguage();
+  const resolvedOurPicksLabel = ourPicksLabel ?? t.catOurPicks;
   const address = cafe.address ?? null;
   const isOurPicks = cafe.categories.includes("our-picks");
 
@@ -76,7 +79,7 @@ export default function CafeCard({
           <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
             <CoffeeLoveIcon className="w-3.5 h-3.5 text-[#2D6A4F] flex-shrink-0" />
             <span className="text-[0.65rem] uppercase tracking-wider font-semibold text-[#2D6A4F]">
-              Our picks
+              {resolvedOurPicksLabel}
             </span>
           </div>
         )}

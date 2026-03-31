@@ -257,7 +257,12 @@ function CafeDirectory() {
             <>
               <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-6 sm:gap-x-8 sm:gap-y-12">
                 {filtered.slice(0, visibleCount).map((cafe, i) => (
-                  <CafeCard key={cafe.id} cafe={cafe} index={i} />
+                  <CafeCard
+                    key={cafe.id}
+                    cafe={cafe}
+                    index={i}
+                    ourPicksLabel={categoriesMeta?.["our-picks"]?.label ?? t.catOurPicks}
+                  />
                 ))}
               </div>
               <div className="text-center mt-10 sm:mt-14 flex items-center justify-center gap-4">
@@ -360,6 +365,7 @@ function CafeDirectory() {
           cafe={randomCafe}
           onClose={() => setRandomCafe(null)}
           onNext={nextRandom}
+          ourPicksLabel={categoriesMeta?.["our-picks"]?.label ?? t.catOurPicks}
         />
       )}
     </>
