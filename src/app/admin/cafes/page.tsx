@@ -105,7 +105,7 @@ function EditModal({
 
   return (
     <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center p-4" onClick={onClose}>
-      <div className="bg-white w-full max-w-lg shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+      <div className="bg-white w-full max-w-lg rounded-xl shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between px-6 py-4 border-b border-[#E0DDD9]">
           <h2 className="font-playfair text-lg font-bold text-stone-900">Edit cafe</h2>
           <button onClick={onClose} className="text-stone-400 hover:text-stone-700 text-xl leading-none">&times;</button>
@@ -128,7 +128,7 @@ function EditModal({
               </div>
               <div className="flex flex-col gap-2">
                 <button onClick={() => fileRef.current?.click()} disabled={uploading}
-                  className="text-xs uppercase tracking-wider border border-[#E0DDD9] px-3 py-1.5 text-stone-600 hover:border-stone-400 transition-colors disabled:opacity-40">
+                  className="text-xs uppercase tracking-wider border border-[#E0DDD9] rounded-lg px-3 py-1.5 text-stone-600 hover:border-stone-400 transition-colors disabled:opacity-40">
                   {uploading ? "Uploading…" : "Upload photo"}
                 </button>
                 <p className="text-[0.65rem] text-stone-400">JPG or PNG, max 8 MB</p>
@@ -141,7 +141,7 @@ function EditModal({
           <div>
             <label className="text-xs uppercase tracking-wider text-stone-400 block mb-2">Name</label>
             <input type="text" value={name} onChange={(e) => setName(e.target.value)}
-              className="w-full border border-[#E0DDD9] px-3 py-2.5 text-sm text-stone-800 outline-none focus:border-[#2D6A4F] transition-colors" />
+              className="w-full border border-[#E0DDD9] rounded-lg px-3 py-2.5 text-sm text-stone-800 outline-none focus:border-[#2D6A4F] transition-colors" />
           </div>
 
           {/* Tags */}
@@ -152,7 +152,7 @@ function EditModal({
                 const active = categories.includes(value);
                 return (
                   <button key={value} type="button" onClick={() => toggleCategory(value)}
-                    className={`text-xs px-3 py-1.5 border transition-colors ${
+                    className={`text-xs px-3 py-1.5 border rounded-lg transition-colors ${
                       active ? "bg-[#2D6A4F] border-[#2D6A4F] text-white" : "border-[#E0DDD9] text-stone-600 hover:border-stone-400"
                     }`}>
                     {label}
@@ -162,14 +162,14 @@ function EditModal({
             </div>
           </div>
 
-          {/* Comment */}
+          {/* Recommendation / Comment */}
           <div>
             <label className="text-xs uppercase tracking-wider text-stone-400 block mb-2">
-              Comment <span className="normal-case text-stone-300">(shows on the site)</span>
+              Why we recommend it <span className="normal-case text-stone-300">(shows under the cafe name)</span>
             </label>
             <textarea value={comment} onChange={(e) => setComment(e.target.value)} rows={3}
               placeholder="e.g. Best croissants in the city. Gets busy on weekends."
-              className="w-full border border-[#E0DDD9] px-3 py-2.5 text-sm text-stone-800 outline-none focus:border-[#2D6A4F] transition-colors resize-none placeholder:text-stone-300" />
+              className="w-full border border-[#E0DDD9] rounded-lg px-3 py-2.5 text-sm text-stone-800 outline-none focus:border-[#2D6A4F] transition-colors resize-none placeholder:text-stone-300" />
             {override.comment && (
               <button onClick={handleClearComment} className="text-xs text-stone-400 hover:text-red-500 mt-1 transition-colors">
                 Clear comment
@@ -181,9 +181,9 @@ function EditModal({
         </div>
 
         <div className="flex items-center justify-end gap-3 px-6 py-4 border-t border-[#E0DDD9]">
-          <button onClick={onClose} className="text-xs uppercase tracking-wider text-stone-500 hover:text-stone-800 transition-colors px-4 py-2">Cancel</button>
+          <button onClick={onClose} className="text-xs uppercase tracking-wider text-stone-500 hover:text-stone-800 transition-colors px-4 py-2 rounded-lg">Cancel</button>
           <button onClick={handleSave} disabled={saving || uploading}
-            className="bg-[#2D6A4F] text-white text-xs uppercase tracking-widest px-6 py-2.5 hover:bg-[#245a42] transition-colors disabled:opacity-40">
+            className="bg-[#2D6A4F] text-white text-xs uppercase tracking-widest px-6 py-2.5 rounded-lg hover:bg-[#245a42] transition-colors disabled:opacity-40">
             {saving ? "Saving…" : "Save"}
           </button>
         </div>
@@ -303,7 +303,7 @@ export default function AdminCafesPage() {
           placeholder="Search cafes…"
           value={search}
           onChange={(e) => { setSearch(e.target.value); setSelected(new Set()); }}
-          className="w-full bg-white border border-[#E0DDD9] px-4 py-3 text-sm text-stone-800 outline-none focus:border-[#2D6A4F] transition-colors placeholder:text-stone-400 mb-6"
+          className="w-full bg-white border border-[#E0DDD9] rounded-xl px-4 py-3 text-sm text-stone-800 outline-none focus:border-[#2D6A4F] transition-colors placeholder:text-stone-400 mb-6"
         />
 
         {loading ? (
@@ -389,7 +389,7 @@ export default function AdminCafesPage() {
 
                     <button
                       onClick={(e) => { e.stopPropagation(); setEditing(cafe); }}
-                      className="text-xs uppercase tracking-wider text-stone-400 hover:text-stone-800 border border-[#E0DDD9] hover:border-stone-400 px-3 py-1.5 transition-colors flex-shrink-0"
+                      className="text-xs uppercase tracking-wider text-stone-400 hover:text-stone-800 border border-[#E0DDD9] hover:border-stone-400 rounded-lg px-3 py-1.5 transition-colors flex-shrink-0"
                     >
                       Edit
                     </button>
@@ -416,7 +416,7 @@ export default function AdminCafesPage() {
             <div className="ml-auto flex items-center gap-3 relative">
               {/* Tag assignment panel */}
               {tagPanelOpen && (
-                <div className="absolute bottom-full right-0 mb-3 bg-white border border-[#E0DDD9] shadow-xl p-4 w-72 z-50">
+                <div className="absolute bottom-full right-0 mb-3 bg-white border border-[#E0DDD9] rounded-xl shadow-xl p-4 w-72 z-50">
                   <p className="text-[0.65rem] uppercase tracking-widest text-stone-400 mb-3">
                     Assign tags to {selected.size} cafe{selected.size > 1 ? "s" : ""}
                   </p>
@@ -431,7 +431,7 @@ export default function AdminCafesPage() {
                             if (next.has(value)) next.delete(value); else next.add(value);
                             return next;
                           })}
-                          className={`text-xs px-3 py-1.5 border transition-colors ${
+                          className={`text-xs px-3 py-1.5 border rounded-lg transition-colors ${
                             active
                               ? "bg-[#2D6A4F] border-[#2D6A4F] text-white"
                               : "border-[#E0DDD9] text-stone-600 hover:border-stone-400"
@@ -448,7 +448,7 @@ export default function AdminCafesPage() {
                   <button
                     onClick={handleBulkAssignTags}
                     disabled={pendingTags.size === 0 || bulkSaving}
-                    className="w-full bg-[#2D6A4F] text-white text-xs uppercase tracking-widest py-2.5 hover:bg-[#245a42] transition-colors disabled:opacity-40"
+                    className="w-full bg-[#2D6A4F] text-white text-xs uppercase tracking-widest py-2.5 rounded-lg hover:bg-[#245a42] transition-colors disabled:opacity-40"
                   >
                     {bulkSaving ? "Saving…" : `Apply to ${selected.size} cafe${selected.size > 1 ? "s" : ""}`}
                   </button>
@@ -457,7 +457,7 @@ export default function AdminCafesPage() {
 
               <button
                 onClick={() => { setTagPanelOpen((o) => !o); setPendingTags(new Set()); }}
-                className={`text-xs uppercase tracking-wider border px-4 py-2 transition-colors ${
+                className={`text-xs uppercase tracking-wider border rounded-lg px-4 py-2 transition-colors ${
                   tagPanelOpen
                     ? "border-[#2D6A4F] bg-[#2D6A4F] text-white"
                     : "border-[#2D6A4F] text-[#2D6A4F] hover:bg-[#2D6A4F] hover:text-white"
@@ -470,7 +470,7 @@ export default function AdminCafesPage() {
                 <button
                   onClick={handleBulkShow}
                   disabled={bulkSaving}
-                  className="text-xs uppercase tracking-wider border border-emerald-300 text-emerald-700 px-4 py-2 hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition-colors disabled:opacity-40"
+                  className="text-xs uppercase tracking-wider border border-emerald-300 rounded-lg text-emerald-700 px-4 py-2 hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition-colors disabled:opacity-40"
                 >
                   Show on site
                 </button>
@@ -478,7 +478,7 @@ export default function AdminCafesPage() {
                 <button
                   onClick={handleBulkHide}
                   disabled={bulkSaving}
-                  className="text-xs uppercase tracking-wider border border-red-200 text-red-500 px-4 py-2 hover:bg-red-500 hover:text-white hover:border-red-500 transition-colors disabled:opacity-40"
+                  className="text-xs uppercase tracking-wider border border-red-200 rounded-lg text-red-500 px-4 py-2 hover:bg-red-500 hover:text-white hover:border-red-500 transition-colors disabled:opacity-40"
                 >
                   Hide from site
                 </button>

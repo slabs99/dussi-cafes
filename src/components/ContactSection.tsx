@@ -75,7 +75,7 @@ export default function ContactSection() {
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="border border-[#E0DDD9] bg-white px-3 py-2.5 text-sm text-stone-800 outline-none focus:border-[#2D6A4F] transition-colors placeholder:text-stone-300"
+                    className="border border-[#E0DDD9] rounded-xl bg-white px-3 py-2.5 text-sm text-stone-800 outline-none focus:border-[#2D6A4F] transition-colors placeholder:text-stone-300"
                     placeholder="e.g. Anna"
                   />
                 </div>
@@ -88,7 +88,7 @@ export default function ContactSection() {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="border border-[#E0DDD9] bg-white px-3 py-2.5 text-sm text-stone-800 outline-none focus:border-[#2D6A4F] transition-colors placeholder:text-stone-300"
+                    className="border border-[#E0DDD9] rounded-xl bg-white px-3 py-2.5 text-sm text-stone-800 outline-none focus:border-[#2D6A4F] transition-colors placeholder:text-stone-300"
                     placeholder="you@example.com"
                   />
                 </div>
@@ -103,7 +103,7 @@ export default function ContactSection() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   rows={5}
-                  className="border border-[#E0DDD9] bg-white px-3 py-2.5 text-sm text-stone-800 outline-none focus:border-[#2D6A4F] transition-colors resize-none placeholder:text-stone-300"
+                  className="border border-[#E0DDD9] rounded-xl bg-white px-3 py-2.5 text-sm text-stone-800 outline-none focus:border-[#2D6A4F] transition-colors resize-none placeholder:text-stone-300"
                   placeholder="Tell us anything…"
                 />
               </div>
@@ -116,7 +116,7 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={status === "sending"}
-                  className="bg-[#2D6A4F] text-white text-xs uppercase tracking-widest px-8 py-3 hover:bg-[#245a42] transition-colors disabled:opacity-40 flex items-center gap-2"
+                  className="bg-[#2D6A4F] text-white text-xs uppercase tracking-widest px-8 py-3 rounded-xl hover:bg-[#245a42] transition-colors disabled:opacity-40 flex items-center gap-2"
                 >
                   {status === "sending" ? t.contactSending : t.contactSend}
                   {status !== "sending" && (

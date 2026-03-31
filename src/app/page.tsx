@@ -215,7 +215,7 @@ function CafeDirectory() {
               <button
                 onClick={openRandom}
                 disabled={loading}
-                className={`flex items-center gap-2 text-xs uppercase tracking-widest border border-[#2D6A4F] text-[#2D6A4F] px-4 py-2 hover:bg-[#2D6A4F] hover:text-white transition-colors disabled:opacity-40 group ${
+                className={`flex items-center gap-2 text-xs uppercase tracking-widest border border-[#2D6A4F] text-[#2D6A4F] px-4 py-2 rounded-xl hover:bg-[#2D6A4F] hover:text-white transition-colors disabled:opacity-40 group ${
                   btnAnimating ? "animate-surprise-pop" : ""
                 }`}
               >
@@ -264,7 +264,7 @@ function CafeDirectory() {
                 {visibleCount < filtered.length && (
                   <button
                     onClick={() => setVisibleCount((n) => n + 9)}
-                    className="text-xs uppercase tracking-widest border border-stone-300 text-stone-600 px-8 py-3 hover:border-[#2D6A4F] hover:text-[#2D6A4F] transition-colors"
+                    className="text-xs uppercase tracking-widest border border-stone-300 text-stone-600 px-8 py-3 rounded-xl hover:border-[#2D6A4F] hover:text-[#2D6A4F] transition-colors"
                   >
                     {t.showMore}
                     <span className="ml-2 text-stone-400">
@@ -278,7 +278,7 @@ function CafeDirectory() {
                       setVisibleCount(9);
                       document.getElementById("cafes")?.scrollIntoView({ behavior: "smooth" });
                     }}
-                    className="text-xs uppercase tracking-widest border border-stone-300 text-stone-600 px-8 py-3 hover:border-stone-500 hover:text-stone-800 transition-colors"
+                    className="text-xs uppercase tracking-widest border border-stone-300 text-stone-600 px-8 py-3 rounded-xl hover:border-stone-500 hover:text-stone-800 transition-colors"
                   >
                     {t.showLess}
                   </button>
@@ -361,8 +361,23 @@ function CafeDirectory() {
         </>
       )}
 
-      <footer className="bg-white border-t border-[#E0DDD9] text-center py-6 text-xs text-stone-400 tracking-wider">
-        Made with ❤️ in Düsseldorf
+      <footer className="bg-white border-t border-[#E0DDD9] py-10 px-4">
+        <div className="max-w-6xl mx-auto text-center flex flex-col gap-4">
+          <p className="text-sm text-stone-500 leading-loose max-w-md mx-auto">
+            Photos from Maps, some shot by our crew,<br />
+            See something off? Just give us a cue.<br />
+            A listing, a café, not quite right?{" "}
+            <button
+              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+              className="underline underline-offset-4 hover:text-[#2D6A4F] transition-colors"
+            >
+              Reach out to us
+            </button>
+            , we&apos;ll fix it up tight.
+          </p>
+          <div className="w-12 h-px bg-[#E0DDD9] mx-auto" />
+          <p className="text-xs text-stone-400 tracking-wider">Made with ❤️ in Düsseldorf</p>
+        </div>
       </footer>
 
       {randomCafe && (

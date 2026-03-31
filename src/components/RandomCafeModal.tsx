@@ -41,7 +41,7 @@ export default function RandomCafeModal({
       onClick={onClose}
     >
       <div
-        className="bg-white w-full max-w-sm overflow-hidden shadow-2xl animate-modal-spring"
+        className="bg-white w-full max-w-sm rounded-xl overflow-hidden shadow-2xl animate-modal-spring"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Photo */}
@@ -62,7 +62,7 @@ export default function RandomCafeModal({
           {/* Close */}
           <button
             onClick={onClose}
-            className="absolute top-3 right-3 w-7 h-7 bg-black/50 text-white flex items-center justify-center hover:bg-black/70 transition-colors text-sm"
+            className="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/70 transition-colors text-sm"
             aria-label="Close"
           >
             ×
@@ -94,7 +94,7 @@ export default function RandomCafeModal({
               {cafe.categories.map((cat) => (
                 <span
                   key={cat}
-                  className="text-[0.65rem] uppercase tracking-wider border border-[#E0DDD9] px-2 py-0.5 text-stone-500"
+                  className="text-[0.65rem] uppercase tracking-wider border border-[#E0DDD9] rounded-lg px-2 py-0.5 text-stone-500"
                 >
                   {CATEGORY_KEYS[cat] ? t[CATEGORY_KEYS[cat]] : cat}
                 </span>
@@ -107,13 +107,13 @@ export default function RandomCafeModal({
               href={cafe.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 bg-[#2D6A4F] text-white text-xs uppercase tracking-widest py-2.5 text-center hover:bg-[#245a42] transition-colors"
+              className="flex-1 bg-[#2D6A4F] text-white text-xs uppercase tracking-widest py-2.5 rounded-xl text-center hover:bg-[#245a42] transition-colors"
             >
               {t.openInMaps}
             </a>
             <button
               onClick={onNext}
-              className="flex-1 border border-[#E0DDD9] text-xs uppercase tracking-widest py-2.5 text-stone-600 hover:border-stone-400 hover:text-stone-900 transition-colors"
+              className="flex-1 border border-[#E0DDD9] text-xs uppercase tracking-widest py-2.5 rounded-xl text-stone-600 hover:border-stone-400 hover:text-stone-900 transition-colors"
             >
               {t.tryAnother}
             </button>
