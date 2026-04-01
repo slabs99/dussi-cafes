@@ -42,7 +42,7 @@ export default function CafeCard({
       : statusLabel;
 
   const mapsHref = cafe.coordinates
-    ? `https://www.google.com/maps/search/?api=1&query=${cafe.coordinates.lat},${cafe.coordinates.lng}`
+    ? `https://www.google.com/maps/search/${encodeURIComponent(cafe.name)}/@${cafe.coordinates.lat},${cafe.coordinates.lng},17z`
     : cafe.mapsUrl;
 
   return (
