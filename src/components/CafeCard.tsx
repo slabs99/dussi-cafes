@@ -41,9 +41,8 @@ export default function CafeCard({
       ? cafe.openingHours
       : statusLabel;
 
-  // Use geo: URI so the OS opens the user's default maps app
   const mapsHref = cafe.coordinates
-    ? `geo:${cafe.coordinates.lat},${cafe.coordinates.lng}?q=${encodeURIComponent(cafe.name)}`
+    ? `https://www.google.com/maps/search/?api=1&query=${cafe.coordinates.lat},${cafe.coordinates.lng}`
     : cafe.mapsUrl;
 
   return (
