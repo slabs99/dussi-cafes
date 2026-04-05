@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Allow login page and auth API through
+  // ── Admin guard ───────────────────────────────────────────────────────────
   if (pathname === "/admin/login" || pathname === "/api/admin/auth") {
     return NextResponse.next();
   }
@@ -22,5 +22,7 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*", "/api/admin/:path*"],
+  matcher: [
+    "/((?!_next/static|_next/image|favicon\\.ico|data/).*)",
+  ],
 };

@@ -2,12 +2,13 @@ import { NextResponse } from "next/server";
 
 const OWNER = "slabs99";
 const REPO = "dussi-cafes";
+const BRANCH = "extra-features";
 const FILE_PATH = "public/data/overrides.json";
 
 async function getFileFromGitHub(): Promise<{ content: Record<string, unknown>; sha: string }> {
   const token = process.env.GITHUB_TOKEN;
   const res = await fetch(
-    `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}`,
+    `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`,
     {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -36,7 +37,7 @@ async function commitToGitHub(content: Record<string, unknown>, sha: string, mes
         "X-GitHub-Api-Version": "2022-11-28",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ message, content: encoded, sha }),
+      body: JSON.stringify({ message, content: encoded, sha, branch: BRANCH }),
     }
   );
   if (!res.ok) {
@@ -75,6 +76,47 @@ export async function POST(req: Request) {
     }
 
     await commitToGitHub(content, sha, `admin: update cafe ${cafeId}`);
+    return NextResponse.json({ ok: true });
+  } catch (err) {
+    return NextResponse.json({ error: (err as Error).message }, { status: 500 });
+  }
+}
+
+// PATCH — bulk update multiple cafes in one commit
+export async function PATCH(req: Request) {
+  try {
+    const { cafeIds, override, removeFields } = await req.json() as {
+      cafeIds: string[];
+      override?: Record<string, unknown>;
+      removeFields?: string[];
+    };
+
+    const { content, sha } = await getFileFromGitHub();
+
+    for (const cafeId of cafeIds) {
+      const existing = (content[cafeId] as Record<string, unknown>) ?? {};
+
+      let entry: Record<string, unknown> = { ...existing };
+
+      if (override) {
+        const cleaned = Object.fromEntries(
+          Object.entries(override).filter(([, v]) => v !== "" && v !== null && v !== undefined)
+        );
+        entry = { ...entry, ...cleaned };
+      }
+
+      if (removeFields) {
+        for (const field of removeFields) delete entry[field];
+      }
+
+      if (Object.keys(entry).length === 0) {
+        delete content[cafeId];
+      } else {
+        content[cafeId] = entry;
+      }
+    }
+
+    await commitToGitHub(content, sha, `admin: bulk update ${cafeIds.length} cafe(s)`);
     return NextResponse.json({ ok: true });
   } catch (err) {
     return NextResponse.json({ error: (err as Error).message }, { status: 500 });

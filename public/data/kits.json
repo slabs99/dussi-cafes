@@ -1,0 +1,46 @@
+[
+  {
+    "id": "pour-over-starter",
+    "name": "The Pour-Over Starter",
+    "brand": "Our Pick",
+    "description": "Everything you need to brew your first great cup at home. Hario V60, 100 filters, a basic gooseneck kettle, and a bag of beans to start.",
+    "includes": ["Hario V60 Dripper", "Hario Paper Filters (100)", "Basic Gooseneck Kettle", "Starter Beans (250g)"],
+    "tags": ["Beginner", "Filter Coffee", "Under €80"],
+    "price": "~€75",
+    "buyUrl": "https://www.amazon.de/s?k=pour+over+coffee+starter+kit",
+    "imageUrl": "https://picsum.photos/seed/kit-pourover/800/600"
+  },
+  {
+    "id": "aeropress-travel",
+    "name": "The Travel Kit",
+    "brand": "Our Pick",
+    "description": "For the coffee lover who refuses to settle for bad hotel coffee. AeroPress Go, a compact hand grinder, and a travel scale fit in any bag.",
+    "includes": ["AeroPress Go", "Porlex Mini Hand Grinder", "Compact Travel Scale", "AeroPress Filters"],
+    "tags": ["Travel", "Compact", "All-in-One"],
+    "price": "~€120",
+    "buyUrl": "https://www.amazon.de/s?k=aeropress+travel+kit",
+    "imageUrl": "https://picsum.photos/seed/kit-travel/800/600"
+  },
+  {
+    "id": "upgrade-kit",
+    "name": "The Upgrade",
+    "brand": "Our Pick",
+    "description": "You've got the basics — now level up. Comandante grinder, Fellow kettle, and a proper scale. This combo changes everything.",
+    "includes": ["Comandante C40 Grinder", "Fellow Stagg EKG Kettle", "Acaia Pearl Scale"],
+    "tags": ["Intermediate", "Serious Brewer", "Gift-Worthy"],
+    "price": "~€500",
+    "buyUrl": "https://www.amazon.de/s?k=coffee+enthusiast+kit",
+    "imageUrl": "https://picsum.photos/seed/kit-upgrade/800/600"
+  },
+  {
+    "id": "espresso-home",
+    "name": "The Home Espresso",
+    "brand": "Our Pick",
+    "description": "No machine needed. A quality Moka pot, a good grinder, and a tamper — espresso-style coffee without the €1000 machine.",
+    "includes": ["Bialetti Moka Express (3-cup)", "Timemore Slim Plus Grinder", "Coffee Tamper", "Medium-Dark Roast Beans"],
+    "tags": ["Espresso-Style", "No Machine", "Budget-Friendly"],
+    "price": "~€100",
+    "buyUrl": "https://www.amazon.de/s?k=moka+pot+coffee+kit",
+    "imageUrl": "https://picsum.photos/seed/kit-espresso/800/600"
+  }
+]

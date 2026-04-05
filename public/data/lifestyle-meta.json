@@ -1,0 +1,22 @@
+{
+  "beans": {
+    "title": "Our favourite coffee beans",
+    "subtitle": "Beans we actually loved. Buy it directly from cafes",
+    "enabled": true
+  },
+  "gear": {
+    "title": "Coffee Gear",
+    "subtitle": "The tools worth having. No fluff.",
+    "enabled": false
+  },
+  "kits": {
+    "title": "Home Barista Kits",
+    "subtitle": "Start somewhere good.",
+    "enabled": false
+  },
+  "apparel": {
+    "title": "Apparel",
+    "subtitle": "Wear your obsession with some dignity.",
+    "enabled": false
+  }
+}

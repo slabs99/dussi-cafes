@@ -1,0 +1,66 @@
+[
+  {
+    "id": "five-elephant-guji",
+    "name": "Carl",
+    "brand": "Das Cøffe (CØFFE Rösterei & Café)",
+    "description": "A smooth, balanced Brazilian espresso with chocolate depth and a subtle plum sweetness. A versatile everyday coffee that works beautifully both black and with milk.",
+    "tags": [
+      "Brazil",
+      "Single origin",
+      "Medium roast",
+      "Espresso",
+      "Filter",
+      "Plum",
+      "Chocolate"
+    ],
+    "price": "€11.90/250g",
+    "buyUrl": "https://dascoffe.store/products/carl-250g",
+    "imageUrl": "/photos/beans-five-elephant-guji.png"
+  },
+  {
+    "id": "the-barn-yirgacheffe",
+    "name": "Espresso No. 3",
+    "brand": "Röstmeister Kaffee",
+    "description": "A bold espresso blend with chocolate depth, nutty notes, and a touch of spice. Balanced and versatile, it works great both as a straight espresso and in milk drinks.",
+    "tags": [
+      "Blend",
+      "arabica",
+      "medium-dark roast",
+      "chocolate",
+      "nutty",
+      "spicy",
+      "low acidity",
+      "espresso",
+      "milk drinks",
+      "full-bodied"
+    ],
+    "price": "€8.10/ 250g",
+    "buyUrl": "https://www.roestmeister.com/espresso-kaffee-no3.html",
+    "imageUrl": "/photos/beans-the-barn-yirgacheffe.png"
+  },
+  {
+    "id": "fjaka-signature",
+    "name": "Jungle Boogie",
+    "brand": "RVTC (Rösterei Vier)",
+    "description": "A modern, berry-sweet Arabica blend with juicy body and subtle spice. Balanced and versatile, it delivers vibrant sweetness with low acidity across brew methods.",
+    "tags": [
+      "Blend",
+      "arabica",
+      "natural",
+      "wet-hulled",
+      "medium roast",
+      "berry",
+      "sweet",
+      "spicy",
+      "juicy body",
+      "low acidity",
+      "filter",
+      "espresso",
+      "milk drinks",
+      "omni roast"
+    ],
+    "price": "€17.29/ 500g",
+    "buyUrl": "https://rvtc.com/products/jungle-boogie",
+    "imageUrl": "/photos/beans-fjaka-signature.jpg"
+  }
+]
