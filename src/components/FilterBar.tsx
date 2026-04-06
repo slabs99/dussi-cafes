@@ -52,19 +52,8 @@ export default function FilterBar({
     <div className="sticky top-12 z-20 bg-[#F5F2EE]/90 backdrop-blur-md border-b border-[#E0DDD9]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-2.5 flex items-center gap-3 sm:gap-4">
 
-        {/* Mobile: category dropdown */}
-        <select
-          value={filters.category}
-          onChange={(e) => onChange({ category: e.target.value as Category | "" })}
-          className="text-sm text-stone-600 bg-transparent outline-none cursor-pointer hover:text-stone-900 transition-colors flex-shrink-0 sm:hidden"
-        >
-          {CATEGORIES.map((c) => (
-            <option key={c.value} value={c.value}>{c.label}</option>
-          ))}
-        </select>
-
-        {/* Desktop: category tag buttons */}
-        <div className="hidden sm:flex items-center gap-0.5 flex-1 overflow-x-auto scrollbar-none -mx-1 px-1">
+        {/* Category tag buttons (both mobile and desktop) */}
+        <div className="flex items-center gap-0.5 flex-1 overflow-x-auto scrollbar-none -mx-1 px-1">
           {CATEGORIES.map((c) => {
             const isActive = filters.category === c.value;
             const isOurPicks = c.value === "our-picks";
@@ -93,7 +82,7 @@ export default function FilterBar({
 
         {/* Counter — right side */}
         <div className="ml-auto sm:ml-0 flex-shrink-0">
-          <span className="text-sm text-stone-600 hidden sm:inline">
+          <span className="text-sm text-stone-600">
             {filteredCount === totalCount
               ? `${totalCount} ${t.places}`
               : `${filteredCount} ${t.of} ${totalCount} ${t.places}`}

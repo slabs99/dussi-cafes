@@ -26,20 +26,15 @@ export default function TopNav() {
   const [scrolled, setScrolled] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   // Start null so lifestyle tabs only appear once we know which are enabled (prevents flash)
-  const [enabledSections, setEnabledSections] = useState<Record<SectionKey, boolean> | null>(null);
+  const [lifestyleMeta, setLifestyleMeta] = useState<Record<SectionKey, { enabled?: boolean; title?: string }> | null>(null);
   const langRef = useRef<HTMLDivElement>(null);
 
-  // Load lifestyle-meta to know which sections are enabled
+  // Load lifestyle-meta to know which sections are enabled and their titles
   useEffect(() => {
     fetch("/api/lifestyle-meta")
       .then((r) => r.json())
-      .then((meta: Record<SectionKey, { enabled?: boolean }>) => {
-        setEnabledSections({
-          beans:   meta.beans?.enabled   !== false,
-          gear:    meta.gear?.enabled    !== false,
-          kits:    meta.kits?.enabled    !== false,
-          apparel: meta.apparel?.enabled !== false,
-        });
+      .then((meta: Record<SectionKey, { enabled?: boolean; title?: string }>) => {
+        setLifestyleMeta(meta);
       })
       .catch(() => {/* keep defaults */});
   }, []);
@@ -47,11 +42,11 @@ export default function TopNav() {
   // Tab definitions — Cafes always shown; lifestyle tabs only added once meta is loaded
   const tabs = [
     { id: "cafes", label: t.tabCafes },
-    ...(enabledSections === null ? [] : [
-      ...(enabledSections.beans   ? [{ id: "beans",   label: t.tabBeans   }] : []),
-      ...(enabledSections.gear    ? [{ id: "gear",    label: t.tabGear    }] : []),
-      ...(enabledSections.kits    ? [{ id: "kits",    label: t.tabKits    }] : []),
-      ...(enabledSections.apparel ? [{ id: "apparel", label: t.tabApparel }] : []),
+    ...(lifestyleMeta === null ? [] : [
+      ...(lifestyleMeta.beans?.enabled   !== false ? [{ id: "beans",   label: lifestyleMeta.beans?.title   || t.tabBeans   }] : []),
+      ...(lifestyleMeta.gear?.enabled    !== false ? [{ id: "gear",    label: lifestyleMeta.gear?.title    || t.tabGear    }] : []),
+      ...(lifestyleMeta.kits?.enabled    !== false ? [{ id: "kits",    label: lifestyleMeta.kits?.title    || t.tabKits    }] : []),
+      ...(lifestyleMeta.apparel?.enabled !== false ? [{ id: "apparel", label: lifestyleMeta.apparel?.title || t.tabApparel }] : []),
     ]),
   ];
 
@@ -60,7 +55,7 @@ export default function TopNav() {
     function onScroll() {
       setScrolled(window.scrollY > 40);
       const offsets = LIFESTYLE_SECTIONS
-        .filter((id) => enabledSections?.[id])
+        .filter((id) => lifestyleMeta?.[id]?.enabled !== false)
         .map((id) => {
           const el = document.getElementById(id);
           return { id, top: el ? el.getBoundingClientRect().top : Infinity };
@@ -70,7 +65,7 @@ export default function TopNav() {
     }
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [enabledSections]);
+  }, [lifestyleMeta]);
 
   // Close lang dropdown on outside click
   useEffect(() => {

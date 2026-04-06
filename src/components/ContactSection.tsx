@@ -14,19 +14,10 @@ export default function ContactSection() {
     e.preventDefault();
     setStatus("sending");
 
-    const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
-
-    if (!formspreeId) {
-      // Fallback: open mail client
-      window.location.href = `mailto:hello@dussi.cafe?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}`;
-      setStatus("success");
-      return;
-    }
-
     try {
-      const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
       });
       if (res.ok) {

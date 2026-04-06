@@ -199,6 +199,16 @@ export default function AdminDashboard({
               </div>
               <span className="text-stone-300 group-hover:text-stone-600 transition-colors">&rarr;</span>
             </a>
+            <a
+              href="/admin/messages"
+              className="flex items-center justify-between bg-white border border-[#E0DDD9] px-6 py-4 hover:border-stone-400 transition-colors group"
+            >
+              <div>
+                <p className="text-sm font-medium text-stone-900">Messages</p>
+                <p className="text-xs text-stone-400 mt-0.5">View and respond to visitor messages</p>
+              </div>
+              <span className="text-stone-300 group-hover:text-stone-600 transition-colors">&rarr;</span>
+            </a>
           </div>
         </section>
 
