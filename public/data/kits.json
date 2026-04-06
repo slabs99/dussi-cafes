@@ -1,46 +1,91 @@
 [
   {
-    "id": "pour-over-starter",
-    "name": "The Pour-Over Starter",
-    "brand": "Our Pick",
-    "description": "Everything you need to brew your first great cup at home. Hario V60, 100 filters, a basic gooseneck kettle, and a bag of beans to start.",
-    "includes": ["Hario V60 Dripper", "Hario Paper Filters (100)", "Basic Gooseneck Kettle", "Starter Beans (250g)"],
-    "tags": ["Beginner", "Filter Coffee", "Under €80"],
-    "price": "~€75",
-    "buyUrl": "https://www.amazon.de/s?k=pour+over+coffee+starter+kit",
-    "imageUrl": "https://picsum.photos/seed/kit-pourover/800/600"
+    "id": "mannong-pu-erh",
+    "name": "Mannong Pu Erh",
+    "brand": "TeeGschwendner",
+    "description": "A classic done well! Earthy and  nutty with a  hint of maltiness and slightly sweet aftertaste. Perfect in the early afternoon.",
+    "tags": [
+      "Yunnan",
+      "China",
+      "Fermented",
+      "Earthy"
+    ],
+    "price": "€9.60/100g",
+    "buyUrl": "https://www.teegschwendner.de/China-Mannong-Pu-Erh-Bio/100576",
+    "imageUrl": "https://www.teegschwendner.de/thumbnail/cc/06/30/1632228055/576_Preview_1920x1920.jpg"
   },
   {
-    "id": "aeropress-travel",
-    "name": "The Travel Kit",
-    "brand": "Our Pick",
-    "description": "For the coffee lover who refuses to settle for bad hotel coffee. AeroPress Go, a compact hand grinder, and a travel scale fit in any bag.",
-    "includes": ["AeroPress Go", "Porlex Mini Hand Grinder", "Compact Travel Scale", "AeroPress Filters"],
-    "tags": ["Travel", "Compact", "All-in-One"],
-    "price": "~€120",
-    "buyUrl": "https://www.amazon.de/s?k=aeropress+travel+kit",
-    "imageUrl": "https://picsum.photos/seed/kit-travel/800/600"
+    "id": "h-jicha",
+    "name": "Hôjicha",
+    "brand": "TeeGschwendner",
+    "description": "Deliciously nutty, earthy and mellow Hojicha. Low in caffeine and perfect for the evening.",
+    "tags": [
+      "Japan",
+      "Hojicha",
+      "Nutty"
+    ],
+    "price": "€12.90/100g",
+    "buyUrl": "https://www.teegschwendner.de/Japan-Hojicha-Mild-Roast-Bio/100710",
+    "imageUrl": "https://www.teegschwendner.de/thumbnail/b4/77/40/1725093136/710_Preview_1920x1920.jpg"
   },
   {
-    "id": "upgrade-kit",
-    "name": "The Upgrade",
-    "brand": "Our Pick",
-    "description": "You've got the basics — now level up. Comandante grinder, Fellow kettle, and a proper scale. This combo changes everything.",
-    "includes": ["Comandante C40 Grinder", "Fellow Stagg EKG Kettle", "Acaia Pearl Scale"],
-    "tags": ["Intermediate", "Serious Brewer", "Gift-Worthy"],
-    "price": "~€500",
-    "buyUrl": "https://www.amazon.de/s?k=coffee+enthusiast+kit",
-    "imageUrl": "https://picsum.photos/seed/kit-upgrade/800/600"
+    "id": "red-chili-chai",
+    "name": "Red Chili Chai",
+    "brand": "Ronnefeldt",
+    "description": "Warm, comforting, slightly fruity, and a hint of spice. A great black tea mix for the mornings made perfect with a splash of milk.",
+    "tags": [
+      "Black mix",
+      "Aromatic",
+      "Warm",
+      "Fruity"
+    ],
+    "price": "€6.90/100g",
+    "buyUrl": "https://www.ronnefeldt.com/teeshop/de/shop/loser-tee/chai-tee/red-chili-chai/?card=5413",
+    "imageUrl": "/photos/kits-red-chili-chai.png"
   },
   {
-    "id": "espresso-home",
-    "name": "The Home Espresso",
-    "brand": "Our Pick",
-    "description": "No machine needed. A quality Moka pot, a good grinder, and a tamper — espresso-style coffee without the €1000 machine.",
-    "includes": ["Bialetti Moka Express (3-cup)", "Timemore Slim Plus Grinder", "Coffee Tamper", "Medium-Dark Roast Beans"],
-    "tags": ["Espresso-Style", "No Machine", "Budget-Friendly"],
-    "price": "~€100",
-    "buyUrl": "https://www.amazon.de/s?k=moka+pot+coffee+kit",
-    "imageUrl": "https://picsum.photos/seed/kit-espresso/800/600"
+    "id": "golden-milk-tea",
+    "name": "Golden Milk Tea",
+    "brand": "Ronnefeldt",
+    "description": "Warm, earthy, sharp, nutty, and  lightly sweet with a gorgeous scent. Just as delicious the second infusion!",
+    "tags": [
+      "Columbia",
+      "Black mix",
+      "Aromatic",
+      "Warm",
+      "Earthy"
+    ],
+    "price": "€6.90/100g",
+    "buyUrl": "https://www.ronnefeldt.com/teeshop/de/shop/loser-tee/schwarzer-tee/s-kolumbien/golden-milk-tea/?card=5623",
+    "imageUrl": "/photos/kits-golden-milk-tea.png"
+  },
+  {
+    "id": "chawi",
+    "name": "Chawi",
+    "brand": "TEEKONTOR",
+    "description": "Beautifully aromatic with a nutty, sweet flavor. Perfect for popcorn and barley tea fans. A lovely green mix for the afternoon.",
+    "tags": [
+      "Japan",
+      "Green mix",
+      "Aromatic"
+    ],
+    "price": "€7.95/100g",
+    "buyUrl": "https://www.teaweb-shop.de/products/senchas-best-copy?variant=51747346645334",
+    "imageUrl": "https://www.teaweb-shop.de/cdn/shop/files/chawi-genmaicha_8f38c80a-7981-41fc-9b05-a68791718868.webp?v=1762164678"
+  },
+  {
+    "id": "in-the-mood-for-love",
+    "name": "In the mood for love",
+    "brand": "P&T",
+    "description": "Delicate, floral, and fresh  with a mellow sweetness. The bright fragrance is bound to boost your  mood even during the second infusion.",
+    "tags": [
+      "China",
+      "Aromatic",
+      "Green",
+      "Jasmine"
+    ],
+    "price": "€14/80g",
+    "buyUrl": "https://www.paperandtea.de/products/in-the-mood-for-love-n-323",
+    "imageUrl": "https://www.paperandtea.de/cdn/shop/files/In_20the_20mood_20for_20Love_20N323_11071_20_f70f7f71-fd5b-4e56-a7f1-92eb9b37110a_20_281_29.webp?v=1768383235&width=600"
   }
 ]

@@ -10,9 +10,9 @@
     "enabled": false
   },
   "kits": {
-    "title": "Home Barista Kits",
-    "subtitle": "Start somewhere good.",
-    "enabled": false
+    "title": "Teas",
+    "subtitle": "Locally available teas that accompany us every day",
+    "enabled": true
   },
   "apparel": {
     "title": "Apparel",

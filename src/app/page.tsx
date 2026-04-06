@@ -21,7 +21,7 @@ import { LanguageProvider, useLanguage } from "@/context/LanguageContext";
 
 function LoadingSkeleton() {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-6 sm:gap-x-8 sm:gap-y-12">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-6 sm:gap-x-8 sm:gap-y-12">
       {Array.from({ length: 9 }).map((_, i) => (
         <div key={i} className="flex flex-col">
           <div className="skeleton animate-card" style={{ aspectRatio: "4/3", animationDelay: `${i * 60}ms` } as React.CSSProperties} />
@@ -255,7 +255,7 @@ function CafeDirectory() {
             </div>
           ) : (
             <>
-              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-6 sm:gap-x-8 sm:gap-y-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-6 sm:gap-x-8 sm:gap-y-12">
                 {filtered.slice(0, visibleCount).map((cafe, i) => (
                   <CafeCard
                     key={cafe.id}
@@ -356,7 +356,7 @@ function CafeDirectory() {
             , we&apos;ll fix it up tight.
           </p>
           <div className="w-12 h-px bg-[#E0DDD9] mx-auto" />
-          <p className="text-xs text-stone-400 tracking-wider">Made with ❤️ in Düsseldorf</p>
+          <p className="font-playfair text-sm font-bold italic uppercase tracking-widest text-stone-700">Made with ❤️ in Düsseldorf</p>
         </div>
       </footer>
 

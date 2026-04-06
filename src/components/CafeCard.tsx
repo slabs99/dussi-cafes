@@ -82,19 +82,28 @@ export default function CafeCard({
             </span>
           </div>
         )}
+
+        {/* Comment overlay at bottom of image */}
+        {cafe.comment && (
+          <div
+            className="absolute bottom-0 left-0 right-0"
+            title={cafe.comment}
+            onClick={(e) => e.preventDefault()}
+          >
+            <div className="bg-black/50 backdrop-blur-sm px-3 py-2">
+              <p className="text-xs text-white/90 italic leading-snug line-clamp-2">
+                {cafe.comment}
+              </p>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Card body */}
       <div className="px-4 pt-3 pb-4 flex flex-col gap-1.5">
-        <h2 className="font-playfair text-[1.05rem] leading-snug text-stone-900 line-clamp-1">
+        <h2 className="font-playfair font-bold text-[1.05rem] leading-snug text-stone-900 line-clamp-1">
           {cafe.name}
         </h2>
-
-        {cafe.comment && (
-          <p className="text-sm text-stone-600 italic leading-snug line-clamp-2">
-            {cafe.comment}
-          </p>
-        )}
 
         {address && (
           <p className="text-sm text-stone-600 truncate leading-snug">
@@ -103,7 +112,7 @@ export default function CafeCard({
         )}
 
         {/* Open in Maps CTA */}
-        <span className="inline-flex items-center gap-1 text-sm text-stone-500 group-hover:text-[#2D6A4F] transition-colors">
+        <span className="inline-flex items-center gap-1 text-sm text-[#2D6A4F] transition-colors">
           {t.openInMaps}
           <span className="inline-block transition-transform duration-200 group-hover:translate-x-0.5">&rarr;</span>
         </span>
