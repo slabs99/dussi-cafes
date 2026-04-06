@@ -105,5 +105,19 @@
     "price": "€9.60",
     "buyUrl": "https://www.teegschwendner.de/China-Mannong-Pu-Erh-Bio/100576",
     "imageUrl": "https://www.teegschwendner.de/thumbnail/cc/06/30/1632228055/576_Preview_1920x1920.jpg"
+  },
+  {
+    "id": "h-jicha",
+    "name": "Hôjicha",
+    "brand": "TeeGschwendner",
+    "description": "Deliciously nutty and mellow Hojicha. Low in caffeine and perfect for the evening.",
+    "tags": [
+      "Japan",
+      "Hojicha",
+      "Nutty"
+    ],
+    "price": "€12.90/100g",
+    "buyUrl": "https://www.teegschwendner.de/Japan-Hojicha-Mild-Roast-Bio/100710",
+    "imageUrl": "https://www.teegschwendner.de/thumbnail/b4/77/40/1725093136/710_Preview_1920x1920.jpg"
   }
 ]
