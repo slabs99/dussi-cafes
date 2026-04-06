@@ -125,7 +125,7 @@ function CafeDirectory() {
     if (!el) return;
     const observer = new IntersectionObserver(
       ([entry]) => setCafesSectionVisible(entry.isIntersecting),
-      { rootMargin: "0px 0px -100% 0px" } // fires when bottom edge leaves viewport top
+      { threshold: 0 }
     );
     observer.observe(el);
     return () => observer.disconnect();
