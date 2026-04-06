@@ -59,21 +59,6 @@
     "imageUrl": "https://picsum.photos/seed/kit-upgrade/800/600"
   },
   {
-    "id": "in-the-mood-for-love",
-    "name": "In the mood for love",
-    "brand": "P&T",
-    "description": "Floral, delicate, sweet, and subtle. Infuse twice for maximum enjoyment!",
-    "tags": [
-      "China",
-      "Aromatic",
-      "Green",
-      "Jasmine"
-    ],
-    "price": "€14/80g",
-    "buyUrl": "https://www.paperandtea.de/products/in-the-mood-for-love-n-323",
-    "imageUrl": "https://www.paperandtea.de/cdn/shop/files/In_20the_20mood_20for_20Love_20N323_11071_20_f70f7f71-fd5b-4e56-a7f1-92eb9b37110a_20_281_29.webp?v=1768383235&width=600"
-  },
-  {
     "id": "mannong-pu-erh",
     "name": "Mannong Pu Erh",
     "brand": "TeeGschwendner",
