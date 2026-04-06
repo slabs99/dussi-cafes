@@ -20,26 +20,6 @@
     "imageUrl": "https://picsum.photos/seed/kit-pourover/800/600"
   },
   {
-    "id": "aeropress-travel",
-    "name": "The Travel Kit",
-    "brand": "Our Pick",
-    "description": "For the coffee lover who refuses to settle for bad hotel coffee. AeroPress Go, a compact hand grinder, and a travel scale fit in any bag.",
-    "includes": [
-      "AeroPress Go",
-      "Porlex Mini Hand Grinder",
-      "Compact Travel Scale",
-      "AeroPress Filters"
-    ],
-    "tags": [
-      "Travel",
-      "Compact",
-      "All-in-One"
-    ],
-    "price": "~€120",
-    "buyUrl": "https://www.amazon.de/s?k=aeropress+travel+kit",
-    "imageUrl": "https://picsum.photos/seed/kit-travel/800/600"
-  },
-  {
     "id": "mannong-pu-erh",
     "name": "Mannong Pu Erh",
     "brand": "TeeGschwendner",
