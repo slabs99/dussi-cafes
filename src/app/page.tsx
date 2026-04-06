@@ -242,16 +242,15 @@ function CafeDirectory() {
       </header>
 
       {/* Filter bar — hidden once cafes section scrolls out of view */}
-      <div className={`transition-all duration-300 overflow-hidden ${cafesSectionVisible ? "max-h-20 opacity-100" : "max-h-0 opacity-0 pointer-events-none"}`}>
-        <FilterBar
-          filters={filters}
-          totalCount={cafes.length}
-          filteredCount={filtered.length}
-          onChange={handleChange}
-          onClear={handleClear}
-          categoriesMeta={categoriesMeta}
-        />
-      </div>
+      <FilterBar
+        filters={filters}
+        totalCount={cafes.length}
+        filteredCount={filtered.length}
+        onChange={handleChange}
+        onClear={handleClear}
+        categoriesMeta={categoriesMeta}
+        visible={cafesSectionVisible}
+      />
 
       {/* Cafe grid */}
       <section ref={cafesSectionRef} id="cafes" className="bg-[#F5F2EE] scroll-mt-24">
