@@ -1,25 +1,5 @@
 [
   {
-    "id": "pour-over-starter",
-    "name": "The Pour-Over Starter",
-    "brand": "Our Pick",
-    "description": "Everything you need to brew your first great cup at home. Hario V60, 100 filters, a basic gooseneck kettle, and a bag of beans to start.",
-    "includes": [
-      "Hario V60 Dripper",
-      "Hario Paper Filters (100)",
-      "Basic Gooseneck Kettle",
-      "Starter Beans (250g)"
-    ],
-    "tags": [
-      "Beginner",
-      "Filter Coffee",
-      "Under €80"
-    ],
-    "price": "~€75",
-    "buyUrl": "https://www.amazon.de/s?k=pour+over+coffee+starter+kit",
-    "imageUrl": "https://picsum.photos/seed/kit-pourover/800/600"
-  },
-  {
     "id": "mannong-pu-erh",
     "name": "Mannong Pu Erh",
     "brand": "TeeGschwendner",
