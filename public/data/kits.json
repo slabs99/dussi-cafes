@@ -59,26 +59,6 @@
     "imageUrl": "https://picsum.photos/seed/kit-upgrade/800/600"
   },
   {
-    "id": "espresso-home",
-    "name": "The Home Espresso",
-    "brand": "Our Pick",
-    "description": "No machine needed. A quality Moka pot, a good grinder, and a tamper — espresso-style coffee without the €1000 machine.",
-    "includes": [
-      "Bialetti Moka Express (3-cup)",
-      "Timemore Slim Plus Grinder",
-      "Coffee Tamper",
-      "Medium-Dark Roast Beans"
-    ],
-    "tags": [
-      "Espresso-Style",
-      "No Machine",
-      "Budget-Friendly"
-    ],
-    "price": "~€100",
-    "buyUrl": "https://www.amazon.de/s?k=moka+pot+coffee+kit",
-    "imageUrl": "https://picsum.photos/seed/kit-espresso/800/600"
-  },
-  {
     "id": "in-the-mood-for-love",
     "name": "In the mood for love",
     "brand": "P&T",
