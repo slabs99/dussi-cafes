@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 const OWNER  = "slabs99";
 const REPO   = "dussi-cafes";
-const BRANCH = "extra-features";
+const BRANCH = "main";
 
 const VALID = ["beans", "gear", "kits", "apparel"];
 

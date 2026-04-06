@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 const OWNER = "slabs99";
 const REPO = "dussi-cafes";
-const BRANCH = "extra-features";
+const BRANCH = "main";
 const FILE_PATH = "public/data/overrides.json";
 
 async function getFileFromGitHub(): Promise<{ content: Record<string, unknown>; sha: string }> {
