@@ -119,5 +119,20 @@
     "price": "€12.90/100g",
     "buyUrl": "https://www.teegschwendner.de/Japan-Hojicha-Mild-Roast-Bio/100710",
     "imageUrl": "https://www.teegschwendner.de/thumbnail/b4/77/40/1725093136/710_Preview_1920x1920.jpg"
+  },
+  {
+    "id": "red-chili-chai",
+    "name": "Red Chili Chai",
+    "brand": "Ronnefeldt",
+    "description": "Warm, comforting, slightly fruity, and a hint of spice. A great black tea mix for the mornings made perfect with a splash of milk.",
+    "tags": [
+      "Black mix",
+      "Aromatic",
+      "Warm",
+      "Fruity"
+    ],
+    "price": "€6.90/100g",
+    "buyUrl": "https://www.ronnefeldt.com/teeshop/de/shop/loser-tee/chai-tee/red-chili-chai/?card=5413",
+    "imageUrl": "https://www.ronnefeldt.com/userdata/dcshop/images/thumb_1/5661_302-x_red_chili_chai_800x800.jpg"
   }
 ]
