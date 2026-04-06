@@ -12,7 +12,7 @@
   "kits": {
     "title": "Teas",
     "subtitle": "Locally available teas that accompany us every day",
-    "enabled": false
+    "enabled": true
   },
   "apparel": {
     "title": "Apparel",
