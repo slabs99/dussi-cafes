@@ -116,7 +116,20 @@ function CafeDirectory() {
   const [randomCafe, setRandomCafe] = useState<Cafe | null>(null);
   const [sparkling, setSparkling] = useState(false);
   const [btnAnimating, setBtnAnimating] = useState(false);
+  const [cafesSectionVisible, setCafesSectionVisible] = useState(true);
   const sparkleTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const cafesSectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const el = cafesSectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setCafesSectionVisible(entry.isIntersecting),
+      { rootMargin: "0px 0px -100% 0px" } // fires when bottom edge leaves viewport top
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     Promise.all([
@@ -228,18 +241,20 @@ function CafeDirectory() {
         <div className="mt-6 sm:mt-10" />
       </header>
 
-      {/* Filter bar */}
-      <FilterBar
-        filters={filters}
-        totalCount={cafes.length}
-        filteredCount={filtered.length}
-        onChange={handleChange}
-        onClear={handleClear}
-        categoriesMeta={categoriesMeta}
-      />
+      {/* Filter bar — hidden once cafes section scrolls out of view */}
+      <div className={`transition-all duration-300 overflow-hidden ${cafesSectionVisible ? "max-h-20 opacity-100" : "max-h-0 opacity-0 pointer-events-none"}`}>
+        <FilterBar
+          filters={filters}
+          totalCount={cafes.length}
+          filteredCount={filtered.length}
+          onChange={handleChange}
+          onClear={handleClear}
+          categoriesMeta={categoriesMeta}
+        />
+      </div>
 
       {/* Cafe grid */}
-      <section id="cafes" className="bg-[#F5F2EE] scroll-mt-24">
+      <section ref={cafesSectionRef} id="cafes" className="bg-[#F5F2EE] scroll-mt-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
           {loading ? (
             <LoadingSkeleton />
