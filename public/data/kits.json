@@ -151,5 +151,18 @@
     "price": "€6.90/100g",
     "buyUrl": "https://www.ronnefeldt.com/teeshop/de/shop/loser-tee/schwarzer-tee/s-kolumbien/golden-milk-tea/?card=5623",
     "imageUrl": "https://www.ronnefeldt.com/userdata/dcshop/images/thumb_1/5842_3896-x_golden_milk_tea_800x800.jpg"
+  },
+  {
+    "id": "chawi",
+    "name": "Chawi",
+    "brand": "TEEKONTOR",
+    "description": "Beautifully aromatic with a nutty, sweet flavor. Perfect for popcorn and barley tea fans. A lovely green mix for the afternoon.",
+    "tags": [
+      "Japan",
+      "Green mix"
+    ],
+    "price": "€7.95/100g",
+    "buyUrl": "https://www.teaweb-shop.de/products/senchas-best-copy?variant=51747346645334",
+    "imageUrl": "https://www.teaweb-shop.de/cdn/shop/files/chawi-genmaicha_8f38c80a-7981-41fc-9b05-a68791718868.webp?v=1762164678"
   }
 ]
