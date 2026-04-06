@@ -40,25 +40,6 @@
     "imageUrl": "https://picsum.photos/seed/kit-travel/800/600"
   },
   {
-    "id": "upgrade-kit",
-    "name": "The Upgrade",
-    "brand": "Our Pick",
-    "description": "You've got the basics — now level up. Comandante grinder, Fellow kettle, and a proper scale. This combo changes everything.",
-    "includes": [
-      "Comandante C40 Grinder",
-      "Fellow Stagg EKG Kettle",
-      "Acaia Pearl Scale"
-    ],
-    "tags": [
-      "Intermediate",
-      "Serious Brewer",
-      "Gift-Worthy"
-    ],
-    "price": "~€500",
-    "buyUrl": "https://www.amazon.de/s?k=coffee+enthusiast+kit",
-    "imageUrl": "https://picsum.photos/seed/kit-upgrade/800/600"
-  },
-  {
     "id": "mannong-pu-erh",
     "name": "Mannong Pu Erh",
     "brand": "TeeGschwendner",
