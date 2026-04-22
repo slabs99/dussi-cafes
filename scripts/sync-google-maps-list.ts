@@ -443,8 +443,16 @@ async function main() {
       await fetchMissingPhotos(context, newCafes);
     }
 
-    // Merge: existing cafes first (unchanged), then new ones appended
-    const finalCafes = [...existingCafes, ...newCafes];
+    // Merge: update photoUrl for existing cafes if a fresh one was scraped
+    const scrapedById = new Map(dedupedScraped.map((c) => [c.id, c]));
+    const updatedExisting = existingCafes.map((c) => {
+      const fresh = scrapedById.get(c.id);
+      if (fresh?.photoUrl && fresh.photoUrl !== c.photoUrl) {
+        return { ...c, photoUrl: fresh.photoUrl };
+      }
+      return c;
+    });
+    const finalCafes = [...updatedExisting, ...newCafes];
 
     fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
     fs.writeFileSync(OUT_PATH, JSON.stringify(finalCafes, null, 2));
