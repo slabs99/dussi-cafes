@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import type { Cafe } from "@/types/cafe";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -21,6 +22,7 @@ export default function CafeCard({
   ourPicksLabel?: string;
 }) {
   const { t } = useLanguage();
+  const [imgError, setImgError] = useState(false);
   const resolvedOurPicksLabel = ourPicksLabel ?? t.catOurPicks;
   const address = cafe.address ?? null;
   const isOurPicks = cafe.categories.includes("our-picks");
@@ -58,11 +60,13 @@ export default function CafeCard({
         className="relative overflow-hidden bg-[#EDE8E2]"
         style={{ aspectRatio: "4/3" }}
       >
-        {cafe.photoUrl ? (
+        {cafe.photoUrl && !imgError ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={cafe.photoUrl}
             alt={cafe.name}
+            referrerPolicy="no-referrer"
+            onError={() => setImgError(true)}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
         ) : (
