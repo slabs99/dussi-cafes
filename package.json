@@ -10,7 +10,8 @@
     "sync": "tsx scripts/sync-google-maps-list.ts",
     "sync:headed": "tsx scripts/sync-google-maps-list.ts --headed",
     "validate": "tsx scripts/validate-cafes.ts",
-    "enrich": "tsx scripts/enrich-places.ts"
+    "enrich": "tsx scripts/enrich-places.ts",
+    "download-photos": "tsx scripts/download-photos.ts"
   },
   "dependencies": {
     "next": "16.2.1",

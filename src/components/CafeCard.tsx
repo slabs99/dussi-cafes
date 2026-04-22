@@ -65,7 +65,6 @@ export default function CafeCard({
           <img
             src={cafe.photoUrl}
             alt={cafe.name}
-            referrerPolicy="no-referrer"
             onError={() => setImgError(true)}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
