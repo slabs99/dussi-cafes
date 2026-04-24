@@ -64,7 +64,8 @@
   "fc173dac": {
     "categories": [
       "our-picks"
-    ]
+    ],
+    "hidden": true
   },
   "843a1ff1": {
     "categories": [
@@ -389,5 +390,11 @@
   },
   "6faa2a45": {
     "photoUrl": "/photos/6faa2a45.jpg"
+  },
+  "92330b7f": {
+    "categories": [
+      "specialty-coffee",
+      "new"
+    ]
   }
 }

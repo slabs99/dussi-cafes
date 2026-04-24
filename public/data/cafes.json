@@ -1429,7 +1429,7 @@
       "lat": 51.2231897,
       "lng": 6.776015
     },
-    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFZPaZioMB9CgoZIcgJGvyEOtyEgrlEccOk_YimtiS81xsC1d3IEMmnWzOTN2qCqGFIQwWvzZ5TzCHOvv42VtBR7DILnrCSCBfoa7ttGVDMOBsUUmizuHdwaTVuaHto-ga17DxN=w600-h400-k-no",
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFHS1_4yNvXlsUm6Is6T6wo5pdHBQP1uk_RvE8aJPgMnDE7_2eZS4_psBdAcelrqUZaWPgZBd2OYa9g8_cra7-MqqSO_h2tcwF5IJyQ143pwtgRLyOffzkY4zlQ_l7K-NDH4i8A=w600-h400-k-no",
     "addedAt": "2026-03-23"
   },
   {
@@ -1568,7 +1568,7 @@
       "lat": 51.2195532,
       "lng": 6.8239407
     },
-    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF_XCwFOr1c2Q4kF6FEEUm-wFo6OMYUlmrPuBmrFxgcYuZAX4cfzQlrnYAANq0KgMqSllv77KFwptPBiz76T7zZe_39SJQmpqjm_cEKDMihyfp2ZsjpKsbq_GJBxPHcBLZ3IhuR=w600-h400-k-no",
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGx1hI8GWCoCX9uwdBrhdgEW0x4CKQCrPnlfXU5ais5SD2u6i_aXunx4dBw_kP4B887fCPkcO9Qd-uYk-pYqc41v4r3gtYmLt_f1oI59V-f1X_jSzNj8pbNRP_UmK9uBlwNIcXT=w600-h400-k-no",
     "addedAt": "2026-03-23"
   },
   {
@@ -1783,7 +1783,7 @@
       "lat": 51.223419899999996,
       "lng": 6.7907649999999995
     },
-    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF5HguwFlsb-1ao-z-sJLFJ8r2xPtlP5DJani3MwTe3o2MTEyuj0l9SsHJ6KtEyBZqt1ptV7MQ3hTtopdxhHpSpVfzIeG4vdMb_Kcpu2ZELadZ_sFoergsJUfVy1koKK353hXS8sA=w600-h400-k-no",
+    "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFWEtH6Athsz5LuI5i75UrxGdp755dKoBPrTv5Bt3t5xIXZJslYUNpsxJ8sHS-X1FMvksmhdhMzniUdODK9ZMi_K6S-qg9nDvIlK7eBMc1XR9SS-ci8iZasiI3gFrANbLMJZHVWFg=w600-h400-k-no",
     "addedAt": "2026-03-23"
   },
   {
@@ -2400,5 +2400,30 @@
     },
     "photoUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGa6FdvACdifoqiD5Gucb_NU-vZeYX4C3MAsBHaFN6Xk3Nfy23sNAlTufvov9oLMClSDHxTuz895MdjedS7rc9WiZm1kAjlJ1g-ycuqNkLZWjnZDvMs7IR4g9uufOQcCgr7_PA2QEWF-Jvi=w600-h400-k-no",
     "addedAt": "2026-04-22"
+  },
+  {
+    "id": "92330b7f",
+    "name": "Coffiez",
+    "categories": [
+      "specialty-coffee"
+    ],
+    "rating": null,
+    "reviewCount": null,
+    "priceTier": null,
+    "status": "open",
+    "openingHours": null,
+    "mapsUrl": "https://maps.app.goo.gl/mVV1ae4pvbyrDP3o6",
+    "address": "Ackerstraße 137, 40233 Düsseldorf",
+    "coordinates": {
+      "lat": 51.2291354,
+      "lng": 6.8054502
+    },
+    "photoUrl": null,
+    "addedAt": "2026-04-24",
+    "comment": null,
+    "placeId": null,
+    "weekdayHours": null,
+    "website": null,
+    "phone": null
   }
 ]
