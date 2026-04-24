@@ -71,6 +71,16 @@ export interface Translations {
   tabGear: string;
   tabKits: string;
   tabApparel: string;
+  // Footer poem
+  footerLine1: string;
+  footerLine2: string;
+  footerLine3: string;
+  footerReachOut: string;
+  footerLine4: string;
+  // Contact placeholders
+  contactNamePlaceholder: string;
+  contactEmailPlaceholder: string;
+  contactMessagePlaceholder: string;
 }
 
 export const TRANSLATIONS: Record<LangCode, Translations> = {
@@ -129,6 +139,14 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     tabGear: "Gear",
     tabKits: "Kits",
     tabApparel: "Apparel",
+    footerLine1: "Photos from Maps, some shot by our crew,",
+    footerLine2: "See something off? Just give us a cue.",
+    footerLine3: "A listing, a café, not quite right?",
+    footerReachOut: "Reach out to us",
+    footerLine4: ", we'll fix it up tight.",
+    contactNamePlaceholder: "e.g. Anna",
+    contactEmailPlaceholder: "you@example.com",
+    contactMessagePlaceholder: "Tell us anything…",
   },
   de: {
     search: "Suchen...",
@@ -185,5 +203,13 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     tabGear: "Ausrüstung",
     tabKits: "Sets",
     tabApparel: "Kleidung",
+    footerLine1: "Fotos von Maps, manche von uns aufgenommen,",
+    footerLine2: "Fehler entdeckt? Sag es uns einfach.",
+    footerLine3: "Ein Eintrag, ein Café – stimmt was nicht?",
+    footerReachOut: "Schreib uns",
+    footerLine4: ", wir kümmern uns drum.",
+    contactNamePlaceholder: "z. B. Anna",
+    contactEmailPlaceholder: "du@beispiel.de",
+    contactMessagePlaceholder: "Schreib uns alles…",
   },
 };

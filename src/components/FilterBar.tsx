@@ -34,22 +34,25 @@ export default function FilterBar({
 }: Props) {
   const { t } = useLanguage();
 
-  // Order: New, Our picks, Brunch, Roastery, Work-friendly, Late evening — then any others
-  const ALL_CATEGORIES: { value: Category; label: string }[] = [
-    { value: "new",              label: categoriesMeta?.["new"]?.label              ?? t.catNew             },
-    { value: "our-picks",        label: categoriesMeta?.["our-picks"]?.label        ?? t.catOurPicks        },
-    { value: "brunch",           label: categoriesMeta?.["brunch"]?.label           ?? t.catBrunch          },
-    { value: "roastery",         label: categoriesMeta?.["roastery"]?.label         ?? t.catRoastery        },
-    { value: "work-friendly",    label: categoriesMeta?.["work-friendly"]?.label    ?? t.catWorkFriendly    },
-    { value: "late-evening",     label: categoriesMeta?.["late-evening"]?.label     ?? t.catLateEvening     },
-    { value: "specialty-coffee", label: categoriesMeta?.["specialty-coffee"]?.label ?? t.catSpecialtyCoffee },
-    { value: "bakery",           label: categoriesMeta?.["bakery"]?.label           ?? t.catBakery          },
-  ];
+  const LABEL_MAP: Record<string, string> = {
+    "new":              categoriesMeta?.["new"]?.label              ?? t.catNew,
+    "our-picks":        categoriesMeta?.["our-picks"]?.label        ?? t.catOurPicks,
+    "brunch":           categoriesMeta?.["brunch"]?.label           ?? t.catBrunch,
+    "roastery":         categoriesMeta?.["roastery"]?.label         ?? t.catRoastery,
+    "work-friendly":    categoriesMeta?.["work-friendly"]?.label    ?? t.catWorkFriendly,
+    "late-evening":     categoriesMeta?.["late-evening"]?.label     ?? t.catLateEvening,
+    "specialty-coffee": categoriesMeta?.["specialty-coffee"]?.label ?? t.catSpecialtyCoffee,
+    "bakery":           categoriesMeta?.["bakery"]?.label           ?? t.catBakery,
+  };
 
-  // Filter out disabled categories from admin
-  const CATEGORIES = categoriesMeta
-    ? ALL_CATEGORIES.filter((c) => categoriesMeta[c.value]?.enabled !== false)
-    : ALL_CATEGORIES;
+  // Use admin-defined order if available, otherwise fall back to default
+  const adminOrder = (categoriesMeta as Record<string, unknown>)?.["order"] as string[] | undefined;
+  const DEFAULT_ORDER = ["our-picks", "new", "brunch", "roastery", "work-friendly", "late-evening", "specialty-coffee", "bakery"];
+  const order = adminOrder ?? DEFAULT_ORDER;
+
+  const CATEGORIES = order
+    .filter((key) => categoriesMeta ? categoriesMeta[key]?.enabled !== false : true)
+    .map((key) => ({ value: key as Category, label: LABEL_MAP[key] ?? key }));
 
   return (
     <div className={`sticky top-12 z-20 bg-[#F5F2EE]/90 backdrop-blur-md border-b border-[#E0DDD9] transition-all duration-300 overflow-hidden ${visible ? "max-h-20 opacity-100" : "max-h-0 opacity-0 pointer-events-none border-0"}`}>

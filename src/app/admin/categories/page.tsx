@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const CATEGORY_KEYS = [
+const ALL_CATEGORY_KEYS = [
   "new",
   "our-picks",
   "specialty-coffee",
@@ -13,23 +13,25 @@ const CATEGORY_KEYS = [
   "late-evening",
 ] as const;
 
-type CategoryKey = (typeof CATEGORY_KEYS)[number];
+type CategoryKey = (typeof ALL_CATEGORY_KEYS)[number];
 type CategoriesMeta = Record<CategoryKey, { label: string; enabled: boolean }>;
 
 const DEFAULTS: CategoriesMeta = {
-  "new":            { label: "New",            enabled: true  },
-  "our-picks":      { label: "Our Picks",       enabled: true  },
-  "specialty-coffee":{ label: "Specialty Coffee",enabled: true  },
-  "bakery":         { label: "Bakery",          enabled: true  },
-  "brunch":         { label: "Brunch",          enabled: true  },
-  "roastery":       { label: "Roastery",        enabled: true  },
-  "work-friendly":  { label: "Work-friendly",   enabled: true  },
-  "late-evening":   { label: "Late Evening",    enabled: true  },
+  "new":             { label: "New",             enabled: true  },
+  "our-picks":       { label: "Our Picks",        enabled: true  },
+  "specialty-coffee":{ label: "Specialty Coffee", enabled: true  },
+  "bakery":          { label: "Bakery",           enabled: true  },
+  "brunch":          { label: "Brunch",           enabled: true  },
+  "roastery":        { label: "Roastery",         enabled: true  },
+  "work-friendly":   { label: "Work-friendly",    enabled: true  },
+  "late-evening":    { label: "Late Evening",     enabled: true  },
 };
 
-const ALL_OPTIONS = [
-  { value: "new",              label: "New"              },
+const DEFAULT_ORDER: CategoryKey[] = ["our-picks", "new", "brunch", "roastery", "work-friendly", "late-evening", "specialty-coffee", "bakery"];
+
+const DEFAULT_OPTIONS = [
   { value: "our-picks",        label: "Curated Picks"    },
+  { value: "new",              label: "New"              },
   { value: "brunch",           label: "Brunch"           },
   { value: "roastery",         label: "Roastery"         },
   { value: "work-friendly",    label: "Work-friendly"    },
@@ -41,6 +43,7 @@ const ALL_OPTIONS = [
 
 export default function AdminCategoriesPage() {
   const [meta, setMeta] = useState<CategoriesMeta>(DEFAULTS);
+  const [order, setOrder] = useState<CategoryKey[]>(DEFAULT_ORDER);
   const [defaultCategory, setDefaultCategory] = useState<string>("new");
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -50,9 +53,11 @@ export default function AdminCategoriesPage() {
   useEffect(() => {
     fetch("/api/admin/categories")
       .then((r) => r.json())
-      .then((data) => {
-        setMeta({ ...DEFAULTS, ...data });
-        setDefaultCategory((data as Record<string, unknown>).defaultCategory as string ?? "new");
+      .then((data: Record<string, unknown>) => {
+        setMeta({ ...DEFAULTS, ...(data as Partial<CategoriesMeta>) });
+        setDefaultCategory(data.defaultCategory as string ?? "new");
+        const savedOrder = data.order as CategoryKey[] | undefined;
+        if (savedOrder?.length) setOrder(savedOrder);
         setLoading(false);
       })
       .catch(() => setLoading(false));
@@ -64,7 +69,7 @@ export default function AdminCategoriesPage() {
     const res = await fetch("/api/admin/categories", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...meta, defaultCategory }),
+      body: JSON.stringify({ ...meta, defaultCategory, order }),
     });
     setSaving(false);
     if (res.ok) {
@@ -81,6 +86,24 @@ export default function AdminCategoriesPage() {
 
   function rename(key: CategoryKey, label: string) {
     setMeta((m) => ({ ...m, [key]: { ...m[key], label } }));
+  }
+
+  function moveUp(index: number) {
+    if (index === 0) return;
+    setOrder((prev) => {
+      const next = [...prev];
+      [next[index - 1], next[index]] = [next[index], next[index - 1]];
+      return next;
+    });
+  }
+
+  function moveDown(index: number) {
+    if (index === order.length - 1) return;
+    setOrder((prev) => {
+      const next = [...prev];
+      [next[index], next[index + 1]] = [next[index + 1], next[index]];
+      return next;
+    });
   }
 
   return (
@@ -106,17 +129,17 @@ export default function AdminCategoriesPage() {
 
       <main className="max-w-3xl mx-auto px-6 py-8 flex flex-col gap-8">
         <p className="text-xs text-stone-400">
-          Toggle categories on or off for the filter bar, rename them, and set which one is selected by default when the page loads. Changes go live within ~15 seconds.
+          Toggle, rename, and reorder filter categories. Set the default shown on page load. Changes go live within ~15 seconds.
         </p>
 
         {/* Default category selector */}
         <div className="bg-white border border-[#E0DDD9] px-5 py-4 flex flex-col gap-3">
           <div>
-            <p className="text-[0.65rem] uppercase tracking-widest text-stone-400 mb-1">Default filter on page load</p>
-            <p className="text-xs text-stone-400">This category is pre-selected when visitors open the site.</p>
+            <p className="text-[0.65rem] uppercase tracking-widest text-stone-400 mb-0.5">Default filter on page load</p>
+            <p className="text-xs text-stone-400">Pre-selected when visitors open the site.</p>
           </div>
           <div className="flex flex-wrap gap-2">
-            {ALL_OPTIONS.map((opt) => {
+            {DEFAULT_OPTIONS.map((opt) => {
               const isActive = defaultCategory === opt.value;
               return (
                 <button
@@ -135,28 +158,56 @@ export default function AdminCategoriesPage() {
           </div>
         </div>
 
-        {/* Category list */}
+        {/* Category list with ordering */}
         {loading ? (
           <div className="text-sm text-stone-400 text-center py-16">Loading…</div>
         ) : (
           <div className="bg-white border border-[#E0DDD9]">
-            <div className="grid grid-cols-[48px_1fr_140px] gap-4 items-center px-5 py-2.5 border-b border-[#E0DDD9] bg-stone-50/80">
+            <div className="grid grid-cols-[32px_48px_1fr_120px_40px] gap-3 items-center px-4 py-2.5 border-b border-[#E0DDD9] bg-stone-50/80">
+              <span className="text-[0.65rem] uppercase tracking-widest text-stone-400">Order</span>
               <span className="text-[0.65rem] uppercase tracking-widest text-stone-400">On</span>
               <span className="text-[0.65rem] uppercase tracking-widest text-stone-400">Label shown on site</span>
-              <span className="text-[0.65rem] uppercase tracking-widest text-stone-400">Internal key</span>
+              <span className="text-[0.65rem] uppercase tracking-widest text-stone-400">Key</span>
+              <span />
             </div>
 
             <div className="divide-y divide-[#E0DDD9]">
-              {CATEGORY_KEYS.map((key) => {
+              {order.map((key, index) => {
                 const item = meta[key];
+                if (!item) return null;
                 const isDefault = defaultCategory === key;
                 return (
                   <div
                     key={key}
-                    className={`grid grid-cols-[48px_1fr_140px] gap-4 items-center px-5 py-3 transition-colors ${
+                    className={`grid grid-cols-[32px_48px_1fr_120px_40px] gap-3 items-center px-4 py-3 transition-colors ${
                       item.enabled ? "" : "bg-stone-50/60"
                     }`}
                   >
+                    {/* Up/Down */}
+                    <div className="flex flex-col gap-0.5">
+                      <button
+                        onClick={() => moveUp(index)}
+                        disabled={index === 0}
+                        className="w-full flex items-center justify-center h-4 text-stone-300 hover:text-stone-600 disabled:opacity-20 disabled:cursor-not-allowed transition-colors"
+                        aria-label="Move up"
+                      >
+                        <svg width="8" height="6" viewBox="0 0 8 6" fill="none">
+                          <path d="M1 5L4 2L7 5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </button>
+                      <button
+                        onClick={() => moveDown(index)}
+                        disabled={index === order.length - 1}
+                        className="w-full flex items-center justify-center h-4 text-stone-300 hover:text-stone-600 disabled:opacity-20 disabled:cursor-not-allowed transition-colors"
+                        aria-label="Move down"
+                      >
+                        <svg width="8" height="6" viewBox="0 0 8 6" fill="none">
+                          <path d="M1 1L4 4L7 1" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </button>
+                    </div>
+
+                    {/* Toggle */}
                     <button
                       onClick={() => toggle(key)}
                       aria-label={item.enabled ? "Disable" : "Enable"}
@@ -171,6 +222,7 @@ export default function AdminCategoriesPage() {
                       />
                     </button>
 
+                    {/* Label input */}
                     <div className="flex items-center gap-2">
                       <input
                         type="text"
@@ -187,7 +239,11 @@ export default function AdminCategoriesPage() {
                       )}
                     </div>
 
+                    {/* Key */}
                     <span className="text-[0.65rem] text-stone-300 font-mono truncate">{key}</span>
+
+                    {/* Spacer */}
+                    <span />
                   </div>
                 );
               })}

@@ -365,19 +365,19 @@ function CafeDirectory() {
       <footer className="bg-white border-t border-[#E0DDD9] py-10 px-4">
         <div className="max-w-6xl mx-auto text-center flex flex-col gap-4">
           <p className="text-sm text-stone-500 leading-loose max-w-md mx-auto">
-            Photos from Maps, some shot by our crew,<br />
-            See something off? Just give us a cue.<br />
-            A listing, a café, not quite right?{" "}
+            {t.footerLine1}<br />
+            {t.footerLine2}<br />
+            {t.footerLine3}{" "}
             <button
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               className="underline underline-offset-4 hover:text-[#2D6A4F] transition-colors"
             >
-              Reach out to us
+              {t.footerReachOut}
             </button>
-            , we&apos;ll fix it up tight.
+            {t.footerLine4}
           </p>
           <div className="w-12 h-px bg-[#E0DDD9] mx-auto" />
-          <p className="font-playfair text-sm font-bold italic uppercase tracking-widest text-stone-700">Made with ❤️ in Düsseldorf</p>
+          <p className="font-playfair text-sm font-bold text-stone-700">{t.madeWithLove}</p>
         </div>
       </footer>
 

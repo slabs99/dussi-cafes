@@ -67,7 +67,7 @@ export default function ContactSection() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="border border-[#E0DDD9] rounded-lg bg-white px-3 py-2.5 text-sm text-stone-800 outline-none focus:border-[#2D6A4F] transition-colors placeholder:text-stone-300"
-                    placeholder="e.g. Anna"
+                    placeholder={t.contactNamePlaceholder}
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
@@ -80,7 +80,7 @@ export default function ContactSection() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="border border-[#E0DDD9] rounded-lg bg-white px-3 py-2.5 text-sm text-stone-800 outline-none focus:border-[#2D6A4F] transition-colors placeholder:text-stone-300"
-                    placeholder="you@example.com"
+                    placeholder={t.contactEmailPlaceholder}
                   />
                 </div>
               </div>
@@ -95,7 +95,7 @@ export default function ContactSection() {
                   onChange={(e) => setMessage(e.target.value)}
                   rows={5}
                   className="border border-[#E0DDD9] rounded-lg bg-white px-3 py-2.5 text-sm text-stone-800 outline-none focus:border-[#2D6A4F] transition-colors resize-none placeholder:text-stone-300"
-                  placeholder="Tell us anything…"
+                  placeholder={t.contactMessagePlaceholder}
                 />
               </div>
 
