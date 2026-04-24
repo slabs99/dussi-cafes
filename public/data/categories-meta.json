@@ -1,5 +1,5 @@
 {
-  "defaultCategory": "new",
+  "defaultCategory": "our-picks",
   "order": ["our-picks", "new", "brunch", "roastery", "work-friendly", "late-evening"],
   "new": {
     "label": "New",

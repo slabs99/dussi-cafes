@@ -81,6 +81,10 @@ export interface Translations {
   contactNamePlaceholder: string;
   contactEmailPlaceholder: string;
   contactMessagePlaceholder: string;
+  // Status
+  statusPermanentlyClosed: string;
+  statusTemporarilyClosed: string;
+  andMore: string;
 }
 
 export const TRANSLATIONS: Record<LangCode, Translations> = {
@@ -147,6 +151,9 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactNamePlaceholder: "e.g. Anna",
     contactEmailPlaceholder: "you@example.com",
     contactMessagePlaceholder: "Tell us anything…",
+    statusPermanentlyClosed: "Permanently closed",
+    statusTemporarilyClosed: "Temporarily closed",
+    andMore: "more",
   },
   de: {
     search: "Suchen...",
@@ -211,5 +218,8 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     contactNamePlaceholder: "z. B. Anna",
     contactEmailPlaceholder: "du@beispiel.de",
     contactMessagePlaceholder: "Schreib uns alles…",
+    statusPermanentlyClosed: "Dauerhaft geschlossen",
+    statusTemporarilyClosed: "Vorübergehend geschlossen",
+    andMore: "weitere",
   },
 };

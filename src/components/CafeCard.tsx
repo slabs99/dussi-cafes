@@ -31,10 +31,10 @@ export default function CafeCard({
   let statusColor = "";
   let statusLabel = "";
   if (status === "closed") {
-    statusLabel = "Permanently closed";
+    statusLabel = t.statusPermanentlyClosed;
     statusColor = "text-stone-400 line-through";
   } else if (status === "temporarily-closed") {
-    statusLabel = "Temporarily closed";
+    statusLabel = t.statusTemporarilyClosed;
     statusColor = "text-amber-700";
   }
 

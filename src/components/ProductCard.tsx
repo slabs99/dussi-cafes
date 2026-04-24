@@ -82,7 +82,7 @@ export default function ProductCard({
               ))}
               {product.includes.length > 3 && (
                 <li className="text-[0.65rem] text-stone-400 italic ml-2.5">
-                  +{product.includes.length - 3} more
+                  +{product.includes.length - 3} {t.andMore}
                 </li>
               )}
             </ul>
