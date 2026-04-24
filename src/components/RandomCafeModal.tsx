@@ -13,6 +13,7 @@ function CoffeeLoveIcon({ className }: { className?: string }) {
 }
 
 const CATEGORY_KEYS: Record<string, keyof import("@/lib/translations").Translations> = {
+  "new":              "catNew",
   "specialty-coffee": "catSpecialtyCoffee",
   bakery:             "catBakery",
   brunch:             "catBrunch",
@@ -79,10 +80,12 @@ export default function RandomCafeModal({
           {/* Close */}
           <button
             onClick={onClose}
-            className="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/70 transition-colors text-sm"
+            className="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/70 transition-colors"
             aria-label="Close"
           >
-            ×
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden>
+              <path d="M1 1L9 9M9 1L1 9" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
+            </svg>
           </button>
         </div>
 
@@ -95,6 +98,12 @@ export default function RandomCafeModal({
           {cafe.address && (
             <p className="text-sm text-stone-600 mt-1.5 truncate">
               {cafe.address.split(",")[0]}
+            </p>
+          )}
+
+          {cafe.comment && (
+            <p className="text-sm text-stone-500 italic mt-2 leading-snug">
+              &ldquo;{cafe.comment}&rdquo;
             </p>
           )}
 

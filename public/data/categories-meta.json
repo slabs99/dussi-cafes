@@ -1,4 +1,9 @@
 {
+  "defaultCategory": "new",
+  "new": {
+    "label": "New",
+    "enabled": true
+  },
   "our-picks": {
     "label": "Curated Picks",
     "enabled": true

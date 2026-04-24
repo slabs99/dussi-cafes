@@ -9,7 +9,7 @@ export interface FilterState {
 }
 
 export const DEFAULT_FILTERS: FilterState = {
-  category: "our-picks",
+  category: "new",
   sort: "rating",
   search: "",
 };
@@ -52,7 +52,7 @@ export function filtersToParams(filters: FilterState): URLSearchParams {
 export function paramsToFilters(params: URLSearchParams): FilterState {
   const cat = params.get("category");
   return {
-    category: cat === null ? "our-picks" : (cat as Category | ""),
+    category: cat === null ? "new" : (cat as Category | ""),
     sort: (params.get("sort") as SortKey) || "rating",
     search: params.get("q") || "",
   };

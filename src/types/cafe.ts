@@ -1,4 +1,5 @@
 export type Category =
+  | "new"
   | "specialty-coffee"
   | "bakery"
   | "brunch"

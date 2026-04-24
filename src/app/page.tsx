@@ -157,6 +157,13 @@ function CafeDirectory() {
       setApparel(apparelData);
       setLifestyleMeta(metaData);
       setCategoriesMeta(catMeta);
+      // Apply admin-configured default if no category was in the URL
+      if (catMeta && searchParams.get("category") === null) {
+        const defaultCat = (catMeta as Record<string, unknown>)["defaultCategory"] as string | undefined;
+        if (defaultCat !== undefined) {
+          setFilters((f) => ({ ...f, category: defaultCat as import("@/types/cafe").Category | "" }));
+        }
+      }
       setLoading(false);
     });
   }, []);

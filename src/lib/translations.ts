@@ -26,7 +26,9 @@ export interface Translations {
   catRoastery: string;
   catWorkFriendly: string;
   catLateEvening: string;
+  catNew: string;
   catOurPicks: string;
+  catAll: string;
   tagline: string;
   location: string;
   surpriseMe: string;
@@ -86,7 +88,9 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     catRoastery: "Roastery",
     catWorkFriendly: "Work-friendly",
     catLateEvening: "Late Evening",
+    catNew: "New",
     catOurPicks: "Our Picks",
+    catAll: "All",
     tagline: "Your inside scoop on Düsseldorf cafes, curated by coffee nerds.",
     location: "Düsseldorf",
     surpriseMe: "Surprise me",
@@ -140,7 +144,9 @@ export const TRANSLATIONS: Record<LangCode, Translations> = {
     catRoastery: "Rösterei",
     catWorkFriendly: "Arbeitsfreundlich",
     catLateEvening: "Abendlokal",
+    catNew: "Neu",
     catOurPicks: "Unsere Empfehlungen",
+    catAll: "Alle",
     tagline: "Dein Insider-Guide zu den besten Düsseldorfer Cafés, zusammengestellt von Kaffee-Nerds.",
     location: "Düsseldorf",
     surpriseMe: "Überrasch mich",

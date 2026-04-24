@@ -34,8 +34,9 @@ export default function FilterBar({
 }: Props) {
   const { t } = useLanguage();
 
-  // Order: Our picks, Brunch, Roastery, Work-friendly, Late evening — then any others
+  // Order: New, Our picks, Brunch, Roastery, Work-friendly, Late evening — then any others
   const ALL_CATEGORIES: { value: Category; label: string }[] = [
+    { value: "new",              label: categoriesMeta?.["new"]?.label              ?? t.catNew             },
     { value: "our-picks",        label: categoriesMeta?.["our-picks"]?.label        ?? t.catOurPicks        },
     { value: "brunch",           label: categoriesMeta?.["brunch"]?.label           ?? t.catBrunch          },
     { value: "roastery",         label: categoriesMeta?.["roastery"]?.label         ?? t.catRoastery        },
@@ -80,6 +81,19 @@ export default function FilterBar({
               </button>
             );
           })}
+
+          {/* Divider + All button */}
+          <span className="flex-shrink-0 w-px h-4 bg-[#E0DDD9] mx-1" />
+          <button
+            onClick={() => onChange({ category: "" })}
+            className={`flex-shrink-0 px-2.5 py-1 text-sm rounded-lg transition-colors ${
+              filters.category === ""
+                ? "text-[#2D6A4F] font-semibold bg-[#2D6A4F]/8"
+                : "text-stone-600 hover:text-stone-900"
+            }`}
+          >
+            {t.catAll}
+          </button>
         </div>
 
         {/* Counter — right side */}

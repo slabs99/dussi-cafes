@@ -7,6 +7,7 @@ type Override = { name?: string; photoUrl?: string; comment?: string; categories
 type Overrides = Record<string, Override>;
 
 const ALL_CATEGORIES: { value: Category; label: string }[] = [
+  { value: "new",              label: "New"              },
   { value: "our-picks",        label: "Our Picks"        },
   { value: "specialty-coffee", label: "Specialty Coffee" },
   { value: "bakery",           label: "Bakery"           },
@@ -197,6 +198,7 @@ export default function AdminCafesPage() {
   const [overrides, setOverrides] = useState<Overrides>({});
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
+  const [categoryFilter, setCategoryFilter] = useState<Category | "">("");
   const [editing, setEditing] = useState<Cafe | null>(null);
 
   // Multi-select
@@ -220,9 +222,13 @@ export default function AdminCafesPage() {
     setOverrides((prev) => ({ ...prev, [cafeId]: { ...prev[cafeId], ...updated } }));
   }
 
-  const filtered = cafes.filter((c) =>
-    !search || c.name.toLowerCase().includes(search.toLowerCase())
-  );
+  const filtered = cafes.filter((c) => {
+    const ov = overrides[c.id];
+    const effectiveCats = ov?.categories ?? c.categories;
+    if (categoryFilter && !effectiveCats.includes(categoryFilter as Category)) return false;
+    if (search && !c.name.toLowerCase().includes(search.toLowerCase())) return false;
+    return true;
+  });
 
   const allSelectedOnPage = filtered.length > 0 && filtered.every((c) => selected.has(c.id));
 
@@ -298,6 +304,33 @@ export default function AdminCafesPage() {
       </header>
 
       <main className={`max-w-4xl mx-auto px-6 py-8 ${selected.size > 0 ? "pb-28" : ""}`}>
+        {/* Category filter tabs */}
+        <div className="flex flex-wrap gap-1.5 mb-4">
+          <button
+            onClick={() => { setCategoryFilter(""); setSelected(new Set()); }}
+            className={`text-xs px-3 py-1.5 border rounded-lg transition-colors ${
+              categoryFilter === ""
+                ? "bg-[#2D6A4F] border-[#2D6A4F] text-white"
+                : "border-[#E0DDD9] text-stone-600 hover:border-stone-400 bg-white"
+            }`}
+          >
+            All
+          </button>
+          {ALL_CATEGORIES.map(({ value, label }) => (
+            <button
+              key={value}
+              onClick={() => { setCategoryFilter(categoryFilter === value ? "" : value); setSelected(new Set()); }}
+              className={`text-xs px-3 py-1.5 border rounded-lg transition-colors ${
+                categoryFilter === value
+                  ? "bg-[#2D6A4F] border-[#2D6A4F] text-white"
+                  : "border-[#E0DDD9] text-stone-600 hover:border-stone-400 bg-white"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
         <input
           type="search"
           placeholder="Search cafes…"
